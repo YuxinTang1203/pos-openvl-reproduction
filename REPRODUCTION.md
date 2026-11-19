@@ -2,6 +2,8 @@
 
 解压后先运行 `python3 scripts/verify_package.py` 校验交付文件。
 
+实现结构、数据流和代码入口见 [PIPELINE.md](PIPELINE.md)。
+
 ## 1. 复现对象
 
 本包在 **PyRUA-Lean baseline** 上复现 PoS 状态维护与执行循环、OpenVL 视觉工具路由，复用其代码执行、机器人动作接口和基础感知链路。默认配置来自现有 ablation_fusion.json：v17_ablation / fusion，关闭 static_rules、action_focus、reliability，保留 PoS 与 OpenVL。新增 configure.py 只把路径解析到当前解压目录，不改变核心算法。

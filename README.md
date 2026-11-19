@@ -2,6 +2,7 @@
 
 在 **PyRUA-Lean baseline** 上集成 PoS 状态维护与 OpenVL 视觉工具路由，复用 PyRUA 的代码执行、机器人动作接口和基础感知链路。
 
+- [实现 Pipeline](PIPELINE.md)：数据流、模块职责、状态更新、完成审核与源码入口。
 - [复现指南](REPRODUCTION.md)：环境要求、依赖安装、配置、任务运行与验收。
 - [Codex 交接说明](CODEX_HANDOFF.md)：让另一个 Codex 按步骤复现。
 - `source/`：PyRUA-Lean 源码、PoS/OpenVL 实现、测试及策略适配器。

@@ -1,6 +1,6 @@
 # Codex reproduction handoff
 
-先读 README.md、REPRODUCTION.md、MANIFEST.json 与 VALIDATION.md。目标是在 PyRUA-Lean baseline 上复现 PoS + OpenVL。
+先读 README.md、PIPELINE.md、REPRODUCTION.md、MANIFEST.json 与 VALIDATION.md。目标是在 PyRUA-Lean baseline 上复现 PoS + OpenVL。
 
 1. 运行 scripts/verify_package.py，核对 Python、GPU、benchmark、权重和模型端点。
 2. 创建 Python 3.11 环境，按 requirements/cpu.txt 安装依赖与 source/，运行 scripts/smoke.sh。
