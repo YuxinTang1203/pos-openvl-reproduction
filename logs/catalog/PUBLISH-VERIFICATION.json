@@ -1,0 +1,136 @@
+{
+  "verified_at_utc": "2026-11-19T02:56:26.538796+00:00",
+  "release_tag": "historical-logs-2026-11-19",
+  "github_release_id": 450816786,
+  "asset_count": 21,
+  "total_bytes": 2666921171,
+  "verification": "Every GitHub uploaded asset size and server SHA256 digest matches the local archive/checksum file. Local ZIP CRC was checked during archive creation.",
+  "assets": [
+    {
+      "asset": "api-contract-generalization-v32.zip",
+      "bytes": 414539,
+      "sha256": "3c99e4f3aa5adc7809376797f920849c2a0ca0d6ace9c48d875a39276bc31d57",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "api-contract-generalization-v32b.zip",
+      "bytes": 624358,
+      "sha256": "5bdc349bdde1b3427499205266575d3bca8c86fefb3efdc6cc413f062469c128",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "api-reminder-boundary-probe-v30.zip",
+      "bytes": 14330279,
+      "sha256": "b716b31c0ddfd8b0bc53815f73e6541bf025b7132493a682095b097133189972",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "api-reminder-causal-probe-v29.zip",
+      "bytes": 50865986,
+      "sha256": "f21af3b976786f6f567bc92fdcc592312932c12e22997250158ae13f46918c2e",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "feedback-mechanism-study.zip",
+      "bytes": 1763526,
+      "sha256": "9a9c00ac667afdf07639709acfff8906047a0e89a2d1184358f31a1cf55b553d",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "image-transport-20261118.zip",
+      "bytes": 4692,
+      "sha256": "a94ac64c2b1e76a9f03af9143d71c3d45961006ebd726a70603a9114ff6f94f1",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-api-guidance-v33.zip",
+      "bytes": 177627931,
+      "sha256": "cec8a6ca3134f5f9d780fc3ad393319111f94f63ac34b2696e4cccc9da536090",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-bounded-search-v27.zip",
+      "bytes": 34507,
+      "sha256": "5226375873a3ef57b9de1607020d798afe2ca4fa710247dfe764ef2e2820be6e",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-checked-v23.zip",
+      "bytes": 1343104,
+      "sha256": "adfb230bafbb0ffe184c5348955a9542b237c0603fb62c3119a1f13cc879d967",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-evidence-control.zip",
+      "bytes": 91784127,
+      "sha256": "11300fe63c2c73cb46dbbf8490b0405da51385e1f5e6a8f95a4bc6750a9a86fa",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-execution-boundary-v26.zip",
+      "bytes": 179044655,
+      "sha256": "f403adb038a5130df0e1a02476b3de7b8a37629921bf814e48c462fd374a40dc",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-grasp-branch-v31.zip",
+      "bytes": 676841132,
+      "sha256": "d2370f70a630e6e039723c9f1211341c5685e1a7c0b7f5d93f50d02598f38ac8",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-mainline.zip",
+      "bytes": 56245483,
+      "sha256": "f5e442016b51e86f340494087446a686434a9e1c78dc8f794bd09f2dba3afb0f",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-marked-relations-v25.zip",
+      "bytes": 217169459,
+      "sha256": "170bcf603bde405723a87286695ab44a8c6463dd2ebba9dd7f186fc351ea338a",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-plan-requirements-v34.zip",
+      "bytes": 429979829,
+      "sha256": "d32775794933c4f5f59e01f2b10d7433e9c5a56c8c57bca7158be6aca42d2b6b",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-recovery-v22.zip",
+      "bytes": 4554,
+      "sha256": "7956b488ab830f133599d962516f73b5754989ec2b23ac3cd48b1238073d1300",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "pos-openvl-reminder-presentation-v28.zip",
+      "bytes": 624344706,
+      "sha256": "d1463c20220b6c3505f8202b16d6c8f6a8eb8bd34d25671575f35bd5d2b31a59",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "SHA256SUMS.txt",
+      "bytes": 1952,
+      "sha256": "b14b819768bcf5447e2c9b661e5d4821fe73ee3f7c76f57b9200c3ac586ddf2a",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "v17-eval.zip",
+      "bytes": 7215,
+      "sha256": "be6e2261ca679519e0b5df329d959be8a1f310cdf049395d080b322c0615db37",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "vision-layer-audit-20261116.zip",
+      "bytes": 95138,
+      "sha256": "8cc104c0d73924fe169c9bd9aa2261db155a06cfc294d0b2dd17ba0fc7562f66",
+      "github_digest_matches": true
+    },
+    {
+      "asset": "vision-readiness-v34.zip",
+      "bytes": 144393999,
+      "sha256": "0742c9ec167868c08c32ffc573955c369bccd4f2077db318b98afb1963d30df0",
+      "github_digest_matches": true
+    }
+  ]
+}

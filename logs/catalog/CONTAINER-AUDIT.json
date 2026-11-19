@@ -1,0 +1,83 @@
+{
+  "containers": [
+    {
+      "project": "pos-openvl-evidence-control",
+      "container": "pilot2-run/delivered-images.tar.gz",
+      "container_sha256": "d9f823a79cb26688e13204704ba063e3c1103fe8d3c047384fd13766d7b082e6",
+      "counts": {
+        "byte_identical_to_already_archived": 46
+      }
+    },
+    {
+      "project": "pos-openvl-evidence-control",
+      "container": "pilot2-run/public-evidence-supplement.tar.gz",
+      "container_sha256": "d0464bea64865a14b69dc0c29a53b32b66b60ef301d6759b5e4d8f1f3c016b84",
+      "counts": {
+        "byte_identical_to_already_archived": 9
+      }
+    },
+    {
+      "project": "pos-openvl-evidence-control",
+      "container": "pilot2-run/public-evidence.tar.gz",
+      "container_sha256": "5236efcdd771b51b996b35f41157c3b0958c228d1a64893c09dc3ab407e89221",
+      "counts": {
+        "byte_identical_to_already_archived": 633,
+        "source_or_nonlog_excluded": 115
+      }
+    },
+    {
+      "project": "pos-openvl-execution-boundary-v26",
+      "container": "run/s2/public-evidence.tar.gz",
+      "container_sha256": "8bb90f01f19d9889d3a5b534a7dadaad8d54c8e95436ecf9339c4eff8558ac85",
+      "counts": {
+        "byte_identical_to_already_archived": 1861,
+        "source_or_nonlog_excluded": 569
+      }
+    },
+    {
+      "project": "pos-openvl-marked-relations-v25",
+      "container": "run/serial4/public-evidence.tar.gz",
+      "container_sha256": "16d7d73fae51d7da7c4eaeac7cfde4e4c5b43ba4084eccbc1832727e58e6437e",
+      "counts": {
+        "byte_identical_to_already_archived": 2869,
+        "source_or_nonlog_excluded": 1117
+      }
+    },
+    {
+      "project": "vision-readiness-v34",
+      "container": "DELIVERED-IMAGES.tar.gz",
+      "container_sha256": "7acbcfe72107c578d208d439e96125c1cb47d001afd2d92d62f1a15d6af46921",
+      "counts": {
+        "byte_identical_to_already_archived": 84
+      }
+    },
+    {
+      "project": "vision-readiness-v34",
+      "container": "FINAL-EVIDENCE.tar.gz",
+      "container_sha256": "3adbafe23d68f426bd3ff1bcf05766fbcf85fefa477f5846340c5331b14d6add",
+      "counts": {
+        "byte_identical_to_already_archived": 1261,
+        "source_or_nonlog_excluded": 7
+      }
+    },
+    {
+      "project": "vision-readiness-v34",
+      "container": "V0-EVIDENCE.tar.gz",
+      "container_sha256": "1c9aeaec07acc9250055285206a349fb019c37b7a73aadccf096f6b10d28b42c",
+      "counts": {
+        "byte_identical_to_already_archived": 655
+      }
+    },
+    {
+      "project": "vision-layer-audit-20261116",
+      "container": "cpu-validation.tar.gz",
+      "container_sha256": "9d5dcb80eab8aa93b42267765dc12878e844772735213c5869334d6b0b913885",
+      "counts": {
+        "source_or_nonlog_excluded": 236,
+        "byte_identical_to_already_archived": 7
+      }
+    }
+  ],
+  "recovered_file_count": 0,
+  "recovered_zip_bytes": 1124
+}
