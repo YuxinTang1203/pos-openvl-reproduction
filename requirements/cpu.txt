@@ -1,0 +1,14 @@
+numpy>=1.26,<2
+pillow
+pytest>=8
+pyyaml>=6
+httpx>=0.27
+mcp>=1.8,<2
+uvicorn
+pycocotools
+openvlharness @ git+https://github.com/uclanlp/OpenVLHarness.git@abd465d1b7271b024d94ff0f0ce8ee7c4242a79a
+opencv-python-headless==4.10.0.84
+matplotlib<3.11
+scipy
+torch
+torchvision

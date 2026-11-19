@@ -1,0 +1,14 @@
+{
+  "kind": "v17_ablation",
+  "profile": "fusion",
+  "pos": {},
+  "static_rules": false,
+  "action_focus": false,
+  "reliability": false,
+  "openvl": {
+    "enabled": true,
+    "config": "../openvl/capabilities_visual.yml",
+    "ambiguity_score_margin": 0.1,
+    "duplicate_mask_iou": 0.9
+  }
+}

@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+.env
+.env.*
+!*.example.*
+assets/
+outputs/
+configs/runtime-resolved*.json
+configs/torch-before.txt
+configs/torch-constraints.txt
+*.pt
+*.safetensors

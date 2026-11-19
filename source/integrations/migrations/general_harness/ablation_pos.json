@@ -1,0 +1,8 @@
+{
+  "kind": "v17_ablation",
+  "profile": "pos",
+  "pos": {},
+  "static_rules": false,
+  "action_focus": false,
+  "reliability": false
+}

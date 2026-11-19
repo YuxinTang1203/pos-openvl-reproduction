@@ -1,0 +1,42 @@
+# Native visual reasoning subset. Backends are replaced by local shared clients.
+agent_name: MainAgent
+agent_config_version: pyrualean_visual_v2
+agent:
+  model_service: orchestrator
+  max_iterations: 15
+  max_context_length: 168000
+  tool_choice: auto
+  paired_sampling_seed: false
+memory:
+  emit_policy: on_change
+  modules:
+  - name: image
+  - name: tool_context
+  - name: url
+    webpage_env_update_limit: 20
+capabilities:
+  registries:
+  - paper
+  tools:
+    grounding:
+      backend: sam3_segment
+    zoom:
+      backend: zoom_in_image_by_bbox
+services:
+  client:
+    base_url: http://127.0.0.1:8101
+    timeout_seconds: 60
+    retry: 0
+  server:
+    host: 127.0.0.1
+    port: 8101
+    registration: configured_only
+  tools:
+    sam3_segment:
+      server_url: http://127.0.0.1:1
+    zoom_in_image_by_bbox: {}
+  models:
+    orchestrator:
+      alias: gpt-6-astra
+      base: http://127.0.0.1:1/v1
+      key: unused

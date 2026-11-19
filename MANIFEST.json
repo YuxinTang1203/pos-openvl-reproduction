@@ -1,0 +1,30 @@
+{
+  "package": "PoS + OpenVL on PyRUA-Lean",
+  "baseline": "PyRUA-Lean execution stack, migration kind=baseline",
+  "default": "v17_ablation/fusion",
+  "source_snapshot_id": "local-v40-split-20261118",
+  "packaged_on": "2026-11-19 Asia/Shanghai",
+  "source_modified": true,
+  "scope": "PoS state maintenance and OpenVL visual routing on the PyRUA-Lean baseline",
+  "source_changes": [
+    "Remove experimental dense-geometry extension modules and registration",
+    "Add source README and restore project license metadata"
+  ],
+  "additions": [
+    "portable scripts",
+    "requirements",
+    "configs",
+    "reproduction documentation"
+  ],
+  "excluded": [
+    "model weights",
+    "credentials and .env files",
+    "simulator and benchmark assets",
+    "historical datasets and unrelated experimental records",
+    "original exact dependency lockfile"
+  ],
+  "upstream_pins": {
+    "sam3": "c1f6b1e83967c912f675d8975d437ccdc41e17d8",
+    "openvlharness": "abd465d1b7271b024d94ff0f0ce8ee7c4242a79a"
+  }
+}

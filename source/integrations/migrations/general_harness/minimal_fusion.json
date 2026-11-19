@@ -1,0 +1,11 @@
+{
+  "kind": "minimal_fusion",
+  "pos": {},
+  "openvl": {
+    "enabled": true,
+    "config": "../openvl/capabilities_visual.yml",
+    "ambiguity_score_margin": 0.1,
+    "duplicate_mask_iou": 0.9
+  },
+  "dependency_mode": "advisory"
+}

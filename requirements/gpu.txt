@@ -1,0 +1,6 @@
+-r cpu.txt
+huggingface_hub>=0.34
+einops
+pycocotools
+psutil
+opencv-python-headless==4.10.0.84
