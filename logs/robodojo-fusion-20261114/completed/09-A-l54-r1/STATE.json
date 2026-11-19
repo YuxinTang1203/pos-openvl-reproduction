@@ -1,0 +1,1050 @@
+{
+  "status": "scored",
+  "gpu": 0,
+  "kind": "v17_ablation",
+  "started_at": "2026-11-14T02:51:44.754542+00:00",
+  "pid": 1731409,
+  "progress": {
+    "episode": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/09-A-l54-r1/episodes/insert_tubes_l54_s0-1794624827",
+    "requests": 64,
+    "auxiliary_requests": 11,
+    "python_cells": 50,
+    "last_event": "tool"
+  },
+  "elapsed_s": 4434.7,
+  "returncode": 0,
+  "finished_at": "2026-11-14T04:05:39.487578+00:00",
+  "success": false,
+  "score": 0.0,
+  "episode": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/09-A-l54-r1/episodes/insert_tubes_l54_s0-1794624827",
+  "migration": {
+    "kind": "v17_ablation",
+    "agent_loop": "pyrualean.openai_runtime",
+    "execution_recovery": false,
+    "stage_verification": false,
+    "native": {
+      "mode": "automatically_routed_visual_workspace",
+      "agent_loop": "pyrualean.openai_runtime",
+      "config": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/capabilities_visual.yml",
+      "native_components": [
+        "MemoryStore",
+        "Grounding capability/schema/renderer",
+        "Zoom capability/backend"
+      ],
+      "local_backend": "Existing shared PyRUA SAM3; all valid candidates, not just top one",
+      "options": {
+        "execution_recovery": false,
+        "stage_verification": false
+      },
+      "robot_action_hook": "passive_history_only",
+      "automatic_action_capture": false,
+      "passive_history": "Existing public results/states only; on-demand reads, no sensing, action policy or automatic directory",
+      "camera_metadata_context": {
+        "enabled": true,
+        "trigger": "Python camera_meta request; bypassed when routing is disabled",
+        "original_return_unchanged": true,
+        "extra_image_payload": false
+      },
+      "routing": "locate/segment text queries; distinct score-competitive mask hypotheses require explicit choice",
+      "ambiguity_heuristic": {
+        "version": "score-gap-mask-iou-v1",
+        "score_margin": 0.1,
+        "duplicate_mask_iou": 0.9,
+        "grouping": "highest-score-first representative masks; original candidates retained",
+        "calibrated_probability_guarantee": false
+      },
+      "semantic_change": "Ambiguous text perception raises before original top-one geometry; no automatic replay",
+      "selection_guard": "Ordinary catchable Python exception, not a global action interlock"
+    },
+    "adaptation": {
+      "kind": "minimal_fusion",
+      "implementation": "minimal-fusion-v17",
+      "pos": {
+        "kind": "pos_progress_lite",
+        "implementation": "pyrualean-pos-progress-im-lite-v1",
+        "paper": "https://arxiv.org/abs/2610.01415",
+        "source": "https://github.com/luoyu100/PoS",
+        "adaptation": "cell-level explicit belief, independent sentinel, trapping recovery",
+        "benchmark_reproduction": false,
+        "history_trimming": false,
+        "independent_verifier": true,
+        "verifier_is_ground_truth": false,
+        "automatic_retry": false,
+        "evaluation_updates": false,
+        "extra_model_calls_share_episode_budget": true,
+        "response_protocol": "closed_role_specific_schema_with_host_validation",
+        "maintenance_min_calls": 2,
+        "health_window": 4,
+        "max_cycle_length": 3,
+        "health_threshold": 0.25,
+        "cycle_threshold": 0.75,
+        "recurrence_epsilon": 0.05,
+        "max_records": 24,
+        "max_gaps": 12,
+        "max_evidence": 64,
+        "max_images": 4,
+        "repair_attempts": 1,
+        "execution_checks": "feedback-driven recovery; no blanket failed-motion gripper gate",
+        "schedule": {
+          "event_driven": true,
+          "paced_spending": true,
+          "final_reserved_chains": 1,
+          "late_window_s": 1200,
+          "stale_seconds": 600,
+          "stale_cells": 8,
+          "urgent_cooldown_seconds": 180,
+          "urgent_cooldown_cells": 2,
+          "new_per_cell_cpu_limit": null
+        },
+        "independent_completion_audit": false,
+        "reference_paper": "https://proceedings.mlr.press/v205/huang23c/huang23c.pdf",
+        "reference_method": "Inner Monologue: action outcome + task-progress scene feedback + replanning",
+        "reproduction": false,
+        "oracle_feedback": false,
+        "learned_skills_added": false,
+        "automatic_action_execution": false,
+        "required_step_contract": false,
+        "extra_auxiliary_budget": false,
+        "metadata_corrections": "nonblocking,logged; never rewrite code or fabricate physical success"
+      },
+      "openvl_enabled": true,
+      "reflact": null,
+      "shared_auxiliary_budget": true,
+      "additional_reflection_requests": 0,
+      "automatic_robot_replay": false,
+      "pos_schema_and_validation": "inherited unchanged; no candidate rewrite",
+      "pos_model_calls": "original payload fields/prompt prefixes plus schema contract and delivered-source handoff; no report rewriting",
+      "pos_step_and_completion": "original step validation and completion audit; obsolete directives archived after motion",
+      "robot_primitive_wrappers_added": false,
+      "planner_handoff": "revision-stamped belief/gap, public feedback, compact delivered OpenVL source links and semantic limits; full original evidence retained in POS_CONTEXT",
+      "fusion_adapter": "v14-delivered-source-gap-bridge",
+      "auxiliary_input_change": "openvl_pos_handoff added to belief, repair and Sentinel payloads; original payload fields retained",
+      "pos_schedule": "existing trigger/final reserve; funded retry capacity may be reserved inside original round/total limits",
+      "additional_tools": [],
+      "additional_host_queries": 0,
+      "visual_evidence_policy": "delivered results only; original source time and eligibility retained",
+      "observation_scope": "baseline",
+      "dependency_mode": "off",
+      "additional_model_requests": 0,
+      "additional_sensing_calls": 0,
+      "dependency_links": "optional executor declarations; invalidations only, no promotion",
+      "same_cell_intervention": false,
+      "original_temporal_validation_preserved": true,
+      "full_world_selective_freshness_implemented": false,
+      "v17_ablation": {
+        "profile": "fusion",
+        "static_rules": false,
+        "static_rules_sha256": "c7fad68f7f8afe068e1e5838cefa4b6b557d00d2c7d7681239094033140c75d0",
+        "static_rules_injection": "executor instruction prompt only; identical suffix across pairs",
+        "v15_action_focus": false,
+        "v15_reliability": false,
+        "dependency_mode": "off",
+        "same_v17_projection_fix": true,
+        "added_model_calls": 0,
+        "added_sensing_calls": 0,
+        "added_action_gates": false
+      }
+    }
+  },
+  "episode_status": "completed",
+  "finish": null,
+  "policy_wall_s": 4287.496224006638,
+  "requests": 64,
+  "auxiliary_requests": 11,
+  "auxiliary_usage": {
+    "prompt": 271391,
+    "completion": 53498,
+    "cached": 4608,
+    "reasoning": 40849
+  },
+  "python_cells": 50,
+  "input_tokens": 16883027,
+  "output_tokens": 250989,
+  "cached_input_tokens": 15992320,
+  "infrastructure_issue": false,
+  "failed_requests": 0,
+  "harness_errors": [],
+  "mechanism_events": 396,
+  "mechanism_failures": [
+    {
+      "kind": "minimal_fusion",
+      "event": "maintenance_degraded",
+      "sequence": 13,
+      "revision": 2,
+      "status": "audit_rejected",
+      "issues": [
+        "payload.directive.next_step: text exceeds 400 characters",
+        "payload.directive.why_change: text exceeds 240 characters"
+      ],
+      "context": {
+        "revision": 2,
+        "status": "audit_rejected",
+        "belief": {
+          "world": {
+            "entities": [
+              {
+                "id": "table",
+                "name": "Wooden work table",
+                "evidence": [
+                  "obs-0-image-0",
+                  "obs-1-image-0"
+                ]
+              },
+              {
+                "id": "rack",
+                "name": "Blue-and-white tube rack, empty holes",
+                "evidence": [
+                  "obs-0-image-0",
+                  "obs-3",
+                  "obs-5-image-0",
+                  "obs-6"
+                ]
+              },
+              {
+                "id": "tube-1",
+                "name": "Tube left of rack (mask 1)",
+                "evidence": [
+                  "obs-1",
+                  "obs-3",
+                  "obs-0-image-1"
+                ]
+              },
+              {
+                "id": "tube-2",
+                "name": "Tube right of rack, inner (mask 2)",
+                "evidence": [
+                  "obs-1",
+                  "obs-3",
+                  "obs-0-image-2"
+                ]
+              },
+              {
+                "id": "tube-3",
+                "name": "Tube far right (mask 3)",
+                "evidence": [
+                  "obs-1",
+                  "obs-3",
+                  "obs-0-image-2"
+                ]
+              },
+              {
+                "id": "left-gripper",
+                "name": "Left robot gripper",
+                "evidence": [
+                  "obs-2",
+                  "obs-0-image-1"
+                ]
+              },
+              {
+                "id": "right-gripper",
+                "name": "Right robot gripper",
+                "evidence": [
+                  "obs-2",
+                  "obs-0-image-2"
+                ]
+              }
+            ],
+            "states": [
+              {
+                "id": "s-rack-pose",
+                "entity": "rack",
+                "property": "pose and size",
+                "value": "center (-0.004, 0.017, 0.776) m, top_z 0.787, L 0.219 x W 0.132 m, long_axis -10.7 deg; height from one camera only",
+                "confidence": 0.75,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3"
+                ]
+              },
+              {
+                "id": "s-rack-empty",
+                "entity": "rack",
+                "property": "insertion status",
+                "value": "all rack holes open/empty; zero of three tubes inserted",
+                "confidence": 0.85,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-0-image-0",
+                  "obs-4-image-0",
+                  "obs-5-image-0",
+                  "obs-7"
+                ]
+              },
+              {
+                "id": "s-rack-holes",
+                "entity": "rack",
+                "property": "hole layout",
+                "value": "blue top plate spans image rows 167-215, cols 268-368; ~10 larger round holes (~13 px wide) in two offset rows plus smaller holes",
+                "confidence": 0.6,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-6",
+                  "obs-7",
+                  "obs-4"
+                ]
+              },
+              {
+                "id": "s-tube1-table",
+                "entity": "tube-1",
+                "property": "location and posture",
+                "value": "lying on table left of rack at (-0.297, -0.137, 0.774), L 0.127 W 0.035 m, grasp_yaw 7.5",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-1"
+                ]
+              },
+              {
+                "id": "s-tube2-table",
+                "entity": "tube-2",
+                "property": "location and posture",
+                "value": "lying on table right of rack at (0.195, -0.112, 0.776), L 0.119 W 0.032 m, long_axis 51.4, grasp_yaw -38.6",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-1"
+                ]
+              },
+              {
+                "id": "s-tube3-table",
+                "entity": "tube-3",
+                "property": "location and posture",
+                "value": "lying on table far right at (0.336, -0.002, 0.775), L 0.124 W 0.032 m, long_axis 52.6",
+                "confidence": 0.75,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-1"
+                ]
+              },
+              {
+                "id": "s-left-gripper-open",
+                "entity": "left-gripper",
+                "property": "gripper opening",
+                "value": "grip 1.0 = fully open, tcp (-0.300, -0.207, 0.922); holding nothing",
+                "confidence": 0.85,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-2",
+                  "obs-0-image-1"
+                ]
+              },
+              {
+                "id": "s-right-gripper-open",
+                "entity": "right-gripper",
+                "property": "gripper opening",
+                "value": "grip 1.0 = fully open, tcp (0.300, -0.207, 0.922); holding nothing",
+                "confidence": 0.85,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-2",
+                  "obs-0-image-2"
+                ]
+              },
+              {
+                "id": "s-no-motion-yet",
+                "entity": "table",
+                "property": "scene progress",
+                "value": "still epoch-0 starting scene; no grasp or insertion action executed",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-2",
+                  "obs-3"
+                ]
+              }
+            ],
+            "relations": [
+              {
+                "id": "r-rack-on-table",
+                "source": "rack",
+                "relation": "sits on",
+                "target": "table",
+                "confidence": 0.9,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-0-image-0",
+                  "obs-3"
+                ]
+              },
+              {
+                "id": "r-tube1-left-of-rack",
+                "source": "tube-1",
+                "relation": "lies left of",
+                "target": "rack",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-1"
+                ]
+              },
+              {
+                "id": "r-tube2-right-of-rack",
+                "source": "tube-2",
+                "relation": "lies right of",
+                "target": "rack",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-1"
+                ]
+              },
+              {
+                "id": "r-tube3-far-right",
+                "source": "tube-3",
+                "relation": "lies further right of",
+                "target": "rack",
+                "confidence": 0.75,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-1"
+                ]
+              },
+              {
+                "id": "r-left-gripper-near-tube1",
+                "source": "left-gripper",
+                "relation": "above and near",
+                "target": "tube-1",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-2",
+                  "obs-3"
+                ]
+              },
+              {
+                "id": "r-right-gripper-near-tube2",
+                "source": "right-gripper",
+                "relation": "above and near",
+                "target": "tube-2",
+                "confidence": 0.75,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-2",
+                  "obs-3"
+                ]
+              }
+            ]
+          },
+          "epistemic": [
+            {
+              "id": "e-hole-fit",
+              "target": "Which rack holes accept the tubes: tube width 0.032-0.035 m vs detected holes ~13 px (~0.03 m); need hole centres in world frame and a chosen upright target hole.",
+              "entities": [
+                "rack",
+                "tube-1",
+                "tube-2",
+                "tube-3"
+              ]
+            },
+            {
+              "id": "e-rack-height",
+              "target": "Rack top_z/height is a single-camera guess (locate note); re-locate rack from above before aligning a tube for insertion.",
+              "entities": [
+                "rack"
+              ]
+            },
+            {
+              "id": "e-tube-identity",
+              "target": "Tube 1/2/3 identity rests on cam_head masks plus grounding boxes; wrist views do not independently confirm the mapping.",
+              "entities": [
+                "tube-1",
+                "tube-2",
+                "tube-3"
+              ]
+            }
+          ],
+          "achievement": [
+            {
+              "id": "a-insert-first",
+              "target": "Grasp one table-lying tube, orient it upright and insert it into an empty rack hole (first of three); none inserted yet.",
+              "entities": [
+                "tube-1",
+                "tube-2",
+                "tube-3",
+                "rack",
+                "left-gripper",
+                "right-gripper"
+              ]
+            },
+            {
+              "id": "a-all-three",
+              "target": "Insert all three tubes into the rack one by one; currently 0 of 3 inserted.",
+              "entities": [
+                "tube-1",
+                "tube-2",
+                "tube-3",
+                "rack"
+              ]
+            }
+          ],
+          "active_gap": {
+            "type": "achievement",
+            "id": "a-insert-first"
+          }
+        },
+        "health": {
+          "window_ready": false,
+          "verified_transitions": 1
+        },
+        "recovery": null,
+        "evidence_review": {
+          "sequence": 13,
+          "motion_epoch": 3,
+          "provided_text_ids": [
+            "obs-8",
+            "obs-9",
+            "obs-10",
+            "obs-11",
+            "obs-12",
+            "obs-13",
+            "obs-6"
+          ],
+          "attached_image_ids": [
+            "obs-12-image-0",
+            "obs-13-image-0",
+            "obs-9-image-0"
+          ],
+          "not_provided_reference_ids": [
+            "obs-0-image-0",
+            "obs-1-image-0",
+            "obs-5-image-0",
+            "obs-0-image-1",
+            "obs-0-image-2",
+            "obs-2",
+            "obs-4-image-0",
+            "obs-7",
+            "obs-4"
+          ],
+          "partial_text_reference_ids": [
+            "obs-3",
+            "obs-1"
+          ],
+          "historical_text_chars": 12000,
+          "historical_text_budget": 12000,
+          "text_scope": "registered public excerpts; field-level truncation markers remain in the text",
+          "verification": "input delivery only, not confirmation of the referenced claims"
+        },
+        "verification": "fallible model beliefs, not official verdicts"
+      }
+    },
+    {
+      "kind": "minimal_fusion",
+      "event": "maintenance_degraded",
+      "sequence": 27,
+      "revision": 3,
+      "status": "audit_rejected",
+      "issues": [
+        "e-vertical-approach calls pitch~90 'untested', but prior obs-16/17/18 recorded pitch-90 reach/singularity failures to the hole; s-reach-limit was dropped without justification.",
+        "s-tube1-resting-on-rack cites obs-25-image-0, which predates the obs-26 release; the resting state is supported only by obs-26 grip text plus the head frame.",
+        "s-approach-horizontal 'tube stayed near-horizontal' conflicts with obs-24/25 crops showing a tilted tube; those are non-original display arrays, not current camera frames.",
+        "Hole plane still unresolved (0.823 vs 0.787): obs-27 locate_candidate errored for lack of a current original frame, so no verified insertion target height.",
+        "tube-3 unseen in obs-26-image-0; only one table tube is visible, so '2 still on the table' is inference from stale epoch-0 poses."
+      ],
+      "context": {
+        "revision": 3,
+        "status": "audit_rejected",
+        "belief": {
+          "world": {
+            "entities": [
+              {
+                "id": "table",
+                "name": "Wooden work table",
+                "evidence": [
+                  "obs-0-image-0",
+                  "obs-19-image-0"
+                ]
+              },
+              {
+                "id": "rack",
+                "name": "Blue-and-white tube rack on table",
+                "evidence": [
+                  "obs-19-image-0",
+                  "obs-8",
+                  "obs-3"
+                ]
+              },
+              {
+                "id": "tube-1",
+                "name": "Tube originally left of rack (mask 1), now held",
+                "evidence": [
+                  "obs-3",
+                  "obs-11",
+                  "obs-15",
+                  "obs-19-image-0"
+                ]
+              },
+              {
+                "id": "tube-2",
+                "name": "Tube right of rack, inner (mask 2)",
+                "evidence": [
+                  "obs-3",
+                  "obs-13-image-0"
+                ]
+              },
+              {
+                "id": "tube-3",
+                "name": "Tube far right (mask 3)",
+                "evidence": [
+                  "obs-3",
+                  "obs-13-image-0"
+                ]
+              },
+              {
+                "id": "right-gripper",
+                "name": "Right robot gripper",
+                "evidence": [
+                  "obs-15",
+                  "obs-19",
+                  "obs-19-image-0"
+                ]
+              },
+              {
+                "id": "left-gripper",
+                "name": "Left robot gripper",
+                "evidence": [
+                  "obs-11",
+                  "obs-13",
+                  "obs-19-image-0"
+                ]
+              }
+            ],
+            "states": [
+              {
+                "id": "s-rack-empty",
+                "entity": "rack",
+                "property": "insertion status",
+                "value": "0 of 3 tubes inserted; all visible rack holes still open/empty",
+                "confidence": 0.85,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-19-image-0"
+                ]
+              },
+              {
+                "id": "s-rack-geom",
+                "entity": "rack",
+                "property": "pose and hole plane",
+                "value": "centre ~(-0.001,0.018); 10 hole centres projected at z=0.8231 (x -0.075..0.072, y -0.030..0.029); earlier locate gave top_z 0.787",
+                "confidence": 0.6,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-8",
+                  "obs-3"
+                ]
+              },
+              {
+                "id": "s-tube1-held",
+                "entity": "tube-1",
+                "property": "grasp and pose",
+                "value": "grasped mid-shaft (opening 0.238, width 0.0283 m) by right gripper; tcp (0.201,-0.025,0.900), arm pitch 0 so tube axis horizontal",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-15",
+                  "obs-19",
+                  "obs-19-image-0"
+                ]
+              },
+              {
+                "id": "s-tube2-table",
+                "entity": "tube-2",
+                "property": "location and posture",
+                "value": "lying on table right of rack at ~(0.195,-0.112,0.776); not re-measured since epoch 0",
+                "confidence": 0.6,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-13-image-0"
+                ]
+              },
+              {
+                "id": "s-tube3-table",
+                "entity": "tube-3",
+                "property": "location and posture",
+                "value": "lying on table far right at ~(0.336,-0.002,0.775); partly occluded by right arm in latest head view",
+                "confidence": 0.55,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-13-image-0"
+                ]
+              },
+              {
+                "id": "s-left-gripper-open",
+                "entity": "left-gripper",
+                "property": "gripper state",
+                "value": "open (1.0), homed, holding nothing after releasing tube-1 on table at (0.12,-0.22,0.80)",
+                "confidence": 0.75,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-13",
+                  "obs-19-image-0"
+                ]
+              },
+              {
+                "id": "s-reach-limit",
+                "entity": "right-gripper",
+                "property": "reach to rack hole",
+                "value": "hole (0.0719,0.0058,0.823) unreachable at pitch90/yaw78.4 (0.259 m short, then singular path); closest achieved (0.0742,0.0012,0.854), 0.008 m and 6 deg off",
+                "confidence": 0.7,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-16",
+                  "obs-17",
+                  "obs-18"
+                ]
+              }
+            ],
+            "relations": [
+              {
+                "id": "r-tube1-in-right-gripper",
+                "source": "tube-1",
+                "relation": "held by",
+                "target": "right-gripper",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-15",
+                  "obs-19",
+                  "obs-19-image-0"
+                ]
+              },
+              {
+                "id": "r-rack-on-table",
+                "source": "rack",
+                "relation": "sits on",
+                "target": "table",
+                "confidence": 0.9,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-19-image-0",
+                  "obs-3"
+                ]
+              },
+              {
+                "id": "r-tube2-on-table",
+                "source": "tube-2",
+                "relation": "lies right of",
+                "target": "rack",
+                "confidence": 0.6,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-13-image-0"
+                ]
+              },
+              {
+                "id": "r-tube3-on-table",
+                "source": "tube-3",
+                "relation": "lies further right of",
+                "target": "rack",
+                "confidence": 0.55,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-3",
+                  "obs-13-image-0"
+                ]
+              },
+              {
+                "id": "r-right-gripper-right-of-rack",
+                "source": "right-gripper",
+                "relation": "stands right of, not above",
+                "target": "rack",
+                "confidence": 0.8,
+                "status": "uncertain",
+                "evidence": [
+                  "obs-19",
+                  "obs-19-image-0"
+                ]
+              }
+            ]
+          },
+          "epistemic": [
+            {
+              "id": "e-hole-plane",
+              "target": "Rack hole plane unresolved: obs-8 hole centres assume z=0.8231 (pixel projection), obs-3 locate gave top_z 0.787. Need a measured hole plane and one chosen upright target hole.",
+              "entities": [
+                "rack",
+                "tube-1"
+              ]
+            },
+            {
+              "id": "e-tube-identity",
+              "target": "Held tube assumed to be tube-1 (relocated by left arm, then grasped by right arm); which remaining table tube is 2 vs 3 is not confirmed by current images.",
+              "entities": [
+                "tube-1",
+                "tube-2",
+                "tube-3",
+                "right-gripper"
+              ]
+            }
+          ],
+          "achievement": [
+            {
+              "id": "a-insert-first",
+              "target": "Insert the first tube upright into an empty rack hole: tube is held but 0 inserted; must reach above a hole with vertical orientation (pitch ~90) and release, despite reach/singularity failures.",
+              "entities": [
+                "tube-1",
+                "rack",
+                "right-gripper"
+              ]
+            },
+            {
+              "id": "a-all-three",
+              "target": "Insert all three tubes into the rack one by one; currently 0 of 3 inserted, 2 still lying on the table.",
+              "entities": [
+                "tube-1",
+                "tube-2",
+                "tube-3",
+                "rack"
+              ]
+            }
+          ],
+          "active_gap": {
+            "type": "achievement",
+            "id": "a-insert-first"
+          }
+        },
+        "health": {
+          "window_ready": false,
+          "verified_transitions": 2
+        },
+        "recovery": null,
+        "evidence_review": {
+          "sequence": 27,
+          "motion_epoch": 15,
+          "provided_text_ids": [
+            "obs-20",
+            "obs-21",
+            "obs-22",
+            "obs-23",
+            "obs-24",
+            "obs-25",
+            "obs-26",
+            "obs-27",
+            "obs-8"
+          ],
+          "attached_image_ids": [
+            "obs-23-image-0",
+            "obs-24-image-0",
+            "obs-25-image-0",
+            "obs-26-image-0"
+          ],
+          "not_provided_reference_ids": [
+            "obs-0-image-0",
+            "obs-13",
+            "obs-19-image-0",
+            "obs-11",
+            "obs-13-image-0",
+            "obs-19",
+            "obs-16",
+            "obs-17",
+            "obs-18"
+          ],
+          "partial_text_reference_ids": [
+            "obs-3",
+            "obs-15"
+          ],
+          "historical_text_chars": 12000,
+          "historical_text_budget": 12000,
+          "text_scope": "registered public excerpts; field-level truncation markers remain in the text",
+          "verification": "input delivery only, not confirmation of the referenced claims"
+        },
+        "verification": "fallible model beliefs, not official verdicts"
+      }
+    }
+  ],
+  "mechanism_updates": 3,
+  "selected_skill_ids": [],
+  "mechanism_used": true,
+  "identity_errors": [],
+  "comparison_eligible": true,
+  "budget_exhausted": false,
+  "errors": [],
+  "warnings": [],
+  "condition": "A",
+  "profile": "fusion",
+  "static_rules": false,
+  "metrics": {
+    "public_stateful_calls": 63,
+    "public_nonstateful_calls": 268,
+    "public_nonstateful_by_tool": {
+      "artifact": 81,
+      "view_env_state": 12,
+      "locate": 9,
+      "locate_mask": 9,
+      "back_project": 157
+    },
+    "tool_requests_by_name": {
+      "Visual_Grounding_Tool": 6,
+      "python": 50,
+      "Zoom_In_Tool": 1
+    },
+    "native_steps_reported": 500,
+    "first_action_request_s": 1080.716,
+    "first_executed_action_s": 1080.716,
+    "first_standalone_close_request_s": 1130.533,
+    "first_reported_holding_after_close_s": 1130.533,
+    "time_origin": "runtime elapsed time; ledger wall-clock offset inside matched tool range",
+    "standalone_close_requests": 8,
+    "standalone_empty_close_reports": 3,
+    "explicit_zero_step_ik_reports": 8,
+    "blocked_reports": 0,
+    "belief_commits": 3,
+    "maintenance_degraded": 2,
+    "http_attempts": 64,
+    "failed_http_attempts": 0,
+    "failed_http_by_role": {},
+    "failed_http_latency_s": 0,
+    "failed_action_followups": [
+      {
+        "call": 45,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": 46,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 48,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 49,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 58,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 59,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 59,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 61,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 1,
+        "observation_named_calls_between": 1,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 61,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": 62,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 86,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 87,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 87,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 88,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 88,
+        "reason": "empty_close",
+        "next_action_call": 89,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 89,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 90,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 306,
+        "reason": "empty_close",
+        "next_action_call": 307,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 307,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 311,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 3,
+        "observation_named_calls_between": 2,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 312,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 313,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 313,
+        "reason": "empty_close",
+        "next_action_call": 314,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 314,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": 315,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 328,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": null,
+        "next_method_parameters_changed": null,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      }
+    ],
+    "visual_projection_reports": 22,
+    "limitations": [
+      "holding does not identify the object or certify placement",
+      "Nonstateful ledger calls are not all useful observations; one helper may make several calls",
+      "Unknown timing remains null; malformed final live log lines are ignored",
+      "Changed parameters and fewer failures do not establish better task performance"
+    ]
+  }
+}

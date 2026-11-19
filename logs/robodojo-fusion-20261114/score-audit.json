@@ -1,0 +1,59 @@
+{
+  "audited_at": "2026-11-14T05:59:50.818452+00:00",
+  "remote_read_only": true,
+  "model_calls": 0,
+  "robot_actions": 0,
+  "rows": [
+    {
+      "job": "01-A-l0-r0",
+      "condition": "A",
+      "layout": 0,
+      "repeat": 0,
+      "score": 0.0,
+      "success": false,
+      "summary_matches_official": true,
+      "identity_eligible": true,
+      "identity_errors": [],
+      "official_path": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/robodojo/eval_result/RoboDojo/insert_tubes/PyRUA_V22Mainline/arx_x5/0_ckpt_name=no-checkpoint,action_type=joint/pos-openvl-mainline-abe12-parallel04-20261114-01-A-l0-r0/_result.json"
+    },
+    {
+      "job": "04-A-l54-r0",
+      "condition": "A",
+      "layout": 54,
+      "repeat": 0,
+      "score": 0.0,
+      "success": false,
+      "summary_matches_official": true,
+      "identity_eligible": true,
+      "identity_errors": [],
+      "official_path": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/04-A-l54-r0/robodojo/eval_result/RoboDojo/insert_tubes/PyRUA_V22Mainline/arx_x5/0_ckpt_name=no-checkpoint,action_type=joint/pos-openvl-mainline-abe12-parallel04-20261114-04-A-l54-r0/_result.json"
+    },
+    {
+      "job": "09-A-l54-r1",
+      "condition": "A",
+      "layout": 54,
+      "repeat": 1,
+      "score": 0.0,
+      "success": false,
+      "summary_matches_official": true,
+      "identity_eligible": true,
+      "identity_errors": [],
+      "official_path": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/09-A-l54-r1/robodojo/eval_result/RoboDojo/insert_tubes/PyRUA_V22Mainline/arx_x5/0_ckpt_name=no-checkpoint,action_type=joint/pos-openvl-mainline-abe12-parallel04-20261114-09-A-l54-r1/_result.json"
+    },
+    {
+      "job": "12-A-l0-r1",
+      "condition": "A",
+      "layout": 0,
+      "repeat": 1,
+      "score": 1.0,
+      "success": true,
+      "summary_matches_official": true,
+      "identity_eligible": true,
+      "identity_errors": [],
+      "official_path": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/12-A-l0-r1/robodojo/eval_result/RoboDojo/insert_tubes/PyRUA_V22Mainline/arx_x5/0_ckpt_name=no-checkpoint,action_type=joint/pos-openvl-mainline-abe12-parallel04-20261114-12-A-l0-r1/_result.json"
+    }
+  ],
+  "scope": "All four condition-A fusion episodes; other experimental conditions excluded",
+  "historical_audit_score_scale": "0..1",
+  "raw_official_score_scale": "0..100"
+}

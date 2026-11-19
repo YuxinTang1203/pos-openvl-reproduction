@@ -1,0 +1,406 @@
+{
+  "status": "scored",
+  "gpu": 4,
+  "kind": "v17_ablation",
+  "started_at": "2026-11-14T04:09:30.400482+00:00",
+  "pid": 2219248,
+  "progress": {
+    "episode": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/12-A-l0-r1/episodes/insert_tubes_l0_s0-1794629497",
+    "requests": 42,
+    "auxiliary_requests": 11,
+    "python_cells": 30,
+    "last_event": "tool"
+  },
+  "elapsed_s": 3151.1,
+  "returncode": 0,
+  "finished_at": "2026-11-14T05:02:01.505048+00:00",
+  "success": true,
+  "score": 1.0,
+  "episode": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/12-A-l0-r1/episodes/insert_tubes_l0_s0-1794629497",
+  "migration": {
+    "kind": "v17_ablation",
+    "agent_loop": "pyrualean.openai_runtime",
+    "execution_recovery": false,
+    "stage_verification": false,
+    "native": {
+      "mode": "automatically_routed_visual_workspace",
+      "agent_loop": "pyrualean.openai_runtime",
+      "config": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/capabilities_visual.yml",
+      "native_components": [
+        "MemoryStore",
+        "Grounding capability/schema/renderer",
+        "Zoom capability/backend"
+      ],
+      "local_backend": "Existing shared PyRUA SAM3; all valid candidates, not just top one",
+      "options": {
+        "execution_recovery": false,
+        "stage_verification": false
+      },
+      "robot_action_hook": "passive_history_only",
+      "automatic_action_capture": false,
+      "passive_history": "Existing public results/states only; on-demand reads, no sensing, action policy or automatic directory",
+      "camera_metadata_context": {
+        "enabled": true,
+        "trigger": "Python camera_meta request; bypassed when routing is disabled",
+        "original_return_unchanged": true,
+        "extra_image_payload": false
+      },
+      "routing": "locate/segment text queries; distinct score-competitive mask hypotheses require explicit choice",
+      "ambiguity_heuristic": {
+        "version": "score-gap-mask-iou-v1",
+        "score_margin": 0.1,
+        "duplicate_mask_iou": 0.9,
+        "grouping": "highest-score-first representative masks; original candidates retained",
+        "calibrated_probability_guarantee": false
+      },
+      "semantic_change": "Ambiguous text perception raises before original top-one geometry; no automatic replay",
+      "selection_guard": "Ordinary catchable Python exception, not a global action interlock"
+    },
+    "adaptation": {
+      "kind": "minimal_fusion",
+      "implementation": "minimal-fusion-v17",
+      "pos": {
+        "kind": "pos_progress_lite",
+        "implementation": "pyrualean-pos-progress-im-lite-v1",
+        "paper": "https://arxiv.org/abs/2610.01415",
+        "source": "https://github.com/luoyu100/PoS",
+        "adaptation": "cell-level explicit belief, independent sentinel, trapping recovery",
+        "benchmark_reproduction": false,
+        "history_trimming": false,
+        "independent_verifier": true,
+        "verifier_is_ground_truth": false,
+        "automatic_retry": false,
+        "evaluation_updates": false,
+        "extra_model_calls_share_episode_budget": true,
+        "response_protocol": "closed_role_specific_schema_with_host_validation",
+        "maintenance_min_calls": 2,
+        "health_window": 4,
+        "max_cycle_length": 3,
+        "health_threshold": 0.25,
+        "cycle_threshold": 0.75,
+        "recurrence_epsilon": 0.05,
+        "max_records": 24,
+        "max_gaps": 12,
+        "max_evidence": 64,
+        "max_images": 4,
+        "repair_attempts": 1,
+        "execution_checks": "feedback-driven recovery; no blanket failed-motion gripper gate",
+        "schedule": {
+          "event_driven": true,
+          "paced_spending": true,
+          "final_reserved_chains": 1,
+          "late_window_s": 1200,
+          "stale_seconds": 600,
+          "stale_cells": 8,
+          "urgent_cooldown_seconds": 180,
+          "urgent_cooldown_cells": 2,
+          "new_per_cell_cpu_limit": null
+        },
+        "independent_completion_audit": false,
+        "reference_paper": "https://proceedings.mlr.press/v205/huang23c/huang23c.pdf",
+        "reference_method": "Inner Monologue: action outcome + task-progress scene feedback + replanning",
+        "reproduction": false,
+        "oracle_feedback": false,
+        "learned_skills_added": false,
+        "automatic_action_execution": false,
+        "required_step_contract": false,
+        "extra_auxiliary_budget": false,
+        "metadata_corrections": "nonblocking,logged; never rewrite code or fabricate physical success"
+      },
+      "openvl_enabled": true,
+      "reflact": null,
+      "shared_auxiliary_budget": true,
+      "additional_reflection_requests": 0,
+      "automatic_robot_replay": false,
+      "pos_schema_and_validation": "inherited unchanged; no candidate rewrite",
+      "pos_model_calls": "original payload fields/prompt prefixes plus schema contract and delivered-source handoff; no report rewriting",
+      "pos_step_and_completion": "original step validation and completion audit; obsolete directives archived after motion",
+      "robot_primitive_wrappers_added": false,
+      "planner_handoff": "revision-stamped belief/gap, public feedback, compact delivered OpenVL source links and semantic limits; full original evidence retained in POS_CONTEXT",
+      "fusion_adapter": "v14-delivered-source-gap-bridge",
+      "auxiliary_input_change": "openvl_pos_handoff added to belief, repair and Sentinel payloads; original payload fields retained",
+      "pos_schedule": "existing trigger/final reserve; funded retry capacity may be reserved inside original round/total limits",
+      "additional_tools": [],
+      "additional_host_queries": 0,
+      "visual_evidence_policy": "delivered results only; original source time and eligibility retained",
+      "observation_scope": "baseline",
+      "dependency_mode": "off",
+      "additional_model_requests": 0,
+      "additional_sensing_calls": 0,
+      "dependency_links": "optional executor declarations; invalidations only, no promotion",
+      "same_cell_intervention": false,
+      "original_temporal_validation_preserved": true,
+      "full_world_selective_freshness_implemented": false,
+      "v17_ablation": {
+        "profile": "fusion",
+        "static_rules": false,
+        "static_rules_sha256": "c7fad68f7f8afe068e1e5838cefa4b6b557d00d2c7d7681239094033140c75d0",
+        "static_rules_injection": "executor instruction prompt only; identical suffix across pairs",
+        "v15_action_focus": false,
+        "v15_reliability": false,
+        "dependency_mode": "off",
+        "same_v17_projection_fix": true,
+        "added_model_calls": 0,
+        "added_sensing_calls": 0,
+        "added_action_gates": false
+      }
+    }
+  },
+  "episode_status": "completed",
+  "finish": null,
+  "policy_wall_s": 3000.8129273485392,
+  "requests": 42,
+  "auxiliary_requests": 11,
+  "auxiliary_usage": {
+    "prompt": 300407,
+    "completion": 51857,
+    "cached": 1536,
+    "reasoning": 38881
+  },
+  "python_cells": 30,
+  "input_tokens": 5911631,
+  "output_tokens": 162127,
+  "cached_input_tokens": 5244416,
+  "infrastructure_issue": true,
+  "failed_requests": 1,
+  "harness_errors": [],
+  "mechanism_events": 231,
+  "mechanism_failures": [
+    {
+      "kind": "minimal_fusion",
+      "event": "maintenance_degraded",
+      "sequence": 0,
+      "revision": 0,
+      "status": "update_unavailable",
+      "issues": [],
+      "context": {
+        "revision": 0,
+        "status": "update_unavailable",
+        "belief": {
+          "world": {
+            "entities": [],
+            "states": [],
+            "relations": []
+          },
+          "epistemic": [],
+          "achievement": [
+            {
+              "id": "a-root",
+              "target": "Insert the three tubes into the rack one by one.",
+              "entities": []
+            }
+          ],
+          "active_gap": {
+            "type": "achievement",
+            "id": "a-root"
+          }
+        },
+        "health": {
+          "window_ready": false
+        },
+        "recovery": null,
+        "evidence_review": null,
+        "verification": "fallible model beliefs, not official verdicts"
+      }
+    }
+  ],
+  "mechanism_updates": 5,
+  "selected_skill_ids": [],
+  "mechanism_used": true,
+  "identity_errors": [],
+  "comparison_eligible": true,
+  "budget_exhausted": false,
+  "errors": [],
+  "warnings": [
+    "request 1 attempt 1: HTTP 0: ReadTimeout: timed out"
+  ],
+  "condition": "A",
+  "profile": "fusion",
+  "static_rules": false,
+  "metrics": {
+    "public_stateful_calls": 53,
+    "public_nonstateful_calls": 49,
+    "public_nonstateful_by_tool": {
+      "view_env_state": 11,
+      "artifact": 25,
+      "locate": 2,
+      "locate_mask": 4,
+      "back_project": 7
+    },
+    "tool_requests_by_name": {
+      "python": 30,
+      "Zoom_In_Tool": 2
+    },
+    "native_steps_reported": 418,
+    "first_action_request_s": 854.492,
+    "first_executed_action_s": 854.492,
+    "first_standalone_close_request_s": 862.403,
+    "first_reported_holding_after_close_s": 862.403,
+    "time_origin": "runtime elapsed time; ledger wall-clock offset inside matched tool range",
+    "standalone_close_requests": 3,
+    "standalone_empty_close_reports": 0,
+    "explicit_zero_step_ik_reports": 10,
+    "blocked_reports": 1,
+    "belief_commits": 5,
+    "maintenance_degraded": 1,
+    "http_attempts": 42,
+    "failed_http_attempts": 1,
+    "failed_http_by_role": {
+      "pos_belief": 1
+    },
+    "failed_http_latency_s": 120.117,
+    "failed_action_followups": [
+      {
+        "call": 31,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 36,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 4,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 36,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": 37,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 37,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": 38,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 38,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": 39,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 39,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 40,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 40,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": 41,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 41,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 43,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 1,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 43,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 44,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 44,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 45,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 45,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 46,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 49,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 50,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 51,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 52,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 52,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 53,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 53,
+        "reason": "explicit_zero_step_ik",
+        "next_action_call": 54,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 75,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": 76,
+        "next_method_parameters_changed": true,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      },
+      {
+        "call": 99,
+        "reason": "partial_or_unknown_motion",
+        "next_action_call": null,
+        "next_method_parameters_changed": null,
+        "nonstateful_calls_between": 0,
+        "observation_named_calls_between": 0,
+        "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+      }
+    ],
+    "visual_projection_reports": 0,
+    "limitations": [
+      "holding does not identify the object or certify placement",
+      "Nonstateful ledger calls are not all useful observations; one helper may make several calls",
+      "Unknown timing remains null; malformed final live log lines are ignored",
+      "Changed parameters and fewer failures do not establish better task performance"
+    ]
+  }
+}

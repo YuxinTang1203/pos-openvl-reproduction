@@ -1,0 +1,808 @@
+{
+  "cohort": "PoS + OpenVL fusion, condition A from the 2026-11-14 mainline batch",
+  "condition_A_is": "Original fusion control of that batch; NOT the plain PyRUA kind=baseline control",
+  "selection": "All condition-A episodes of this batch, independent of score; no new model or simulator runs",
+  "model": "qwen3.8-flash",
+  "task": "insert_tubes",
+  "episode_count": 4,
+  "completed_successes": 1,
+  "mean_official_score_0_to_100": 25.0,
+  "episodes": [
+    {
+      "job": "01-A-l0-r0",
+      "task": "insert_tubes",
+      "layout": 0,
+      "repeat": 0,
+      "eval_seed": 0,
+      "official_score_0_to_100": 0.0,
+      "official_success": false,
+      "infrastructure_issue": true,
+      "historical_metrics": {
+        "public_stateful_calls": 51,
+        "public_nonstateful_calls": 109,
+        "public_nonstateful_by_tool": {
+          "artifact": 68,
+          "view_env_state": 15,
+          "locate_mask": 9,
+          "back_project": 17
+        },
+        "tool_requests_by_name": {
+          "Visual_Grounding_Tool": 3,
+          "python": 39,
+          "Zoom_In_Tool": 8,
+          "finish": 1
+        },
+        "native_steps_reported": 484,
+        "first_action_request_s": 904.948,
+        "first_executed_action_s": 904.948,
+        "first_standalone_close_request_s": 913.451,
+        "first_reported_holding_after_close_s": 913.451,
+        "time_origin": "runtime elapsed time; ledger wall-clock offset inside matched tool range",
+        "standalone_close_requests": 6,
+        "standalone_empty_close_reports": 2,
+        "explicit_zero_step_ik_reports": 4,
+        "blocked_reports": 3,
+        "belief_commits": 4,
+        "maintenance_degraded": 2,
+        "http_attempts": 61,
+        "failed_http_attempts": 2,
+        "failed_http_by_role": {
+          "pos_belief": 2
+        },
+        "failed_http_latency_s": 240.215,
+        "failed_action_followups": [
+          {
+            "call": 19,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 20,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 46,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 85,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 38,
+            "observation_named_calls_between": 27,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 104,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 105,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 105,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 106,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 106,
+            "reason": "empty_close",
+            "next_action_call": 107,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 107,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 108,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 130,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 131,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 144,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 145,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 152,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 153,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 153,
+            "reason": "empty_close",
+            "next_action_call": 154,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          }
+        ],
+        "visual_projection_reports": 30,
+        "limitations": [
+          "holding does not identify the object or certify placement",
+          "Nonstateful ledger calls are not all useful observations; one helper may make several calls",
+          "Unknown timing remains null; malformed final live log lines are ignored",
+          "Changed parameters and fewer failures do not establish better task performance"
+        ]
+      },
+      "episode_dir": "completed/01-A-l0-r0",
+      "official_result": "official/01-A-l0-r0-official.json",
+      "config": "identity/01-A-l0-r0-config.json",
+      "prompt": "identity/01-A-l0-r0-prompt.txt",
+      "deployment": "identity/01-A-l0-r0-deployment-selected.json"
+    },
+    {
+      "job": "04-A-l54-r0",
+      "task": "insert_tubes",
+      "layout": 54,
+      "repeat": 0,
+      "eval_seed": 0,
+      "official_score_0_to_100": 0.0,
+      "official_success": false,
+      "infrastructure_issue": true,
+      "historical_metrics": {
+        "public_stateful_calls": 57,
+        "public_nonstateful_calls": 99,
+        "public_nonstateful_by_tool": {
+          "artifact": 59,
+          "locate_mask": 12,
+          "view_env_state": 6,
+          "locate": 16,
+          "back_project": 6
+        },
+        "tool_requests_by_name": {
+          "Visual_Grounding_Tool": 8,
+          "python": 35,
+          "Zoom_In_Tool": 3
+        },
+        "native_steps_reported": 500,
+        "first_action_request_s": 526.414,
+        "first_executed_action_s": 526.414,
+        "first_standalone_close_request_s": 1637.531,
+        "first_reported_holding_after_close_s": 1637.531,
+        "time_origin": "runtime elapsed time; ledger wall-clock offset inside matched tool range",
+        "standalone_close_requests": 7,
+        "standalone_empty_close_reports": 1,
+        "explicit_zero_step_ik_reports": 12,
+        "blocked_reports": 5,
+        "belief_commits": 4,
+        "maintenance_degraded": 2,
+        "http_attempts": 57,
+        "failed_http_attempts": 1,
+        "failed_http_by_role": {
+          "pos_repair": 1
+        },
+        "failed_http_latency_s": 80.877,
+        "failed_action_followups": [
+          {
+            "call": 11,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 29,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 17,
+            "observation_named_calls_between": 17,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 37,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 41,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 3,
+            "observation_named_calls_between": 2,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 49,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 50,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 50,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 52,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 1,
+            "observation_named_calls_between": 1,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 53,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 55,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 1,
+            "observation_named_calls_between": 1,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 57,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 66,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 8,
+            "observation_named_calls_between": 6,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 69,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 70,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 70,
+            "reason": "empty_close",
+            "next_action_call": 71,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 95,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 97,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 1,
+            "observation_named_calls_between": 1,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 98,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 99,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 102,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 103,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 113,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 114,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 115,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 116,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 116,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 118,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 1,
+            "observation_named_calls_between": 1,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 126,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 127,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 129,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 130,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 130,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 131,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 132,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 135,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 2,
+            "observation_named_calls_between": 2,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 135,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 136,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 138,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 139,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 151,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 152,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 155,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": null,
+            "next_method_parameters_changed": null,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          }
+        ],
+        "visual_projection_reports": 0,
+        "limitations": [
+          "holding does not identify the object or certify placement",
+          "Nonstateful ledger calls are not all useful observations; one helper may make several calls",
+          "Unknown timing remains null; malformed final live log lines are ignored",
+          "Changed parameters and fewer failures do not establish better task performance"
+        ]
+      },
+      "episode_dir": "completed/04-A-l54-r0",
+      "official_result": "official/04-A-l54-r0-official.json",
+      "config": "identity/04-A-l54-r0-config.json",
+      "prompt": "identity/04-A-l54-r0-prompt.txt",
+      "deployment": "identity/04-A-l54-r0-deployment-selected.json"
+    },
+    {
+      "job": "09-A-l54-r1",
+      "task": "insert_tubes",
+      "layout": 54,
+      "repeat": 1,
+      "eval_seed": 0,
+      "official_score_0_to_100": 0.0,
+      "official_success": false,
+      "infrastructure_issue": false,
+      "historical_metrics": {
+        "public_stateful_calls": 63,
+        "public_nonstateful_calls": 268,
+        "public_nonstateful_by_tool": {
+          "artifact": 81,
+          "view_env_state": 12,
+          "locate": 9,
+          "locate_mask": 9,
+          "back_project": 157
+        },
+        "tool_requests_by_name": {
+          "Visual_Grounding_Tool": 6,
+          "python": 50,
+          "Zoom_In_Tool": 1
+        },
+        "native_steps_reported": 500,
+        "first_action_request_s": 1080.716,
+        "first_executed_action_s": 1080.716,
+        "first_standalone_close_request_s": 1130.533,
+        "first_reported_holding_after_close_s": 1130.533,
+        "time_origin": "runtime elapsed time; ledger wall-clock offset inside matched tool range",
+        "standalone_close_requests": 8,
+        "standalone_empty_close_reports": 3,
+        "explicit_zero_step_ik_reports": 8,
+        "blocked_reports": 0,
+        "belief_commits": 3,
+        "maintenance_degraded": 2,
+        "http_attempts": 64,
+        "failed_http_attempts": 0,
+        "failed_http_by_role": {},
+        "failed_http_latency_s": 0,
+        "failed_action_followups": [
+          {
+            "call": 45,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 46,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 48,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 49,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 58,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 59,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 59,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 61,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 1,
+            "observation_named_calls_between": 1,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 61,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 62,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 86,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 87,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 87,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 88,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 88,
+            "reason": "empty_close",
+            "next_action_call": 89,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 89,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 90,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 306,
+            "reason": "empty_close",
+            "next_action_call": 307,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 307,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 311,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 3,
+            "observation_named_calls_between": 2,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 312,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 313,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 313,
+            "reason": "empty_close",
+            "next_action_call": 314,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 314,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 315,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 328,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": null,
+            "next_method_parameters_changed": null,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          }
+        ],
+        "visual_projection_reports": 22,
+        "limitations": [
+          "holding does not identify the object or certify placement",
+          "Nonstateful ledger calls are not all useful observations; one helper may make several calls",
+          "Unknown timing remains null; malformed final live log lines are ignored",
+          "Changed parameters and fewer failures do not establish better task performance"
+        ]
+      },
+      "episode_dir": "completed/09-A-l54-r1",
+      "official_result": "official/09-A-l54-r1-official.json",
+      "config": "identity/09-A-l54-r1-config.json",
+      "prompt": "identity/09-A-l54-r1-prompt.txt",
+      "deployment": "identity/09-A-l54-r1-deployment-selected.json"
+    },
+    {
+      "job": "12-A-l0-r1",
+      "task": "insert_tubes",
+      "layout": 0,
+      "repeat": 1,
+      "eval_seed": 0,
+      "official_score_0_to_100": 100.0,
+      "official_success": true,
+      "infrastructure_issue": true,
+      "historical_metrics": {
+        "public_stateful_calls": 53,
+        "public_nonstateful_calls": 49,
+        "public_nonstateful_by_tool": {
+          "view_env_state": 11,
+          "artifact": 25,
+          "locate": 2,
+          "locate_mask": 4,
+          "back_project": 7
+        },
+        "tool_requests_by_name": {
+          "python": 30,
+          "Zoom_In_Tool": 2
+        },
+        "native_steps_reported": 418,
+        "first_action_request_s": 854.492,
+        "first_executed_action_s": 854.492,
+        "first_standalone_close_request_s": 862.403,
+        "first_reported_holding_after_close_s": 862.403,
+        "time_origin": "runtime elapsed time; ledger wall-clock offset inside matched tool range",
+        "standalone_close_requests": 3,
+        "standalone_empty_close_reports": 0,
+        "explicit_zero_step_ik_reports": 10,
+        "blocked_reports": 1,
+        "belief_commits": 5,
+        "maintenance_degraded": 1,
+        "http_attempts": 42,
+        "failed_http_attempts": 1,
+        "failed_http_by_role": {
+          "pos_belief": 1
+        },
+        "failed_http_latency_s": 120.117,
+        "failed_action_followups": [
+          {
+            "call": 31,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 36,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 4,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 36,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 37,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 37,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 38,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 38,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 39,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 39,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 40,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 40,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 41,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 41,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 43,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 1,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 43,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 44,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 44,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 45,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 45,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 46,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 49,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 50,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 51,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 52,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 52,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 53,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 53,
+            "reason": "explicit_zero_step_ik",
+            "next_action_call": 54,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 75,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": 76,
+            "next_method_parameters_changed": true,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          },
+          {
+            "call": 99,
+            "reason": "partial_or_unknown_motion",
+            "next_action_call": null,
+            "next_method_parameters_changed": null,
+            "nonstateful_calls_between": 0,
+            "observation_named_calls_between": 0,
+            "interpretation": "Mechanical comparison only; no proof of a justified change, information gain or rule violation."
+          }
+        ],
+        "visual_projection_reports": 0,
+        "limitations": [
+          "holding does not identify the object or certify placement",
+          "Nonstateful ledger calls are not all useful observations; one helper may make several calls",
+          "Unknown timing remains null; malformed final live log lines are ignored",
+          "Changed parameters and fewer failures do not establish better task performance"
+        ]
+      },
+      "episode_dir": "completed/12-A-l0-r1",
+      "official_result": "official/12-A-l0-r1-official.json",
+      "config": "identity/12-A-l0-r1-config.json",
+      "prompt": "identity/12-A-l0-r1-prompt.txt",
+      "deployment": "identity/12-A-l0-r1-deployment-selected.json"
+    }
+  ]
+}

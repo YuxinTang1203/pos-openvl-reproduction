@@ -1,0 +1,10 @@
+h = [-0.0422, 0.0599]
+m1 = robo.move_to([h[0], h[1], 0.875], arm='left', gripper=robo.CLOSE, pitch=0, yaw=-33, path='line')
+print("align:", m1.reached, m1.final_xyz)
+m2 = robo.move_to([h[0], h[1], 0.860], arm='left', gripper=robo.CLOSE, pitch=0, yaw=-33, path='line')
+print("insert:", m2.reached, m2.final_xyz, m2.blocked)
+g = robo.set_gripper('left', robo.OPEN)
+print("release:", g.opening)
+m3 = robo.move_to([-0.30, -0.15, 0.95], arm='left', gripper=robo.OPEN, pitch=0, yaw=0, path='line')
+print("retreat:", m3.reached, m3.final_xyz, m3.steps_used)
+robo.show('cam_head')

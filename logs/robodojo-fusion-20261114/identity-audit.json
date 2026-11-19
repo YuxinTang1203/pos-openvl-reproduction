@@ -1,0 +1,211 @@
+{
+  "prompts": {
+    "01-A-l0-r0": {
+      "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/prompt.txt",
+      "sha256": "a7cc1bd01d74e42f9ca46b31024d345a2bbd01c96da12972957ad3205dc4cab6"
+    },
+    "04-A-l54-r0": {
+      "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/04-A-l54-r0/episodes/insert_tubes_l54_s0-1794611604/prompt.txt",
+      "sha256": "f0d480bdcef0696a05958e63a768c51f3e4d59ca621c525d695c2e0c7212fcd6"
+    },
+    "09-A-l54-r1": {
+      "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/09-A-l54-r1/episodes/insert_tubes_l54_s0-1794624827/prompt.txt",
+      "sha256": "f0d480bdcef0696a05958e63a768c51f3e4d59ca621c525d695c2e0c7212fcd6"
+    },
+    "12-A-l0-r1": {
+      "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/12-A-l0-r1/episodes/insert_tubes_l0_s0-1794629497/prompt.txt",
+      "sha256": "a7cc1bd01d74e42f9ca46b31024d345a2bbd01c96da12972957ad3205dc4cab6"
+    }
+  },
+  "deployments": {
+    "01-A-l0-r0": {
+      "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/robodojo/XPolicyLab/policy/PyRUA_V22Mainline/deploy.yml",
+      "sha256": "3740b9536a138d243d4a0e0954ce6e42df6a130999a07fb48ea2326833ce8b4b",
+      "selected": {
+        "model": "qwen3.8-flash",
+        "runtime": "openai",
+        "reasoning_effort": "high",
+        "openai_options": {
+          "max_tokens": 8192,
+          "nudges": 20,
+          "extra_body": {
+            "reasoning_effort": "high"
+          },
+          "temperature": null,
+          "retries": 10,
+          "request_timeout_s": 900,
+          "max_requests": null,
+          "stream": false,
+          "preserve_reasoning_content": false,
+          "image_max_side": 0,
+          "tool_choice": "auto",
+          "batch_actions": false,
+          "phase_tools": false,
+          "auxiliary_budget_s": 1080.0,
+          "auxiliary_round_budget_s": 480.0,
+          "auxiliary_stage_budget_s": 120.0,
+          "planner_reserve_s": 540.0
+        },
+        "migration": {
+          "kind": "v17_ablation",
+          "profile": "fusion",
+          "pos": {},
+          "static_rules": false,
+          "action_focus": false,
+          "reliability": false,
+          "openvl": {
+            "enabled": true,
+            "config": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/capabilities_visual.yml",
+            "ambiguity_score_margin": 0.1,
+            "duplicate_mask_iou": 0.9
+          }
+        },
+        "max_turns": 100,
+        "budget_s": 5400,
+        "max_attempts": 1
+      }
+    },
+    "04-A-l54-r0": {
+      "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/04-A-l54-r0/robodojo/XPolicyLab/policy/PyRUA_V22Mainline/deploy.yml",
+      "sha256": "f38fb155ba90148dc0f17f4c919254fc77b36113cf8f2148f5d9d78acdd1f3a0",
+      "selected": {
+        "model": "qwen3.8-flash",
+        "runtime": "openai",
+        "reasoning_effort": "high",
+        "openai_options": {
+          "max_tokens": 8192,
+          "nudges": 20,
+          "extra_body": {
+            "reasoning_effort": "high"
+          },
+          "temperature": null,
+          "retries": 10,
+          "request_timeout_s": 900,
+          "max_requests": null,
+          "stream": false,
+          "preserve_reasoning_content": false,
+          "image_max_side": 0,
+          "tool_choice": "auto",
+          "batch_actions": false,
+          "phase_tools": false,
+          "auxiliary_budget_s": 1080.0,
+          "auxiliary_round_budget_s": 480.0,
+          "auxiliary_stage_budget_s": 120.0,
+          "planner_reserve_s": 540.0
+        },
+        "migration": {
+          "kind": "v17_ablation",
+          "profile": "fusion",
+          "pos": {},
+          "static_rules": false,
+          "action_focus": false,
+          "reliability": false,
+          "openvl": {
+            "enabled": true,
+            "config": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/capabilities_visual.yml",
+            "ambiguity_score_margin": 0.1,
+            "duplicate_mask_iou": 0.9
+          }
+        },
+        "max_turns": 100,
+        "budget_s": 5400,
+        "max_attempts": 1
+      }
+    },
+    "09-A-l54-r1": {
+      "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/09-A-l54-r1/robodojo/XPolicyLab/policy/PyRUA_V22Mainline/deploy.yml",
+      "sha256": "01dd4012604c437c042991b2260338e0971220c2766ac0cd02da91ab73dc1d4b",
+      "selected": {
+        "model": "qwen3.8-flash",
+        "runtime": "openai",
+        "reasoning_effort": "high",
+        "openai_options": {
+          "max_tokens": 8192,
+          "nudges": 20,
+          "extra_body": {
+            "reasoning_effort": "high"
+          },
+          "temperature": null,
+          "retries": 10,
+          "request_timeout_s": 900,
+          "max_requests": null,
+          "stream": false,
+          "preserve_reasoning_content": false,
+          "image_max_side": 0,
+          "tool_choice": "auto",
+          "batch_actions": false,
+          "phase_tools": false,
+          "auxiliary_budget_s": 1080.0,
+          "auxiliary_round_budget_s": 480.0,
+          "auxiliary_stage_budget_s": 120.0,
+          "planner_reserve_s": 540.0
+        },
+        "migration": {
+          "kind": "v17_ablation",
+          "profile": "fusion",
+          "pos": {},
+          "static_rules": false,
+          "action_focus": false,
+          "reliability": false,
+          "openvl": {
+            "enabled": true,
+            "config": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/capabilities_visual.yml",
+            "ambiguity_score_margin": 0.1,
+            "duplicate_mask_iou": 0.9
+          }
+        },
+        "max_turns": 100,
+        "budget_s": 5400,
+        "max_attempts": 1
+      }
+    },
+    "12-A-l0-r1": {
+      "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/12-A-l0-r1/robodojo/XPolicyLab/policy/PyRUA_V22Mainline/deploy.yml",
+      "sha256": "e6459955a28d3ab734d40c46dc215b902ffe01cd9d02b2e73eb542840be9e905",
+      "selected": {
+        "model": "qwen3.8-flash",
+        "runtime": "openai",
+        "reasoning_effort": "high",
+        "openai_options": {
+          "max_tokens": 8192,
+          "nudges": 20,
+          "extra_body": {
+            "reasoning_effort": "high"
+          },
+          "temperature": null,
+          "retries": 10,
+          "request_timeout_s": 900,
+          "max_requests": null,
+          "stream": false,
+          "preserve_reasoning_content": false,
+          "image_max_side": 0,
+          "tool_choice": "auto",
+          "batch_actions": false,
+          "phase_tools": false,
+          "auxiliary_budget_s": 1080.0,
+          "auxiliary_round_budget_s": 480.0,
+          "auxiliary_stage_budget_s": 120.0,
+          "planner_reserve_s": 540.0
+        },
+        "migration": {
+          "kind": "v17_ablation",
+          "profile": "fusion",
+          "pos": {},
+          "static_rules": false,
+          "action_focus": false,
+          "reliability": false,
+          "openvl": {
+            "enabled": true,
+            "config": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/capabilities_visual.yml",
+            "ambiguity_score_margin": 0.1,
+            "duplicate_mask_iou": 0.9
+          }
+        },
+        "max_turns": 100,
+        "budget_s": 5400,
+        "max_attempts": 1
+      }
+    }
+  },
+  "note": "Only included-job prompt/deployment audit entries. Full original audit SHA256 recorded in provenance."
+}

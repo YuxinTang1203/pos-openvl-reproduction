@@ -1,0 +1,228 @@
+{
+  "release_tag": "historical-logs-2026-11-19",
+  "selection": "All available original PoS/OpenVL project logs, plus named related probes/diagnostics; independent dense-geometry branches excluded. Raw records and all existing images retained except credential redaction.",
+  "archives": [
+    {
+      "project": "pos-openvl-api-guidance-v33",
+      "asset": "pos-openvl-api-guidance-v33.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-api-guidance-v33.zip",
+      "file_count": 1293,
+      "uncompressed_bytes": 185826956,
+      "zip_bytes": 177627931,
+      "sha256": "cec8a6ca3134f5f9d780fc3ad393319111f94f63ac34b2696e4cccc9da536090",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "pos-openvl-bounded-search-v27",
+      "asset": "pos-openvl-bounded-search-v27.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-bounded-search-v27.zip",
+      "file_count": 7,
+      "uncompressed_bytes": 70065,
+      "zip_bytes": 34507,
+      "sha256": "5226375873a3ef57b9de1607020d798afe2ca4fa710247dfe764ef2e2820be6e",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "pos-openvl-checked-v23",
+      "asset": "pos-openvl-checked-v23.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-checked-v23.zip",
+      "file_count": 236,
+      "uncompressed_bytes": 11169623,
+      "zip_bytes": 1343104,
+      "sha256": "adfb230bafbb0ffe184c5348955a9542b237c0603fb62c3119a1f13cc879d967",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "pos-openvl-evidence-control",
+      "asset": "pos-openvl-evidence-control.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-evidence-control.zip",
+      "file_count": 860,
+      "uncompressed_bytes": 98333824,
+      "zip_bytes": 91784127,
+      "sha256": "11300fe63c2c73cb46dbbf8490b0405da51385e1f5e6a8f95a4bc6750a9a86fa",
+      "credential_redactions": 0,
+      "omitted_containers": 3
+    },
+    {
+      "project": "pos-openvl-execution-boundary-v26",
+      "asset": "pos-openvl-execution-boundary-v26.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-execution-boundary-v26.zip",
+      "file_count": 2137,
+      "uncompressed_bytes": 206034723,
+      "zip_bytes": 179044655,
+      "sha256": "f403adb038a5130df0e1a02476b3de7b8a37629921bf814e48c462fd374a40dc",
+      "credential_redactions": 0,
+      "omitted_containers": 1
+    },
+    {
+      "project": "pos-openvl-grasp-branch-v31",
+      "asset": "pos-openvl-grasp-branch-v31.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-grasp-branch-v31.zip",
+      "file_count": 5167,
+      "uncompressed_bytes": 707204124,
+      "zip_bytes": 676841132,
+      "sha256": "d2370f70a630e6e039723c9f1211341c5685e1a7c0b7f5d93f50d02598f38ac8",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "pos-openvl-mainline",
+      "asset": "pos-openvl-mainline.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-mainline.zip",
+      "file_count": 967,
+      "uncompressed_bytes": 80804558,
+      "zip_bytes": 56245483,
+      "sha256": "f5e442016b51e86f340494087446a686434a9e1c78dc8f794bd09f2dba3afb0f",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "pos-openvl-marked-relations-v25",
+      "asset": "pos-openvl-marked-relations-v25.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-marked-relations-v25.zip",
+      "file_count": 3437,
+      "uncompressed_bytes": 259787403,
+      "zip_bytes": 217169459,
+      "sha256": "170bcf603bde405723a87286695ab44a8c6463dd2ebba9dd7f186fc351ea338a",
+      "credential_redactions": 0,
+      "omitted_containers": 1
+    },
+    {
+      "project": "pos-openvl-plan-requirements-v34",
+      "asset": "pos-openvl-plan-requirements-v34.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-plan-requirements-v34.zip",
+      "file_count": 3445,
+      "uncompressed_bytes": 451459156,
+      "zip_bytes": 429979829,
+      "sha256": "d32775794933c4f5f59e01f2b10d7433e9c5a56c8c57bca7158be6aca42d2b6b",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "pos-openvl-recovery-v22",
+      "asset": "pos-openvl-recovery-v22.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-recovery-v22.zip",
+      "file_count": 4,
+      "uncompressed_bytes": 6125,
+      "zip_bytes": 4554,
+      "sha256": "7956b488ab830f133599d962516f73b5754989ec2b23ac3cd48b1238073d1300",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "pos-openvl-reminder-presentation-v28",
+      "asset": "pos-openvl-reminder-presentation-v28.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/pos-openvl-reminder-presentation-v28.zip",
+      "file_count": 4651,
+      "uncompressed_bytes": 649073570,
+      "zip_bytes": 624344706,
+      "sha256": "d1463c20220b6c3505f8202b16d6c8f6a8eb8bd34d25671575f35bd5d2b31a59",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "api-reminder-causal-probe-v29",
+      "asset": "api-reminder-causal-probe-v29.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/api-reminder-causal-probe-v29.zip",
+      "file_count": 650,
+      "uncompressed_bytes": 74461545,
+      "zip_bytes": 50865986,
+      "sha256": "f21af3b976786f6f567bc92fdcc592312932c12e22997250158ae13f46918c2e",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "api-reminder-boundary-probe-v30",
+      "asset": "api-reminder-boundary-probe-v30.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/api-reminder-boundary-probe-v30.zip",
+      "file_count": 452,
+      "uncompressed_bytes": 21733088,
+      "zip_bytes": 14330279,
+      "sha256": "b716b31c0ddfd8b0bc53815f73e6541bf025b7132493a682095b097133189972",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "api-contract-generalization-v32",
+      "asset": "api-contract-generalization-v32.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/api-contract-generalization-v32.zip",
+      "file_count": 60,
+      "uncompressed_bytes": 1021069,
+      "zip_bytes": 414539,
+      "sha256": "3c99e4f3aa5adc7809376797f920849c2a0ca0d6ace9c48d875a39276bc31d57",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "api-contract-generalization-v32b",
+      "asset": "api-contract-generalization-v32b.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/api-contract-generalization-v32b.zip",
+      "file_count": 304,
+      "uncompressed_bytes": 1601803,
+      "zip_bytes": 624358,
+      "sha256": "5bdc349bdde1b3427499205266575d3bca8c86fefb3efdc6cc413f062469c128",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "feedback-mechanism-study",
+      "asset": "feedback-mechanism-study.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/feedback-mechanism-study.zip",
+      "file_count": 111,
+      "uncompressed_bytes": 5610539,
+      "zip_bytes": 1763526,
+      "sha256": "9a9c00ac667afdf07639709acfff8906047a0e89a2d1184358f31a1cf55b553d",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "vision-readiness-v34",
+      "asset": "vision-readiness-v34.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/vision-readiness-v34.zip",
+      "file_count": 2048,
+      "uncompressed_bytes": 156518130,
+      "zip_bytes": 144393999,
+      "sha256": "0742c9ec167868c08c32ffc573955c369bccd4f2077db318b98afb1963d30df0",
+      "credential_redactions": 0,
+      "omitted_containers": 3
+    },
+    {
+      "project": "vision-layer-audit-20261116",
+      "asset": "vision-layer-audit-20261116.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/vision-layer-audit-20261116.zip",
+      "file_count": 21,
+      "uncompressed_bytes": 412945,
+      "zip_bytes": 95138,
+      "sha256": "8cc104c0d73924fe169c9bd9aa2261db155a06cfc294d0b2dd17ba0fc7562f66",
+      "credential_redactions": 0,
+      "omitted_containers": 1
+    },
+    {
+      "project": "image-transport-20261118",
+      "asset": "image-transport-20261118.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/image-transport-20261118.zip",
+      "file_count": 4,
+      "uncompressed_bytes": 6154,
+      "zip_bytes": 4692,
+      "sha256": "a94ac64c2b1e76a9f03af9143d71c3d45961006ebd726a70603a9114ff6f94f1",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    },
+    {
+      "project": "v17-eval",
+      "asset": "v17-eval.zip",
+      "download_url": "https://github.com/YuxinTang1203/pos-openvl-reproduction/releases/download/historical-logs-2026-11-19/v17-eval.zip",
+      "file_count": 1,
+      "uncompressed_bytes": 49057,
+      "zip_bytes": 7215,
+      "sha256": "be6e2261ca679519e0b5df329d959be8a1f310cdf049395d080b322c0615db37",
+      "credential_redactions": 0,
+      "omitted_containers": 0
+    }
+  ],
+  "total_original_data_bytes": 2911184457,
+  "total_zip_bytes": 2666919219
+}

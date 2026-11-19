@@ -1,0 +1,7 @@
+h = robo.home('both')
+print('home:', h.reached, round(h.max_joint_error_rad,3), h.steps_used)
+st = robo.state()
+print('L', [round(v,4) for v in st.left.tcp_pos], round(st.left.pitch,1), round(st.left.yaw,1), round(st.left.gripper,2))
+print('R', [round(v,4) for v in st.right.tcp_pos], round(st.right.pitch,1), round(st.right.yaw,1), round(st.right.gripper,2))
+print('truncated', st.truncated)
+robo.show('cam_head')

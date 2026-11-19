@@ -1,0 +1,4 @@
+{
+  "files": [],
+  "note": "Only credential-shaped strings/fields removed. User/project paths, robot states, raw outputs and scores preserved in release archives."
+}

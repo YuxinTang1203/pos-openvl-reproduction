@@ -8,6 +8,8 @@
 - `source/`：PyRUA-Lean 源码、PoS/OpenVL 实现、测试及策略适配器。
 - `scripts/`：环境检查、配置生成和服务启动工具。
 - `requirements/`：分层依赖及已测试的软件环境快照。
+- [Errors 与表现](logs/ERRORS-AND-PERFORMANCE.md)：按批次整理的成绩、故障分类和原始事件定位。
+- [全部原始日志](logs/README.md)：20 个项目归档、44 条完整任务索引、辅助探针与图片，Release 下载。
 - [验证记录](VALIDATION.md)：本地软件检查结果。
 
 使用 `python scripts/configure.py` 生成 PoS + OpenVL 配置；使用 `--variant baseline` 生成同一 PyRUA 执行栈的 baseline 配置，以便对照。

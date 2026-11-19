@@ -1,0 +1,5 @@
+g = robo.set_gripper('left', robo.OPEN)
+print("open:", g.opening, g.holding)
+up = robo.move_to([-0.049, 0.0423, 0.93], arm='left', gripper=robo.OPEN, pitch=0, yaw=-17.2, path='line')
+print("retreat up:", up.reached, up.final_xyz, up.steps_used)
+robo.show('cam_head')

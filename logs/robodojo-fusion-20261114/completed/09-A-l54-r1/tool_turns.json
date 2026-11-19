@@ -1,0 +1,574 @@
+[
+  {
+    "index": 0,
+    "tool": "Visual_Grounding_Tool",
+    "elapsed_s": 2.035,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 1,
+    "tool": "python",
+    "elapsed_s": 0.775,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 2,
+    "tool": "python",
+    "elapsed_s": 21.335,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 3,
+    "tool": "Visual_Grounding_Tool",
+    "elapsed_s": 0.983,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 4,
+    "tool": "python",
+    "elapsed_s": 0.033,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 5,
+    "tool": "python",
+    "elapsed_s": 0.053,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 6,
+    "tool": "python",
+    "elapsed_s": 0.059,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 7,
+    "tool": "python",
+    "elapsed_s": 0.241,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 8,
+    "tool": "Zoom_In_Tool",
+    "elapsed_s": 0.042,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 9,
+    "tool": "python",
+    "elapsed_s": 8.898,
+    "ok": true,
+    "moved": true,
+    "env_steps": 21,
+    "terminated": false,
+    "sandbox_flags": [
+      "private-attr:__name__"
+    ]
+  },
+  {
+    "index": 10,
+    "tool": "python",
+    "elapsed_s": 5.654,
+    "ok": true,
+    "moved": true,
+    "env_steps": 17,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 11,
+    "tool": "python",
+    "elapsed_s": 0.035,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 12,
+    "tool": "python",
+    "elapsed_s": 21.737,
+    "ok": true,
+    "moved": true,
+    "env_steps": 58,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 13,
+    "tool": "python",
+    "elapsed_s": 7.84,
+    "ok": true,
+    "moved": true,
+    "env_steps": 17,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 14,
+    "tool": "python",
+    "elapsed_s": 7.973,
+    "ok": true,
+    "moved": true,
+    "env_steps": 25,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 15,
+    "tool": "python",
+    "elapsed_s": 3.444,
+    "ok": true,
+    "moved": true,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 16,
+    "tool": "python",
+    "elapsed_s": 1.222,
+    "ok": true,
+    "moved": true,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 17,
+    "tool": "python",
+    "elapsed_s": 5.108,
+    "ok": true,
+    "moved": true,
+    "env_steps": 17,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 18,
+    "tool": "python",
+    "elapsed_s": 5.865,
+    "ok": true,
+    "moved": true,
+    "env_steps": 20,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 19,
+    "tool": "python",
+    "elapsed_s": 3.069,
+    "ok": true,
+    "moved": true,
+    "env_steps": 8,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 20,
+    "tool": "python",
+    "elapsed_s": 2.396,
+    "ok": true,
+    "moved": true,
+    "env_steps": 8,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 21,
+    "tool": "python",
+    "elapsed_s": 1.494,
+    "ok": true,
+    "moved": true,
+    "env_steps": 3,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 22,
+    "tool": "python",
+    "elapsed_s": 0.086,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 23,
+    "tool": "python",
+    "elapsed_s": 1.586,
+    "ok": true,
+    "moved": true,
+    "env_steps": 4,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 24,
+    "tool": "python",
+    "elapsed_s": 1.085,
+    "ok": true,
+    "moved": true,
+    "env_steps": 2,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 25,
+    "tool": "python",
+    "elapsed_s": 4.081,
+    "ok": true,
+    "moved": true,
+    "env_steps": 9,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 26,
+    "tool": "python",
+    "elapsed_s": 0.03,
+    "ok": false,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 27,
+    "tool": "Visual_Grounding_Tool",
+    "elapsed_s": 0.899,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 28,
+    "tool": "python",
+    "elapsed_s": 14.104,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 29,
+    "tool": "python",
+    "elapsed_s": 16.037,
+    "ok": true,
+    "moved": true,
+    "env_steps": 7,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 30,
+    "tool": "python",
+    "elapsed_s": 10.524,
+    "ok": true,
+    "moved": true,
+    "env_steps": 36,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 31,
+    "tool": "python",
+    "elapsed_s": 0.046,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 32,
+    "tool": "python",
+    "elapsed_s": 5.742,
+    "ok": true,
+    "moved": true,
+    "env_steps": 21,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 33,
+    "tool": "python",
+    "elapsed_s": 0.06,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 34,
+    "tool": "python",
+    "elapsed_s": 9.999,
+    "ok": true,
+    "moved": true,
+    "env_steps": 32,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 35,
+    "tool": "python",
+    "elapsed_s": 8.568,
+    "ok": true,
+    "moved": true,
+    "env_steps": 30,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 36,
+    "tool": "python",
+    "elapsed_s": 0.064,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 37,
+    "tool": "python",
+    "elapsed_s": 0.91,
+    "ok": false,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 38,
+    "tool": "python",
+    "elapsed_s": 0.893,
+    "ok": true,
+    "moved": true,
+    "env_steps": 1,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 39,
+    "tool": "python",
+    "elapsed_s": 6.181,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 40,
+    "tool": "python",
+    "elapsed_s": 1.625,
+    "ok": true,
+    "moved": true,
+    "env_steps": 2,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 41,
+    "tool": "python",
+    "elapsed_s": 3.912,
+    "ok": true,
+    "moved": true,
+    "env_steps": 10,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 42,
+    "tool": "python",
+    "elapsed_s": 7.275,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 43,
+    "tool": "Visual_Grounding_Tool",
+    "elapsed_s": 0.848,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 44,
+    "tool": "python",
+    "elapsed_s": 0.1,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 45,
+    "tool": "python",
+    "elapsed_s": 3.063,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 46,
+    "tool": "python",
+    "elapsed_s": 3.663,
+    "ok": true,
+    "moved": true,
+    "env_steps": 14,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 47,
+    "tool": "Visual_Grounding_Tool",
+    "elapsed_s": 0.948,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 48,
+    "tool": "python",
+    "elapsed_s": 18.612,
+    "ok": true,
+    "moved": true,
+    "env_steps": 41,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 49,
+    "tool": "python",
+    "elapsed_s": 0.067,
+    "ok": false,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 50,
+    "tool": "python",
+    "elapsed_s": 0.045,
+    "ok": false,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 51,
+    "tool": "Visual_Grounding_Tool",
+    "elapsed_s": 0.988,
+    "ok": true,
+    "moved": false,
+    "env_steps": 0,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 52,
+    "tool": "python",
+    "elapsed_s": 8.499,
+    "ok": true,
+    "moved": true,
+    "env_steps": 12,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 53,
+    "tool": "python",
+    "elapsed_s": 15.657,
+    "ok": true,
+    "moved": true,
+    "env_steps": 56,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 54,
+    "tool": "python",
+    "elapsed_s": 3.625,
+    "ok": true,
+    "moved": true,
+    "env_steps": 11,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 55,
+    "tool": "python",
+    "elapsed_s": 3.746,
+    "ok": true,
+    "moved": true,
+    "env_steps": 9,
+    "terminated": false,
+    "sandbox_flags": []
+  },
+  {
+    "index": 56,
+    "tool": "python",
+    "elapsed_s": 2.645,
+    "ok": true,
+    "moved": true,
+    "env_steps": 8,
+    "terminated": false,
+    "sandbox_flags": []
+  }
+]

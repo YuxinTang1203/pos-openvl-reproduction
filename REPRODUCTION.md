@@ -144,3 +144,9 @@ python scripts/configure.py --variant baseline --benchmark "$BENCHMARK_ROOT"
 
 常见问题：Python 3.9 不支持本项目；mcp 必须 1.x；NumPy 保留 1.26 系列；torch/torchvision 要匹配；GPU 检查失败应换到已授权可用卡，不要绕过所有权检查。更换解压目录后重新运行 configure.py 生成绝对路径。
 
+
+## 7. 已归档的真实任务日志
+
+见 [logs/robodojo-fusion-20261114](logs/robodojo-fusion-20261114/README.md)。其中四条 A 条件均为 PoS + OpenVL fusion，不能误当纯 PyRUA baseline。保留全部成功/失败结果、故障事件、可用模型/工具轨迹及来源索引；日志与当前源码存在已记录差异，不是本次软件交付中新跑的任务。
+
+全部相关历史归档与缺项见 [logs/README.md](logs/README.md)，错误和表现见 [logs/ERRORS-AND-PERFORMANCE.md](logs/ERRORS-AND-PERFORMANCE.md)。

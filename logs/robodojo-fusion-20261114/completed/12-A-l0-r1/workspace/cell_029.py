@@ -1,0 +1,10 @@
+for z in (0.888, 0.882, 0.877):
+    m = robo.move_to([-0.005, 0.041, z], arm=robo.LEFT, gripper=robo.CLOSE, pitch=0, yaw=0, roll=0, path='line')
+    print('desc', z, m.reached, [round(v,4) for v in m.final_xyz], m.blocked, m.steps_used)
+g = robo.set_gripper(robo.LEFT, robo.OPEN)
+print('release:', g.holding, round(g.opening,3))
+m = robo.move_to([-0.005, 0.041, 0.95], arm=robo.LEFT, gripper=robo.OPEN, pitch=0, yaw=0, roll=0, path='line')
+print('retract:', m.reached, [round(v,4) for v in m.final_xyz], m.steps_used)
+m = robo.move_to([-0.32, -0.20, 0.93], arm=robo.LEFT, gripper=robo.OPEN, pitch=90, yaw=0, path='line')
+print('clear:', m.reached, [round(v,4) for v in m.final_xyz], m.steps_used)
+robo.show('cam_head')

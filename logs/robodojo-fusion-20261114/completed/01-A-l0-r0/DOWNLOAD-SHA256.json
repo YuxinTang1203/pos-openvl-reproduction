@@ -1,0 +1,186 @@
+{
+  "result.json": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/result.json",
+    "sha256": "05e47ce231df395dacfc4077ed4739e0d4d86659d63d5f4d5ad610df921122c3"
+  },
+  "calls.jsonl": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/calls.jsonl",
+    "sha256": "2cd103f0d0406117c1774aae206eb7d34ae0061e94e6e5d6bff51016bd142bb7"
+  },
+  "openai_events.jsonl": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/openai_events.jsonl",
+    "sha256": "8dfa9e5eb02f20fbc079e14091165a0a8a15052f289fcf434a09226c1c0f54c5"
+  },
+  "tool_turns.json": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/tool_turns.json",
+    "sha256": "d8a4976343cfa75f486db8b9ecd88ac513f15963d52e85d205086593e1570913"
+  },
+  "migration.json": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/migration.json",
+    "sha256": "7d4d7bd6868e4487aadb27bc705968759925216e394743063a9ba7d142f81052"
+  },
+  "card.json": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/card.json",
+    "sha256": "f285b9d770e9dba7bed5d12ea14e760c11c825ca8149c0fe2088cfab1c67cfee"
+  },
+  "official_result.json": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/robodojo/eval_result/RoboDojo/insert_tubes/PyRUA_V22Mainline/arx_x5/0_ckpt_name=no-checkpoint,action_type=joint/pos-openvl-mainline-abe12-parallel04-20261114-01-A-l0-r0/_result.json",
+    "sha256": "99b780f4e1842dfa81b413ccd2e5302e5827cc349fea4edf978e1bd847986ed3"
+  },
+  "workspace/cell_013.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_013.py",
+    "sha256": "b9884fb68864f5062563e1ed6fbbc55ea79d757ec07b672957e552c999c37a29"
+  },
+  "workspace/cell_022.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_022.py",
+    "sha256": "5dd5c7234042e99b18a7ebcd46b2dce71da995c99a4d244afd7f3199f0a8c375"
+  },
+  "workspace/cell_002.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_002.py",
+    "sha256": "bb2acf16faf829da55b049ebae3b60c2afeb840671439394f2d4b7e419dcfd02"
+  },
+  "workspace/cell_023.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_023.py",
+    "sha256": "362e77f8ecfa2c00a7f3fa75dcda08f5e2afca30a110a65c8c539902625aabab"
+  },
+  "workspace/cell_031.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_031.py",
+    "sha256": "2be495aa1e98b23b347155f0d2a9ecb9deb2c0ca07935342a6eed870bb3e0020"
+  },
+  "workspace/cell_038.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_038.py",
+    "sha256": "e8371f8ec43edcb98a08b21ceb3f607dada4a120daa5faee815902ac4f31006c"
+  },
+  "workspace/cell_015.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_015.py",
+    "sha256": "ff05d9e53ed30566243feb47388cdaac1eb802356ce67bd474b7f4fc3792b733"
+  },
+  "workspace/cell_017.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_017.py",
+    "sha256": "5b6047a43f64205b7d0edd993745f298fab109dd10cf9ded204a61648a3dde61"
+  },
+  "workspace/cell_021.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_021.py",
+    "sha256": "5f9987c6ee214d9f41c13fe212417ff8dfbe2e313ad4db02320e8d7481f6dcd0"
+  },
+  "workspace/cell_018.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_018.py",
+    "sha256": "fa54c10670d05e97c23ef90f54be69499580e184d6c232afe13723125093f1eb"
+  },
+  "workspace/cell_037.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_037.py",
+    "sha256": "fde04ed36e0e003f765ce28e3f0bfaee6e26680d40ee55636785a5f5d43c95dc"
+  },
+  "workspace/cell_035.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_035.py",
+    "sha256": "952905a9faba72ba3ef224d3811e0e461d597c3d16015ff490e7854ec93e4023"
+  },
+  "workspace/cell_009.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_009.py",
+    "sha256": "82a8cc0dcd75a5c3aa223130e965de323dc6767d0bc61db4cb249c0e491498d4"
+  },
+  "workspace/cell_001.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_001.py",
+    "sha256": "baf51426e32828137bf3fb57b94eeb03552afd59d2c066921640da1801ed82d1"
+  },
+  "workspace/cell_007.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_007.py",
+    "sha256": "f23db38d0752d8aa3305d0e95947ac0c22b13d432177dced38c90721c63b07d5"
+  },
+  "workspace/cell_025.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_025.py",
+    "sha256": "fb4b26343b7372aaa09fc8ad1366e44c998b9a171fab7c4918b0ed7e1f32098c"
+  },
+  "workspace/cell_014.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_014.py",
+    "sha256": "15ac53dae0ffc2b26a4ee99f946e3bd2881e0ebe7b0f4957284f89d992cfbc4c"
+  },
+  "workspace/cell_027.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_027.py",
+    "sha256": "28a18a9ff3b57903734f6bd5b632ec9beddfef097515a7d4e06051617820fcfc"
+  },
+  "workspace/cell_029.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_029.py",
+    "sha256": "cba9c400b45449a35d9cd2db6608052b950d1d6725558c2c5b594d2438362bc9"
+  },
+  "workspace/cell_033.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_033.py",
+    "sha256": "321c7e5b72075e02b3999a7917be3b1a454f888b4fb42cf6491af5400886c43b"
+  },
+  "workspace/cell_032.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_032.py",
+    "sha256": "c2ac71207aba2c21a27616247367d8faef705120d94a270254762f9d8d0ad762"
+  },
+  "workspace/cell_011.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_011.py",
+    "sha256": "b0730e3ac93ec67a84450080ad9ab912b8a0652d5ebc11a96d4d4bbf72553a5c"
+  },
+  "workspace/cell_008.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_008.py",
+    "sha256": "e85029665e69b3b054fe18a2f7b94db2f90138f3452c34d9992026dd3c608379"
+  },
+  "workspace/cell_004.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_004.py",
+    "sha256": "10c82306bd687162c0d0e380e642fa9e3c695ce8a1d6305a80fa05f52ccfea42"
+  },
+  "workspace/cell_016.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_016.py",
+    "sha256": "38970e5c718b0f19ec2c6ade3118d27508350288e69b61934963d200bf92eb4b"
+  },
+  "workspace/cell_039.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_039.py",
+    "sha256": "db721f5ed1ae52430d37a805f3efb4456321271780e11464bc502badd77a6e82"
+  },
+  "workspace/cell_024.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_024.py",
+    "sha256": "2875d161ad6830db02dc3f91606ea7e3e8de6cc7d282aca458a6d01943a108af"
+  },
+  "workspace/cell_006.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_006.py",
+    "sha256": "e5cc3f2cd284818230b8afd4d0718003a0d81628a39622f4e638b500fbe23e30"
+  },
+  "workspace/cell_005.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_005.py",
+    "sha256": "8b95449e85f1778c7949975d7c11d42cffae0aa6c7efb182f97f04423bbc045b"
+  },
+  "workspace/cell_020.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_020.py",
+    "sha256": "ecd42a9b98beba7c9005a73fcb1ac2e4b35a749b05423b4b79125476b0004181"
+  },
+  "workspace/cell_028.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_028.py",
+    "sha256": "27ccea07d3ce32c81f29ec938aebe3677e3750214556daee66538a203268aaba"
+  },
+  "workspace/cell_026.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_026.py",
+    "sha256": "db53c630be29889268a47c6083ccc32dcba06f6e8a03a436416880a81901d92a"
+  },
+  "workspace/cell_034.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_034.py",
+    "sha256": "142139ae4f674f068451e1333b661e9c7543e47495deed76c35aa6ae7fea40fc"
+  },
+  "workspace/cell_030.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_030.py",
+    "sha256": "2934a17c328e6d6d77415880ddb2eae2f85af2483e60fc266bab912107cfdefd"
+  },
+  "workspace/cell_003.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_003.py",
+    "sha256": "af16bd31262d3b9e029f35445c0b14fbbceb4f16d14f87b3ac03b3afe6de81ce"
+  },
+  "workspace/cell_012.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_012.py",
+    "sha256": "7db4ca0318879b2a1d9e46dd4e27c4990b4d8eb5a3eff5ee5ac1ffd1f995ac0e"
+  },
+  "workspace/cell_019.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_019.py",
+    "sha256": "3cc51ca798f3189d8cf0bdb5e65298164e3c3d28df98fdc30633145e746ad58b"
+  },
+  "workspace/cell_010.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_010.py",
+    "sha256": "9da0a177ea2da2274fcea26b2d1ea13324ef6b3b9ac084ba014889feeb6a5dbc"
+  },
+  "workspace/cell_036.py": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/workspace/cell_036.py",
+    "sha256": "11f63bb7c54824057252834f9b899bffca2f81dd0667f413a20e58f65a151d79"
+  }
+}

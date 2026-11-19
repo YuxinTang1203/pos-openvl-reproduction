@@ -1,0 +1,5 @@
+g = robo.set_gripper('left', robo.CLOSE)
+print("close:", g.holding, g.width_m, g.opening)
+m = robo.move_to([-0.090, 0.139, 0.87], arm='left', gripper=robo.CLOSE, pitch=60, yaw=-30, path='line')
+print("lift:", m.reached, m.final_xyz, m.steps_used, m.ik_error)
+robo.show('cam_head')

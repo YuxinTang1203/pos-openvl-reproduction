@@ -1,0 +1,182 @@
+[
+  {
+    "message_index": 4,
+    "cell": 1,
+    "stdout": "Insert the three tubes into the rack one by one.\ntruncated False\nleft tcp (-0.29957286915003756, -0.20729987567387193, 0.9215000306075757) -0.0 0.02 -0.0 1.0\nright tcp (0.30042715469182035, -0.20729987567387193, 0.9215000306075757) -0.0 0.02 -0.0 1.0\nrack ObjectSight(found=True, center_xyz=(0.0011, 0.0408, 0.7771), top_z=0.7891, height_m=0.0241, length_m=0.2184, width_m=0.1313, long_axis_deg=7.9, grasp_yaw=-82.1, score=0.684, centroid=(187, 319), area_px=4513, camera='cam_head', note='one camera sees it: its height is a guess (locate it again from above before a grasp)', views=1)\n",
+    "text_truncated": false
+  },
+  {
+    "message_index": 8,
+    "cell": 2,
+    "stdout": "the white test tube lying on the left EXC PerceptionChoiceRequired locate returned 2 distinct competitive mask hypotheses among 3 candidate regions (score-gap heuristic, not a correctness guarantee). Inspect the attached numbered image for 'segment_the_white_test_tube_lying_on_t'. After selecting a candidate, prefer robo.locate_candidate(binding_id, candidate_numbe\nthe white test tube lying in the middle EXC PerceptionChoiceRequired locate returned 2 distinct competitive mask hypotheses among 3 candidate regions (score-gap heuristic, not a correctness guarantee). Inspect the attached numbered image for 'segment_the_white_test_tube_lying_in_t'. After selecting a candidate, prefer robo.locate_candidate(binding_id, candidate_numbe\nthe white test tube lying on the right EXC PerceptionChoiceRequired locate returned 3 distinct competitive mask hypotheses among 3 candidate regions (score-gap heuristic, not a correctness guarantee). Inspect the attached numbered image for 'segment_the_white_test_tube_lying_on_t_2'. After selecting a candidate, prefer robo.locate_candidate(binding_id, candidate_num\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 12,
+    "cell": 3,
+    "stdout": "1 found True center (-0.2398, -0.0486, 0.7721) top 0.7791 h 0.0141 L 0.1275 W 0.0384 long 72.9 gyaw -17.1 views 2 score 0.863 centroid (218, 211) note the cameras agree only roughly: its height may be centimetres off (locate it again from above before a grasp)\n2 found True center (0.1183, -0.1688, 0.7771) top 0.7891 h 0.0241 L 0.1179 W 0.0279 long -57.2 gyaw 32.8 views 1 score 0.941 centroid (266, 378) note one camera sees it: its height is a guess (locate it again from above before a grasp)\n3 found True center (0.34, -0.0517, 0.7721) top 0.7791 h 0.0141 L 0.1183 W 0.0334 long -55.2 gyaw 34.8 views 2 score 0.941 centroid (220, 472) note None\n",
+    "text_truncated": false
+  },
+  {
+    "message_index": 15,
+    "cell": 4,
+    "stdout": null,
+    "text_truncated": false
+  },
+  {
+    "message_index": 19,
+    "cell": 5,
+    "stdout": "above: True (0.34, -0.052, 0.8602) 0.0002 None None 25\ndown : True (0.34, -0.0518, 0.7827) 0.0007 None None 5\nclose: closed opening 0.231 holding True width 0.0275 5\nlift : True (0.34, -0.0521, 0.8994) 0.0006 False 7\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 24,
+    "cell": 6,
+    "stdout": "blue px 1997 col range 272 369 row range 161 202\ndark px in rack bbox 417\ncomponents 20\nhole 90 (170, 367)\nhole 42 (172, 353)\nhole 74 (173, 334)\nhole 59 (174, 318)\nhole 56 (176, 302)\nhole 43 (198, 367)\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 27,
+    "cell": 7,
+    "stdout": "rack bbox rows 158 205 cols 269 372\nn comp 32\nhole px 167 336 sz 343 surface object xyz [0.0364, 0.0618, 0.8231]\nhole px 171 352 sz 38 surface object xyz [0.0722, 0.0496, 0.8231]\nhole px 172 334 sz 68 surface object xyz [0.0315, 0.0466, 0.8231]\nhole px 174 318 sz 62 surface object xyz [-0.0045, 0.0406, 0.8231]\nhole px 175 302 sz 68 surface object xyz [-0.0402, 0.0377, 0.8231]\nhole px 176 290 sz 25 surface object xyz [-0.0669, 0.0347, 0.8231]\nhole px 177 283 sz 28 surface object xyz [-0.0823, 0.0317, 0.8231]\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 31,
+    "cell": 8,
+    "stdout": "rack: (-0.0005, 0.0236, 0.7941) top 0.8231 h 0.0581 L 0.2052 W 0.0972 long 6.8 views 2 score 0.969 note None\nstate right (0.3399939364423285, -0.05205801894859619, 0.8993581356177685) 0.2296652255234895\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 35,
+    "cell": 9,
+    "stdout": "probe above hole: False (0.34, -0.0521, 0.8994) 0.2868 out of reach: the closest pose the arm can take is 0.036 m and 10 deg away; reachable instead: pitch=60 at this position None False 0\nstate (0.3399939364423285, -0.05205801894859619, 0.8993581356177685) 89.99 34.8 0.2296652255234895\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 38,
+    "cell": 10,
+    "stdout": "[0.12, 0.02, 0.87] reached False final [0.1204, 0.0197, 0.8643] ik None steps 14\n[0.08, 0.02, 0.87] reached False final [0.0876, 0.0048, 0.8605] ik None steps 4\n[0.08, 0.0, 0.87] reached False final [0.0789, 0.0027, 0.8651] ik None steps 5\n[0.05, 0.02, 0.87] reached False final [0.0789, 0.0027, 0.8651] ik out of reach: the closest pose the arm can take is 0.026 m and 7 deg away; reachable instead: pitch=60 at this position steps 0\n[0.05, 0.0, 0.87] reached False final [0.0558, -0.0098, 0.8617] ik None steps 5\n[0.02, 0.0, 0.87] reached False final [0.0558, -0.0098, 0.8617] ik out of reach: the closest pose the arm can take is 0.025 m and 7 deg away; reachable instead: pitch=60 at this position steps 0\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 42,
+    "cell": 11,
+    "stdout": "right opening 0.229 tcp [0.0558, -0.0098, 0.8617]\nleft  opening 1.0 tcp [-0.2996, -0.2073, 0.9215]\nL probe [-0.04, 0.038, 0.88] reached False final [-0.2996, -0.2073, 0.9215] err 90.0 ik out of reach: the closest pose the arm can take is 0.037 m and 10 deg away; reachable instead: pitch=60 at this position steps 0\nL probe [-0.005, 0.041, 0.88] reached False final [-0.2996, -0.2073, 0.9215] err 90.0 ik out of reach: the closest pose the arm can take is 0.046 m and 12 deg away; reachable instead: pitch=60 at this position steps 0\nL probe [0.032, 0.047, 0.88] reached False final [-0.2996, -0.2073, 0.9215] err 90.0 ik out of reach: the closest pose the arm can take is 0.056 m and 15 deg away; reachable instead: pitch=45 at this position steps 0\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 46,
+    "cell": 12,
+    "stdout": "rotate: True [0.0601, -0.0201, 0.9301] orient_err 0.2 pitch 0.2 yaw 0.0 roll 101.1 ik None blocked False 25\ngripper opening 0.227\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 50,
+    "cell": 13,
+    "stdout": "[0.14, 0.06, 0.89] reached False final [0.0601, -0.0201, 0.9301] d 0.12 ik out of reach: the closest pose the arm can take is 0.032 m and 8 deg away; reachable instead: pitch=60 at this position blocked False steps 0\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 53,
+    "cell": 14,
+    "stdout": "prep: True [0.1, -0.1, 0.9] None 27\nprobe 0.86 reached False final [0.1, -0.1, 0.9] d 0.153 ik out of reach: the closest pose the arm can take is 0.030 m and 8 deg away; reachable instead: pitch=60 at this position blocked False steps 0\nprobe 0.85 reached False final [0.1, -0.1, 0.9] d 0.1559 ik out of reach: the closest pose the arm can take is 0.027 m and 7 deg away; reachable instead: pitch=60 at this position blocked False steps 0\nprobe 0.84 reached False final [0.1, -0.1, 0.9] d 0.1594 ik out of reach: the closest pose the arm can take is 0.025 m and 7 deg away; reachable instead: pitch=60 at this position blocked False steps 0\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 57,
+    "cell": 15,
+    "stdout": "vertical prep: True [0.072, -0.0602, 0.9003] pitch 0.1 yaw -0.1 roll 0.1 err 0.1 ik None blocked False 28\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 62,
+    "cell": 16,
+    "stdout": "over hole: True [0.0718, 0.0436, 0.9] err 0.0 ik None blocked False 6\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 66,
+    "cell": 17,
+    "stdout": "descend 0.89 reached True final [0.0718, 0.0438, 0.8912] ik None blocked False steps 1\ndescend 0.882 reached True final [0.072, 0.0439, 0.8833] ik None blocked False steps 1\ndescend 0.876 reached True final [0.072, 0.044, 0.877] ik None blocked False steps 1\nopen: open opening 1.0 holding False 4\nretract: True [0.072, 0.044, 0.947] None 4\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 74,
+    "cell": 18,
+    "stdout": "(95, 170, 3)\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 78,
+    "cell": 19,
+    "stdout": "clear: True [0.3198, -0.1998, 0.93] None 26\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 82,
+    "cell": 20,
+    "stdout": "loc exc locate returned 2 distinct competitive mask hypotheses among 5 candidate regions (score-gap heuristic, not a correctness guarantee). Inspect the attached numbered image for 'segment_test_tube_standing\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 86,
+    "cell": 21,
+    "stdout": "above: True [0.1203, -0.1692, 0.861] None 11\ndown : True [0.1179, -0.1688, 0.7826] None 5\nclose: True 0.236 0.028 5\nlift : True [0.118, -0.169, 0.8993] False 7\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 90,
+    "cell": 22,
+    "stdout": "vertical: True [0.1, -0.08, 0.9001] pitch 0.1 roll -0.0 None 27\nover hole2: True [0.0321, 0.0467, 0.8999] None False 9\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 94,
+    "cell": 23,
+    "stdout": "desc 0.89 True [0.0312, 0.047, 0.8953] True 1\ndesc 0.883 True [0.0315, 0.0468, 0.8848] False 2\ndesc 0.877 True [0.0316, 0.0469, 0.8786] False 1\nrelease: False 1.0\nretract: True [0.0319, 0.047, 0.9469] 4\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 98,
+    "cell": 24,
+    "stdout": "clear: True [0.3198, -0.1998, 0.93] 25\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 102,
+    "cell": 25,
+    "stdout": "EXC locate returned 3 distinct competitive mask hypotheses among 3 candidate regions (score-gap heuristic, not a correctness guarantee). Inspect the attached numbered image for 'segment_test_tube_lying_flat_on_the_ta'. After selecting a candidate, prefer robo.locate_candidate(binding_id, candidate_number) for its complete ObjectSight geometry. Check found, center_xyz, views and note before acting. vis\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 106,
+    "cell": 26,
+    "stdout": "tube1: (-0.2396, -0.0483, 0.7721) top 0.7791 L 0.1267 W 0.0387 gyaw -17.4 views 2 score 0.758 note the cameras agree only roughly: its height may be centimetres off (locate it again from above before a grasp)\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 109,
+    "cell": 27,
+    "stdout": "above: True [-0.2397, -0.0483, 0.8602] None 25\ndown : True [-0.2396, -0.048, 0.7851] None 4\nclose: True 0.238 0.0283\nlift : True [-0.2396, -0.0484, 0.8994] False 7\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 112,
+    "cell": 28,
+    "stdout": "vertical: True [-0.1, -0.08, 0.9001] pitch 0.1 roll 0.0 None 27\nover hole3: True [-0.0052, 0.0408, 0.8999] None False 9\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 115,
+    "cell": 29,
+    "stdout": "desc 0.888 True [-0.0051, 0.0409, 0.8897] False 1\ndesc 0.882 True [-0.005, 0.0409, 0.8833] False 1\ndesc 0.877 True [-0.0048, 0.0409, 0.8783] False 1\nrelease: False 1.0\nretract: True [-0.0053, 0.0408, 0.9468] 4\nclear: True [-0.3198, -0.1998, 0.93] 23\n",
+    "text_truncated": true
+  },
+  {
+    "message_index": 120,
+    "cell": 30,
+    "stdout": "home: False 0.474 13\nL [-0.2996, -0.2148, 0.9483] 21.4 0.0 1.0\nR [0.3004, -0.2151, 0.9493] 21.2 0.0 1.0\ntruncated True\n",
+    "text_truncated": true
+  }
+]

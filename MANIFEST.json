@@ -20,11 +20,16 @@
     "model weights",
     "credentials and .env files",
     "simulator and benchmark assets",
-    "historical datasets and unrelated experimental records",
     "original exact dependency lockfile"
   ],
   "upstream_pins": {
     "sam3": "c1f6b1e83967c912f675d8975d437ccdc41e17d8",
     "openvlharness": "abd465d1b7271b024d94ff0f0ce8ee7c4242a79a"
+  },
+  "historical_log_archive": {
+    "projects": 20,
+    "indexed_task_episodes": 44,
+    "release_tag": "historical-logs-2026-11-19",
+    "new_runs": false
   }
 }

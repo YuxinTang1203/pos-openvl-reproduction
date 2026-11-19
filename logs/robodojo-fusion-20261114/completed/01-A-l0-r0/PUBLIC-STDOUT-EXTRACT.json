@@ -1,0 +1,362 @@
+[
+  {
+    "message_index": 4,
+    "truncated": false
+  },
+  {
+    "message_index": 5,
+    "truncated": false
+  },
+  {
+    "message_index": 10,
+    "truncated": false,
+    "cell": 1,
+    "stdout": "Insert the three tubes into the rack one by one.\n1 (-0.2397, -0.0486, 0.7721) top 0.7791 h 0.0141 L 0.1275 W 0.0382 long 72.8 gy -17.2 views 2 note the cameras agree only roughly: its height may be centimetres off (locate it again from above before a grasp) score 0.379\n2 (0.1184, -0.1689, 0.7771) top 0.7891 h 0.0241 L 0.1175 W 0.0279 long -57.2 gy 32.8 views 1 note one camera sees it: its height is a guess (locate it again from above before a grasp) score 0.35\n3 (0.3399, -0.0518, 0.7721) top 0.7791 h 0.0141 L 0.1183 W 0.0333 long -55.3 gy 34.7 views 2 note None score 0.312\nrack (0.0012, 0.0416, 0.7761) top 0.7871 h 0.0221 L 0.219 W 0.1336 long 7.8 views 1 note one camera sees it: its height is a guess (locate it again from above before a grasp) score 0.578\n",
+    "elapsed_s": 7.33,
+    "stderr": ""
+  },
+  {
+    "message_index": 13,
+    "truncated": false
+  },
+  {
+    "message_index": 18,
+    "truncated": true,
+    "cell": 2,
+    "stdout": "plate object [-0.048, 0.0709, 0.7871]\nbase object [0.0, -0.0228, 0.7853]\ntable object [0.0, -0.0734, 0.7691]\nhole object [0.0236, 0.0459, 0.7871]\ntube1 object [-0.2417, -0.0483, 0.7791]\n",
+    "elapsed_s": 1.19,
+    "stderr": ""
+  },
+  {
+    "message_index": 22,
+    "truncated": true,
+    "cell": 3,
+    "stdout": "above: True (-0.2401, -0.049, 0.8702) None None 25\ndescend: True (-0.24, -0.0491, 0.7888) None None 5\nclose: True 0.0281 0.237 5 False\n",
+    "elapsed_s": 10.11,
+    "stderr": ""
+  },
+  {
+    "message_index": 25,
+    "truncated": true,
+    "cell": 4,
+    "stdout": "lift: False (-0.24, -0.0491, 0.7889) 0 False\nrotate: True (-0.24, -0.0491, 0.9499) 0.1 -17.2 21 None None\n",
+    "elapsed_s": 6.95,
+    "stderr": ""
+  },
+  {
+    "message_index": 29,
+    "truncated": true,
+    "cell": 5,
+    "stdout": "transport: True (-0.0507, 0.0713, 0.8813) 13 False None\n",
+    "elapsed_s": 3.69,
+    "stderr": ""
+  },
+  {
+    "message_index": 33,
+    "truncated": true
+  },
+  {
+    "message_index": 38,
+    "truncated": true,
+    "cell": 6,
+    "stdout": "lum percentiles [ 10.   24.   83.3  97.  181.3 203. ]\nn comps 4\n(151.8, 375.2, 53)\n(178.6, 374.2, 33)\n(198.4, 371.0, 43)\n(213.9, 323.5, 234)\n",
+    "elapsed_s": 0.05,
+    "stderr": ""
+  },
+  {
+    "message_index": 42,
+    "truncated": true
+  },
+  {
+    "message_index": 46,
+    "truncated": true,
+    "cell": 7,
+    "stdout": "sample plate px: [(189, 369), (181, 274), (202, 284), (161, 349), (193, 369), (181, 274)]\n189 369 table [0.1188, 0.0462, 0.765]\n181 274 object [-0.1122, 0.0662, 0.7711]\n202 284 object [-0.0848, 0.0067, 0.7652]\n161 349 object [0.0745, 0.1359, 0.7684]\n193 369 object [0.1173, 0.0322, 0.7671]\n181 274 object [-0.1122, 0.0662, 0.7711]\n",
+    "elapsed_s": 2.17,
+    "stderr": ""
+  },
+  {
+    "message_index": 49,
+    "truncated": true,
+    "cell": 8,
+    "stdout": "check [ 0.0187 -0.2326  0.7871]\nn holes 10\n(171.4, 350.5, 80, 8.0, 12.0) world [ 0.056  -0.2546  0.7871]\n(172.9, 334.5, 82, 9.0, 12.0) world [ 0.0267 -0.2518  0.7871]\n(174.3, 318.6, 82, 9.0, 12.0) world [-0.0026 -0.2492  0.7871]\n(175.5, 302.5, 81, 8.0, 12.0) world [-0.0324 -0.2469  0.7871]\n(177.0, 286.5, 85, 9.0, 12.0) world [-0.0621 -0.2441  0.7871]\n(183.8, 353.1, 88, 9.0, 13.0) world [ 0.0621 -0.231   0.7871]\n(185.2, 337.0, 88, 9.0, 13.0) world [ 0.032  -0.2283  0.7871]\n(186.7, 320.4, 89, 9.0, 12.0) world [ 0.0008 -0.2253  0.7871]\n(188.0, 304.0, 90, 9.0, 13.0) world [-0.0302 -0.2228  0.7871]\n(189.7, 287.1, 92, 9.0, 13.0) world [-0.0624 -0.2194  0.7871]\n",
+    "elapsed_s": 0.25,
+    "stderr": ""
+  },
+  {
+    "message_index": 52,
+    "truncated": true,
+    "cell": 9,
+    "stdout": "(171.4, 350.5) [0.0727 0.0837 0.7871]\n(172.9, 334.5) [0.0338 0.0773 0.7871]\n(174.3, 318.6) [-0.0024  0.0741  0.7871]\n(175.5, 302.5) [-0.0431  0.0677  0.7871]\n(177.0, 286.5) [-0.0812  0.0645  0.7871]\n(183.8, 353.1) [0.0776 0.0428 0.7871]\n(185.2, 337.0) [0.0399 0.0397 0.7871]\n(186.7, 320.4) [0.     0.0337 0.7871]\n(188.0, 304.0) [-0.0373  0.0307  0.7871]\n(189.7, 287.1) [-0.0766  0.0247  0.7871]\n",
+    "elapsed_s": 0.24,
+    "stderr": ""
+  },
+  {
+    "message_index": 55,
+    "truncated": true,
+    "cell": 10,
+    "stdout": "align: True (-0.0447, 0.0686, 0.8819) 1\ndescend: False (-0.0433, 0.07, 0.8589) 11 True None\n",
+    "elapsed_s": 3.89,
+    "stderr": ""
+  },
+  {
+    "message_index": 60,
+    "truncated": true
+  },
+  {
+    "message_index": 65,
+    "truncated": true
+  },
+  {
+    "message_index": 69,
+    "truncated": true,
+    "cell": 11,
+    "stdout": "n 10\n(171.4, 350.5, 80, 8, 12)\n(172.9, 334.5, 82, 9, 12)\n(174.3, 318.6, 82, 9, 12)\n(175.5, 302.5, 81, 8, 12)\n(177.0, 286.5, 85, 9, 12)\n(183.8, 353.1, 88, 9, 13)\n(185.2, 337.0, 88, 9, 13)\n(186.7, 320.4, 89, 9, 12)\n(188.0, 304.0, 90, 9, 13)\n(189.7, 287.1, 92, 9, 13)\n",
+    "elapsed_s": 0.06,
+    "stderr": ""
+  },
+  {
+    "message_index": 72,
+    "truncated": true,
+    "cell": 12,
+    "stdout": "L tcp (-0.04331771746365819, 0.06999663904051909, 0.8588798693311448) -2.44 -17.02 grip 0.22901204071111148\n",
+    "elapsed_s": 0.0,
+    "stderr": ""
+  },
+  {
+    "message_index": 76,
+    "truncated": true,
+    "cell": 13,
+    "stdout": "hole_right object [0.0385 0.0567 0.7991]\nhole_right2 object [0.0196 0.0577 0.7991]\ntip_contact table [-0.0294  0.1121  0.765 ]\nhole_far_corner err back_project: pixel [470, 640] is outside the 480 x 640 image\n",
+    "elapsed_s": 3.11,
+    "stderr": ""
+  },
+  {
+    "message_index": 79,
+    "truncated": true,
+    "cell": 14,
+    "stdout": "holeA ok [0.0493 0.063  0.7871]\nholeB ok [0.0281 0.0644 0.7871]\nholeC ok [0.005  0.068  0.7871]\ntip ok [-0.0338  0.0962  0.7871]\ntube_mid ok [-0.0395  0.1041  0.7871]\nholeA2 ok [0.0482 0.057  0.7871]\n",
+    "elapsed_s": 0.13,
+    "stderr": ""
+  },
+  {
+    "message_index": 82,
+    "truncated": true,
+    "cell": 15,
+    "stdout": "holeA ok [0.0383 0.0578 0.799 ]\nholeB ok [0.0192 0.059  0.799 ]\nholeC ok [-0.0016  0.0623  0.799 ]\ntip ok [-0.0366  0.0877  0.799 ]\n",
+    "elapsed_s": 0.09,
+    "stderr": ""
+  },
+  {
+    "message_index": 85,
+    "truncated": true,
+    "cell": 16,
+    "stdout": "(171.4, 350.5) ok [0.071  0.0725 0.799 ]\n(172.9, 334.5) ok [0.0331 0.0693 0.799 ]\n(174.3, 318.6) ok [-0.0047  0.063   0.799 ]\n(175.5, 302.5) ok [-0.0422  0.0599  0.799 ]\n(177.0, 286.5) ok [-0.0794  0.0537  0.799 ]\n(183.8, 353.1) ok [0.076  0.0354 0.799 ]\n(185.2, 337.0) ok [0.039  0.0295 0.799 ]\n(186.7, 320.4) ok [0.     0.0265 0.799 ]\n(188.0, 304.0) ok [-0.0364  0.0206  0.799 ]\n(189.7, 287.1) ok [-0.075   0.0177  0.799 ]\ntip [-0.0366  0.0877]\n0 0.1087 [ 0.1076 -0.0152]\n1 0.0721 [ 0.0697 -0.0184]\n2 0.0403 [ 0.0319 -0.0247]\n3 0.0284 [-0.0056 -0.0278]\n4 0.0546 [-0.0428 -0.034 ]\n5 0.1241 [ 0.1126 -0.0523]\n6 0.0954 [ 0.0756 -0.0582]\n7 0.0713 [ 0.0366 -0.0612]\n8 0.0671 [ 0.0002 -0.0671]\n9 0.0799 [-0.0384 -0.07  ]\n",
+    "elapsed_s": 0.24,
+    "stderr": ""
+  },
+  {
+    "message_index": 89,
+    "truncated": true,
+    "cell": 17,
+    "stdout": "up: True (-0.0433, 0.0699, 0.8843) 3\nshift: True (-0.0486, 0.0441, 0.8848) 2\ndescend: True (-0.049, 0.0423, 0.8562) False 2\n",
+    "elapsed_s": 3.2,
+    "stderr": ""
+  },
+  {
+    "message_index": 94,
+    "truncated": true
+  },
+  {
+    "message_index": 98,
+    "truncated": true,
+    "cell": 18,
+    "stdout": "",
+    "elapsed_s": 0.0,
+    "stderr": ""
+  },
+  {
+    "message_index": 102,
+    "truncated": true,
+    "cell": 19,
+    "stdout": "open: 1.0 False\nretreat up: True (-0.049, 0.0423, 0.9292) 5\n",
+    "elapsed_s": 3.63,
+    "stderr": ""
+  },
+  {
+    "message_index": 106,
+    "truncated": true,
+    "cell": 20,
+    "stdout": "withdraw: True (-0.2997, -0.1497, 0.9499) 17\n",
+    "elapsed_s": 5.33,
+    "stderr": ""
+  },
+  {
+    "message_index": 110,
+    "truncated": true
+  },
+  {
+    "message_index": 114,
+    "truncated": true
+  },
+  {
+    "message_index": 118,
+    "truncated": true,
+    "cell": 21,
+    "stdout": "err locate returned 2 distinct competitive mask hypotheses among 5 candidate regions (score-gap heuristic, not a correctness guarantee). Inspect the attached numbered image for 'segment_test_tube_with_orange_cap_lyin'. After selecting a candidate, prefer robo.locate_candidate(binding_id, candidate_number) for its complete ObjectSight geometry. Check found, center_xyz, views and note before acting. visual_candidate plus robo.back_project remains an alternate single-surface-pixel path. Original top-one geometry was not returned. Earlier actions already happened; do not replay them.\n",
+    "elapsed_s": 1.01,
+    "stderr": ""
+  },
+  {
+    "message_index": 123,
+    "truncated": true,
+    "cell": 22,
+    "stdout": "2 (-0.0902, 0.1387, 0.7741) top 0.7831 L 0.1233 W 0.0307 long 60.0 gy -30.0 views 1 score 0.629 note one camera sees it: its height is a guess (locate it again from above before a grasp)\n3 (-0.0906, 0.139, 0.7741) top 0.7831 L 0.1233 W 0.0317 long 60.0 gy -30.0 views 1 score 0.27 note one camera sees it: its height is a guess (locate it again from above before a grasp)\n4 (0.1183, -0.1688, 0.7771) top 0.7891 L 0.1179 W 0.0278 long -57.3 gy 32.7 views 1 score 0.738 note one camera sees it: its height is a guess (locate it again from above before a grasp)\n5 (0.3397, -0.0515, 0.7721) top 0.7791 L 0.119 W 0.035 long -55.8 gy 34.2 views 2 score 0.676 note None\n",
+    "elapsed_s": 5.13,
+    "stderr": ""
+  },
+  {
+    "message_index": 127,
+    "truncated": true,
+    "cell": 23,
+    "stdout": "above: False (-0.2997, -0.1497, 0.9499) out of reach: the closest pose the arm can take is 0.059 m and 19 deg away; reachable instead: pitch=45 at this position 0\ndescend: False (-0.2997, -0.1497, 0.9499) out of reach: the closest pose the arm can take is 0.050 m and 16 deg away; reachable instead: pitch=60 at this position False 0\nclose: False 0.0\nlift: False (-0.2997, -0.1497, 0.9499) out of reach: the closest pose the arm can take is 0.067 m and 20 deg away; reachable instead: pitch=45 at this position 0\n",
+    "elapsed_s": 14.91,
+    "stderr": ""
+  },
+  {
+    "message_index": 130,
+    "truncated": true,
+    "cell": 24,
+    "stdout": "open: 1.0\napproach: True (-0.0901, 0.1387, 0.7998) None 26\n",
+    "elapsed_s": 8.28,
+    "stderr": ""
+  },
+  {
+    "message_index": 133,
+    "truncated": true,
+    "cell": 25,
+    "stdout": "close: True 0.025 0.208\nlift: True (-0.0919, 0.1328, 0.8675) 5 None\n",
+    "elapsed_s": 4.16,
+    "stderr": ""
+  },
+  {
+    "message_index": 137,
+    "truncated": true,
+    "cell": 26,
+    "stdout": "rotate: True (-0.0919, 0.1328, 0.8701) 0.1 19\nn holes 10\n(171.5, 350.6, 81)\n(172.8, 334.5, 84)\n(174.3, 318.6, 82)\n(175.5, 302.5, 82)\n(177.0, 286.5, 85)\n(183.7, 353.1, 89)\n(185.1, 337.0, 89)\n(186.6, 320.5, 86)\n(188.0, 304.0, 90)\n(189.6, 287.1, 87)\n",
+    "elapsed_s": 4.83,
+    "stderr": ""
+  },
+  {
+    "message_index": 140,
+    "truncated": true,
+    "cell": 27,
+    "stdout": "align: True (-0.0439, 0.0618, 0.8844) 5\ndescend: True (-0.0427, 0.0602, 0.8788) False 1\nrelease: 1.0\nretreat: True (-0.0422, 0.06, 0.9469) 4\n",
+    "elapsed_s": 6.14,
+    "stderr": ""
+  },
+  {
+    "message_index": 144,
+    "truncated": true,
+    "cell": 28,
+    "stdout": "withdraw: True (-0.2997, -0.1497, 0.95)\n",
+    "elapsed_s": 5.46,
+    "stderr": ""
+  },
+  {
+    "message_index": 148,
+    "truncated": true
+  },
+  {
+    "message_index": 152,
+    "truncated": true,
+    "cell": 29,
+    "stdout": "(-0.0942, 0.1356, 0.7771) 0.7891 0.1282 0.0407 53.9 -36.1 2 0.684 None\n",
+    "elapsed_s": 2.29,
+    "stderr": ""
+  },
+  {
+    "message_index": 155,
+    "truncated": true,
+    "cell": 30,
+    "stdout": "approach: True (-0.0945, 0.1358, 0.8013) None\nclose: True 0.0219\nlift: True (-0.0954, 0.1311, 0.8584)\nrotate: True (-0.0942, 0.1356, 0.8701) 0.1\n",
+    "elapsed_s": 15.09,
+    "stderr": ""
+  },
+  {
+    "message_index": 158,
+    "truncated": true,
+    "cell": 31,
+    "stdout": "align: True (-0.044, 0.0619, 0.8748)\ninsert: False (-0.0428, 0.0609, 0.8581) True 10\nretreat: True (-0.0422, 0.0599, 0.9492)\n",
+    "elapsed_s": 8.59,
+    "stderr": ""
+  },
+  {
+    "message_index": 162,
+    "truncated": true,
+    "cell": 32,
+    "stdout": "step 36 trunc False\n301 500\nblue rows 155 202 cols 262 369\n",
+    "elapsed_s": 1.01,
+    "stderr": ""
+  },
+  {
+    "message_index": 165,
+    "truncated": true,
+    "cell": 33,
+    "stdout": "withdraw: True 18\nwhite px 7637\n(2079, 454.9, 614.4, 425, 479, 579, 639)\n(1621, 396.9, 19.3, 368, 436, 0, 51)\n(767, 277.0, 567.2, 271, 288, 529, 608)\n(684, 80.7, 622.3, 59, 109, 599, 639)\n(615, 269.1, 380.9, 247, 292, 361, 400)\n(524, 222.0, 475.7, 204, 241, 454, 496)\n(509, 224.8, 78.1, 219, 233, 39, 110)\n(266, 158.2, 278.7, 144, 175, 266, 292)\n",
+    "elapsed_s": 5.64,
+    "stderr": ""
+  },
+  {
+    "message_index": 168,
+    "truncated": true,
+    "cell": 34,
+    "stdout": "white n 266 centroid (158.21804511278197, 278.67293233082705)\norange n 62 centroid (144.5483870967742, 292.33870967741933)\ncap dir (col,row) [ 0.70700639 -0.70720716] dist px 19.329071906360117\ncentre object [-0.1049  0.1273  0.7871]\ncap object [-0.0724  0.1773  0.7871]\n",
+    "elapsed_s": 1.36,
+    "stderr": ""
+  },
+  {
+    "message_index": 171,
+    "truncated": true,
+    "cell": 35,
+    "stdout": "approach: True (-0.0853, 0.1542, 0.798) 29\nclose: True 0.0275\nlift: False (-0.0878, 0.1456, 0.85)\nrotate: True (-0.0833, 0.1605, 0.8697) 0.1\n",
+    "elapsed_s": 15.82,
+    "stderr": ""
+  },
+  {
+    "message_index": 175,
+    "truncated": true,
+    "cell": 36,
+    "stdout": "align: True (-0.0435, 0.0622, 0.8748)\ninsert: True (-0.0427, 0.0601, 0.8619) False\nrelease: 1.0\nretreat: True (-0.2998, -0.1497, 0.9498) 19\n",
+    "elapsed_s": 9.49,
+    "stderr": ""
+  },
+  {
+    "message_index": 179,
+    "truncated": true,
+    "cell": 37,
+    "stdout": "approach: True (-0.0856, 0.1554, 0.804) 29\nclose: False 0.0\nrotate: True (-0.0833, 0.1606, 0.8699) 19\n",
+    "elapsed_s": 14.87,
+    "stderr": ""
+  },
+  {
+    "message_index": 182,
+    "truncated": true,
+    "cell": 38,
+    "stdout": "open: 1.0 6\nhome: True 0.0018 17\nL (-0.2995730127186827, -0.20718296687204396, 0.9209543012922736) 1.0 R (0.30042715469182035, -0.20729987567387193, 0.9215000306075757) 1.0 trunc False\n",
+    "elapsed_s": 6.27,
+    "stderr": ""
+  },
+  {
+    "message_index": 185,
+    "truncated": true,
+    "cell": 39,
+    "stdout": "sim step 51 truncated False\nL [-0.3, -0.207, 0.921] open 1.0\nR [0.3, -0.207, 0.922] open 1.0\n",
+    "elapsed_s": 0.0,
+    "stderr": ""
+  },
+  {
+    "message_index": 189,
+    "truncated": true
+  }
+]

@@ -1,0 +1,816 @@
+{
+  "repository_source_reference_commit": "594fa6b689c5a97205af03769fb63df27a1ae723",
+  "historical_manifest_sha256": "271d888aa87554413ef65cafa4618c98b0d836b8be316750bae5bee054d1e48e",
+  "counts": {
+    "identical": 118,
+    "different": 7,
+    "missing_in_repository": 9
+  },
+  "files": [
+    {
+      "path": "integrations/migrations/general_harness/ablation_fusion.json",
+      "historical_sha256": "27a73ca5c0f0a853a97f088f95db0f5a0c16b05d7994ae711522d050404e69e1",
+      "repository_sha256": "27a73ca5c0f0a853a97f088f95db0f5a0c16b05d7994ae711522d050404e69e1",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/ablation_fusion_rules.json",
+      "historical_sha256": "9f2e942cf8d016bfaee0897185fd4273427e52d13833580a005ebc449204d27d",
+      "repository_sha256": "9f2e942cf8d016bfaee0897185fd4273427e52d13833580a005ebc449204d27d",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/ablation_next_action.json",
+      "historical_sha256": "ff6c7cfaa853c9747b731f571b143640f219cd5ed249660d6160374291b356ce",
+      "repository_sha256": "ff6c7cfaa853c9747b731f571b143640f219cd5ed249660d6160374291b356ce",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/ablation_next_action_rules.json",
+      "historical_sha256": "5218d53c7d278d9ad81ef0c26e17cf9bddf5b2364d92eb842118f503b2a54734",
+      "repository_sha256": "5218d53c7d278d9ad81ef0c26e17cf9bddf5b2364d92eb842118f503b2a54734",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/ablation_pos.json",
+      "historical_sha256": "5bbcd84047698ae92a5d54c8db90534751c4ceadaae199d7c0698d9df5387497",
+      "repository_sha256": "5bbcd84047698ae92a5d54c8db90534751c4ceadaae199d7c0698d9df5387497",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/ablation_pos_rules.json",
+      "historical_sha256": "bd6a04d91d8b83e4dffe41e40dfcea74002974036f67bdb12a2026c216d567a0",
+      "repository_sha256": "bd6a04d91d8b83e4dffe41e40dfcea74002974036f67bdb12a2026c216d567a0",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/ablation_v15_focus.json",
+      "historical_sha256": "1ecca46c76447cfb610b3ded84f03e862270111b2de585b4f078e598cac2cf8c",
+      "repository_sha256": "1ecca46c76447cfb610b3ded84f03e862270111b2de585b4f078e598cac2cf8c",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/ablation_v15_reliability.json",
+      "historical_sha256": "f0c6565b7b3883efd40b65de189a60d152815a6dd1e517cc7e8920fed7c28c45",
+      "repository_sha256": "f0c6565b7b3883efd40b65de189a60d152815a6dd1e517cc7e8920fed7c28c45",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/minimal_fusion.json",
+      "historical_sha256": "0f1bfbb4cd72d34598157c0e0736e064386adcfdeccb99942d4c4f1c675c849b",
+      "repository_sha256": "0f1bfbb4cd72d34598157c0e0736e064386adcfdeccb99942d4c4f1c675c849b",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/minimal_fusion_control.json",
+      "historical_sha256": "99d8e6b5af75d8816ed21c39fc767d1b36ec72ddeaedcef4c5a827e00d8935d4",
+      "repository_sha256": "99d8e6b5af75d8816ed21c39fc767d1b36ec72ddeaedcef4c5a827e00d8935d4",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/minimal_fusion_pause.json",
+      "historical_sha256": "d74be49a6b2d1c9549fe25f02fc8013c942d281ca017ed0b98944f3e729a6031",
+      "repository_sha256": "d74be49a6b2d1c9549fe25f02fc8013c942d281ca017ed0b98944f3e729a6031",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v17_interface_only.json",
+      "historical_sha256": "3116e54cab13625d3b188a8d8eecbb48377c2883ce40f6eebb99c80208767c99",
+      "repository_sha256": "3116e54cab13625d3b188a8d8eecbb48377c2883ce40f6eebb99c80208767c99",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v17_next_action.json",
+      "historical_sha256": "2008ec526f54ed36adba8f83b3d130261b607da7153f7a22fefb4e51a624399f",
+      "repository_sha256": "2008ec526f54ed36adba8f83b3d130261b607da7153f7a22fefb4e51a624399f",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v17_next_action_dependencies.json",
+      "historical_sha256": "8428cd07d7e420b5141bdc3b88d2949951b2b561c46f581b7d8aabb89707de03",
+      "repository_sha256": "8428cd07d7e420b5141bdc3b88d2949951b2b561c46f581b7d8aabb89707de03",
+      "status": "identical"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v18_next_action_guard.json",
+      "historical_sha256": "b07423ae297738c231be8229a2bb77c6634ed024aa73268a48399a48c07df012",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v18_next_action_passive.json",
+      "historical_sha256": "eb15436cb723b85edd93ea695cb50aedefae0640accd9c050c14b99ebbcdce87",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v18_pos_guard.json",
+      "historical_sha256": "06f9da771718b554d97541133a5266e5197b97c620f19e59e713e3cc9ddd395a",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v18_pos_passive.json",
+      "historical_sha256": "559d63c52973cffeff7273d0b0141c5d69636f8e3c678cdb08324a4bbbc281b4",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v19_A_baseline.json",
+      "historical_sha256": "27a73ca5c0f0a853a97f088f95db0f5a0c16b05d7994ae711522d050404e69e1",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v19_B_conditional.json",
+      "historical_sha256": "256c4ba323cdc947fb8768d7aa198a2eed02fd959973c9091a62d3336b36432a",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v19_C_guard.json",
+      "historical_sha256": "3d152bfe81fd6edae3896e55bdb737bcacac9985650f0f6acc6b5eac959c1855",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    },
+    {
+      "path": "integrations/migrations/general_harness/v22_E_cached.json",
+      "historical_sha256": "4a65e8d3ca30d23fa67082ca19be87f102bcd465193c6791349a9640f0679c1f",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    },
+    {
+      "path": "integrations/migrations/openvl/capabilities_visual.yml",
+      "historical_sha256": "dfe13391d6dee8bed59f6fa2bbdd56f479660c796d38a6b174569e24ae27bab7",
+      "repository_sha256": "dfe13391d6dee8bed59f6fa2bbdd56f479660c796d38a6b174569e24ae27bab7",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/__init__.py",
+      "historical_sha256": "c489073137711422ae52f87957ffd5bf1d181617cf07511ab4c096da7d7092d4",
+      "repository_sha256": "c489073137711422ae52f87957ffd5bf1d181617cf07511ab4c096da7d7092d4",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/__main__.py",
+      "historical_sha256": "4c8bf58e74c7596a70e90cde9661ecf14d1cbdcff7e9d4d81cbf4088ae681155",
+      "repository_sha256": "4c8bf58e74c7596a70e90cde9661ecf14d1cbdcff7e9d4d81cbf4088ae681155",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/_backend.py",
+      "historical_sha256": "d3acdfd846dd0469d025fe29c7c74a1c88057201e1e2a9803e6d9740feaf22d4",
+      "repository_sha256": "d3acdfd846dd0469d025fe29c7c74a1c88057201e1e2a9803e6d9740feaf22d4",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/_env.py",
+      "historical_sha256": "5897a555650c142c64e866ac46dc9a95670078b264401df7dd379910e89969d4",
+      "repository_sha256": "5897a555650c142c64e866ac46dc9a95670078b264401df7dd379910e89969d4",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/_robot.py",
+      "historical_sha256": "9f76712c3e209ab2e72b45b1e4df5623299a861b8e2dd3e5a224eef120050d58",
+      "repository_sha256": "9f76712c3e209ab2e72b45b1e4df5623299a861b8e2dd3e5a224eef120050d58",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/ablation_v17.py",
+      "historical_sha256": "c148776d661dabfdbba06bdbdc958507dba1502e06674d5396c05d071abf0603",
+      "repository_sha256": "c148776d661dabfdbba06bdbdc958507dba1502e06674d5396c05d071abf0603",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/action_feedback.py",
+      "historical_sha256": "a917fa8ab18c0cf22c438d35283d0fb7b53aa9302c6487d33a29bfd9c9cc6323",
+      "repository_sha256": "a917fa8ab18c0cf22c438d35283d0fb7b53aa9302c6487d33a29bfd9c9cc6323",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/action_focus.py",
+      "historical_sha256": "ad5471b37a99662a2fc84bb8c888025c71c1605c217e3f747699fc26c79ad9ef",
+      "repository_sha256": "ad5471b37a99662a2fc84bb8c888025c71c1605c217e3f747699fc26c79ad9ef",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/analysis_repl.py",
+      "historical_sha256": "258a118d24b5a89c7dca107cc242f2af5e103e1fdc062f3b21a1f4315deb6891",
+      "repository_sha256": "258a118d24b5a89c7dca107cc242f2af5e103e1fdc062f3b21a1f4315deb6891",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/arms.py",
+      "historical_sha256": "a3df1bec7144e5e3b1bb680570ca4947b0c4a01078ba2bf7087958ece032f166",
+      "repository_sha256": "a3df1bec7144e5e3b1bb680570ca4947b0c4a01078ba2bf7087958ece032f166",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/call_reliability.py",
+      "historical_sha256": "a127a4abe601234ec3b957b8963b0b989f5fc52736059113b4c2b59cae4c6b21",
+      "repository_sha256": "a127a4abe601234ec3b957b8963b0b989f5fc52736059113b4c2b59cae4c6b21",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/claude_runtime.py",
+      "historical_sha256": "53dabcf7a07d33eeeda07d780efe0ac7247325b7538d30f73ff12f83b0662dc6",
+      "repository_sha256": "53dabcf7a07d33eeeda07d780efe0ac7247325b7538d30f73ff12f83b0662dc6",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/cli.py",
+      "historical_sha256": "1847571a5fafe8888ac3a3f00dae0d33ad7e3846fed545f359a3e6cd0786253b",
+      "repository_sha256": "1847571a5fafe8888ac3a3f00dae0d33ad7e3846fed545f359a3e6cd0786253b",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/codex-catalog-gpt-6-astra-fallback.json",
+      "historical_sha256": "6cc8df067068c77a87752fb2d5bbbb592f773bf0333736ffa3b6e64728a0454b",
+      "repository_sha256": "6cc8df067068c77a87752fb2d5bbbb592f773bf0333736ffa3b6e64728a0454b",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/composite_harness.py",
+      "historical_sha256": "05c3061e0b0d130d80f9881ca0674c01f25b8dacdfdf32c9014464f8c7b1259c",
+      "repository_sha256": "7a6c86bd6e807aab7e66629020452d03d39ef8a4f5318ad0ede241b59455b8af",
+      "status": "different"
+    },
+    {
+      "path": "src/pyrualean/composite_schedule.py",
+      "historical_sha256": "ef8b0d3baad9481b4ba797c9d1967b3005dac86663ea9b653ad49c7cf10c05e4",
+      "repository_sha256": "ef8b0d3baad9481b4ba797c9d1967b3005dac86663ea9b653ad49c7cf10c05e4",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/eval_metrics.py",
+      "historical_sha256": "40bb5014e93fe5082b1840b438baa54bece67357e6642017c785985eff4028a0",
+      "repository_sha256": "40bb5014e93fe5082b1840b438baa54bece67357e6642017c785985eff4028a0",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/evaluation/__init__.py",
+      "historical_sha256": "19f2eb59c6b09dad0e579319306dc9fde6fc8e9f563a0b3a58c087440ea5f65f",
+      "repository_sha256": "19f2eb59c6b09dad0e579319306dc9fde6fc8e9f563a0b3a58c087440ea5f65f",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/evaluation/compare.py",
+      "historical_sha256": "7e9eb37f21985cae31bf8434f3956ea79da183ffc2b82a80100eab3a3f898975",
+      "repository_sha256": "7e9eb37f21985cae31bf8434f3956ea79da183ffc2b82a80100eab3a3f898975",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/evaluation/metrics.py",
+      "historical_sha256": "123ed68268dca54d3f7670de9000de9855393edfdb7d67acad8a6f38e63231ac",
+      "repository_sha256": "123ed68268dca54d3f7670de9000de9855393edfdb7d67acad8a6f38e63231ac",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/evaluation/rpent.py",
+      "historical_sha256": "45a7c8ff29d1c55cc5fe2de701a80a1e81d17a576d7a08c0c2ed3429695417e6",
+      "repository_sha256": "45a7c8ff29d1c55cc5fe2de701a80a1e81d17a576d7a08c0c2ed3429695417e6",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/evidence_temporal.py",
+      "historical_sha256": "8ac88641898d62fa01aa26220e19617acc6bf4303ca312ed24eb6949f9dd017a",
+      "repository_sha256": "8ac88641898d62fa01aa26220e19617acc6bf4303ca312ed24eb6949f9dd017a",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/evo_harness.py",
+      "historical_sha256": "6ef4c36f634ec19c558e871a7d0df07e014731f9cbf940acb4470b47323075c2",
+      "repository_sha256": "6ef4c36f634ec19c558e871a7d0df07e014731f9cbf940acb4470b47323075c2",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/execution_style.py",
+      "historical_sha256": "3f8ba819db0d330b708428af92873a67c2f679ca400364425754be0f40ad2032",
+      "repository_sha256": "3f8ba819db0d330b708428af92873a67c2f679ca400364425754be0f40ad2032",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/failure_dependencies.py",
+      "historical_sha256": "49a2bbcc67925f07f7fa0971541c95b82b85ad44eaa068f001b5bea33cf57bfb",
+      "repository_sha256": "49a2bbcc67925f07f7fa0971541c95b82b85ad44eaa068f001b5bea33cf57bfb",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/feedback_guard_v18.py",
+      "historical_sha256": "5d3ed2fa74444403cb9a0a168fe022012152708f18f0cbe526500e5b691431e4",
+      "repository_sha256": "5d3ed2fa74444403cb9a0a168fe022012152708f18f0cbe526500e5b691431e4",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/general_harness.py",
+      "historical_sha256": "3eb040f8a8d0cedee82e3d5a9d72da84b72fd4f4965722241f0d9e69198e37bb",
+      "repository_sha256": "3eb040f8a8d0cedee82e3d5a9d72da84b72fd4f4965722241f0d9e69198e37bb",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/generate.py",
+      "historical_sha256": "3113122d3618523a2a780ea8ee4a3df33ad76c2715753705e820a3cee09d3b53",
+      "repository_sha256": "3113122d3618523a2a780ea8ee4a3df33ad76c2715753705e820a3cee09d3b53",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/guardian.py",
+      "historical_sha256": "46375d0e6fc14d0b2c398c64b68087dceca594c06ef4d0e3c61f09ede956496a",
+      "repository_sha256": "46375d0e6fc14d0b2c398c64b68087dceca594c06ef4d0e3c61f09ede956496a",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/harnesspro_classifier.py",
+      "historical_sha256": "2cca59d3a4c7a5f07583ea0b1ffdfc3cdb21152ccfa3a84745da0ded4df01169",
+      "repository_sha256": "2cca59d3a4c7a5f07583ea0b1ffdfc3cdb21152ccfa3a84745da0ded4df01169",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/harnesspro_native.py",
+      "historical_sha256": "ebec3ed75425f612c6964ea45bcad0cbb1a5ee898e7147ab8228d46142c22cfb",
+      "repository_sha256": "ebec3ed75425f612c6964ea45bcad0cbb1a5ee898e7147ab8228d46142c22cfb",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/harnesspro_runtime.py",
+      "historical_sha256": "a9093cad484645ab731cd25a4ab282c16581500454e9067cdc2294a3564b21d2",
+      "repository_sha256": "a9093cad484645ab731cd25a4ab282c16581500454e9067cdc2294a3564b21d2",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/__init__.py",
+      "historical_sha256": "825feda21bd284591f3919335a5de5de168130c4a2f9b34b466893fb20d709f4",
+      "repository_sha256": "825feda21bd284591f3919335a5de5de168130c4a2f9b34b466893fb20d709f4",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/common.py",
+      "historical_sha256": "0185d57f9cecfd64fac87921b269d436e90857408090e1432c704e19cb26d52a",
+      "repository_sha256": "0185d57f9cecfd64fac87921b269d436e90857408090e1432c704e19cb26d52a",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/robodojo_client_root.py",
+      "historical_sha256": "1807e679cc38fb8c39f02d95b1015f8a9f4147c69e9275bb3670fda1bf614ccd",
+      "repository_sha256": "1807e679cc38fb8c39f02d95b1015f8a9f4147c69e9275bb3670fda1bf614ccd",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/robodojo_env_server.py",
+      "historical_sha256": "78125443a6ea070c8eac60e375d2069de71e9201f1dc19fea49fb1ce28489eae",
+      "repository_sha256": "78125443a6ea070c8eac60e375d2069de71e9201f1dc19fea49fb1ce28489eae",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/robodojo_kinematics.py",
+      "historical_sha256": "9e12abe28c805e7daeda343a5cf99c865a17276f075b5078e99d61b0db3c5e26",
+      "repository_sha256": "9e12abe28c805e7daeda343a5cf99c865a17276f075b5078e99d61b0db3c5e26",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/robodojo_native.py",
+      "historical_sha256": "3c66923f8149d0f599081857accabbe4b1a47e2440b5bcc1656ade677932098f",
+      "repository_sha256": "3c66923f8149d0f599081857accabbe4b1a47e2440b5bcc1656ade677932098f",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/robodojo_native_code.py",
+      "historical_sha256": "cbba7242e5406c1c250649ba6050d804321c628c352a3257f6160b86737d52ab",
+      "repository_sha256": "cbba7242e5406c1c250649ba6050d804321c628c352a3257f6160b86737d52ab",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/robodojo_sight.py",
+      "historical_sha256": "990bc8162c39e10506f29ef0eb9b5156c55ef9a7cd18890b007ba6d1cb769265",
+      "repository_sha256": "990bc8162c39e10506f29ef0eb9b5156c55ef9a7cd18890b007ba6d1cb769265",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/robodojo_tools.py",
+      "historical_sha256": "5a76edcba3925db76063d240a8f55ebc24a3927503fece2292995e3b94e7957d",
+      "repository_sha256": "99f2958c8c2ac02d20df66765156e9298821c924fedfe98a8d2c86c9cf3976c3",
+      "status": "different"
+    },
+    {
+      "path": "src/pyrualean/hosts/rpent_libero.py",
+      "historical_sha256": "7d1470d7e9a856645c15f03c72a2a933b88522026201ebf64e14ef485568cfa8",
+      "repository_sha256": "7d1470d7e9a856645c15f03c72a2a933b88522026201ebf64e14ef485568cfa8",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/rpent_robocasa.py",
+      "historical_sha256": "eb63b9e461df79d08ca07fecc372e56487ba3285c986af62d51e4a742987c6e7",
+      "repository_sha256": "eb63b9e461df79d08ca07fecc372e56487ba3285c986af62d51e4a742987c6e7",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/rpent_robodojo.py",
+      "historical_sha256": "7f8d47ee4b7ff0ce03db6c55cd7e53ab2980ecd41588b2b549589d957ba69a86",
+      "repository_sha256": "7f8d47ee4b7ff0ce03db6c55cd7e53ab2980ecd41588b2b549589d957ba69a86",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/rpent_robotwin.py",
+      "historical_sha256": "5dee6ee812a13db3e760f7b73a3a437b7f6d9736e70b7af5ccd8027634037827",
+      "repository_sha256": "5dee6ee812a13db3e760f7b73a3a437b7f6d9736e70b7af5ccd8027634037827",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/sam3_local.py",
+      "historical_sha256": "3bb77fcc26034add2003cf444fbb0bac5b8b2f31058d6f47b3ab9c2d97137d46",
+      "repository_sha256": "3bb77fcc26034add2003cf444fbb0bac5b8b2f31058d6f47b3ab9c2d97137d46",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/sam3_service.py",
+      "historical_sha256": "c516f328aabfca17f9ed83fcd97c5cbf57a4ca1f72a72f6a4e32ca283dd11809",
+      "repository_sha256": "dfd2442fe90f5bb760c84c38a0c38d56e8f00630a47698f2bd67abe996fc7bbf",
+      "status": "different"
+    },
+    {
+      "path": "src/pyrualean/hosts/xpolicylab_bridge.py",
+      "historical_sha256": "051fc541000acb4bd4fc4c9e9c92bbdd75baf155a1167a872abd131fcf7f90d7",
+      "repository_sha256": "051fc541000acb4bd4fc4c9e9c92bbdd75baf155a1167a872abd131fcf7f90d7",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/xpolicylab_robodojo.py",
+      "historical_sha256": "b06427afbc66d985bcea302ad33b3b20ce1784dbc6b7203b58b2313f565c1b30",
+      "repository_sha256": "b06427afbc66d985bcea302ad33b3b20ce1784dbc6b7203b58b2313f565c1b30",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/hosts/xpolicylab_robodojo_rgb.py",
+      "historical_sha256": "1e2feab9000faaf8b88d4e45ddf9a154f0a0a4bb876524e5b1421a9afe9ecc56",
+      "repository_sha256": "1e2feab9000faaf8b88d4e45ddf9a154f0a0a4bb876524e5b1421a9afe9ecc56",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/libero-novla.md",
+      "historical_sha256": "a49276945b9121551a6489b2d02baf633338503f2fd9bf1435c8881dbd58544c",
+      "repository_sha256": "a49276945b9121551a6489b2d02baf633338503f2fd9bf1435c8881dbd58544c",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/libero.md",
+      "historical_sha256": "9600a7e926f9425bdc37e7e8a1a170af5b82a16d71dfbc2f120954b53bce2c4b",
+      "repository_sha256": "9600a7e926f9425bdc37e7e8a1a170af5b82a16d71dfbc2f120954b53bce2c4b",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/robocasa-novla.md",
+      "historical_sha256": "3044f5f93df25830239a179e75b9987abbd3cbeabc54d85cd92b6f44dfc062be",
+      "repository_sha256": "3044f5f93df25830239a179e75b9987abbd3cbeabc54d85cd92b6f44dfc062be",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/robocasa.md",
+      "historical_sha256": "f9d2b87b1c64f36740acdff3f10d226864d5c76a6c863655b6d99508551b310e",
+      "repository_sha256": "f9d2b87b1c64f36740acdff3f10d226864d5c76a6c863655b6d99508551b310e",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/robodojo-novla.md",
+      "historical_sha256": "f4d04f16d3cab3fc97e6287ac59dc335a913c21e9395d69abb30ed75a5371c66",
+      "repository_sha256": "f4d04f16d3cab3fc97e6287ac59dc335a913c21e9395d69abb30ed75a5371c66",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/robodojo.md",
+      "historical_sha256": "8ea8d6eed690b859a5b28d1ae8f710d4aa2b75d0d8d6e756d2313ef3226ac965",
+      "repository_sha256": "8ea8d6eed690b859a5b28d1ae8f710d4aa2b75d0d8d6e756d2313ef3226ac965",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/robodojo_xpl_rgb-novla.md",
+      "historical_sha256": "5227d2f2ee4ebd264109982fcfbe7f7137197d62ad9e3582d8620312539eebd6",
+      "repository_sha256": "5227d2f2ee4ebd264109982fcfbe7f7137197d62ad9e3582d8620312539eebd6",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/robodojo_xpl_rgb.md",
+      "historical_sha256": "f4de395937ee87a2a049587b9dc79b804d34a755400944af9a427f38209b147e",
+      "repository_sha256": "f4de395937ee87a2a049587b9dc79b804d34a755400944af9a427f38209b147e",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/robotwin-novla.md",
+      "historical_sha256": "d1d2363c7df5f0d372988145ae9533e085d87ec19397fc914b36c938cca0896a",
+      "repository_sha256": "d1d2363c7df5f0d372988145ae9533e085d87ec19397fc914b36c938cca0896a",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/knowledge/robotwin.md",
+      "historical_sha256": "83b0120934cbf5855ec13c14f0f4d3dcee6d4a60456dcb7593ab4eff5a46e98a",
+      "repository_sha256": "83b0120934cbf5855ec13c14f0f4d3dcee6d4a60456dcb7593ab4eff5a46e98a",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/libero.py",
+      "historical_sha256": "b63ada08c1a098cbf71d4d481ba2e7186288b94fc4945c8efb416869dd052d96",
+      "repository_sha256": "b63ada08c1a098cbf71d4d481ba2e7186288b94fc4945c8efb416869dd052d96",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/long_harness.py",
+      "historical_sha256": "8b17e414a8fbc05ac46582c62232478598f959abdfe38cdd5e8642e30dbdd65c",
+      "repository_sha256": "8b17e414a8fbc05ac46582c62232478598f959abdfe38cdd5e8642e30dbdd65c",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/mcp_server.py",
+      "historical_sha256": "2c5d49f03aaa503af210d838554c1fbbb90a65621346b8f848e50f167defb7ad",
+      "repository_sha256": "2c5d49f03aaa503af210d838554c1fbbb90a65621346b8f848e50f167defb7ad",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/migrations.py",
+      "historical_sha256": "85d85749c2e4d098c32a807b78752b980ea224aef5c063a7df5843ab8624ccbb",
+      "repository_sha256": "0fd7675f7fb903dc982320eac5ecb6e49c59ed5591619e520e85c2e5d918e0fd",
+      "status": "different"
+    },
+    {
+      "path": "src/pyrualean/minimal_fusion.py",
+      "historical_sha256": "2956fba582111b3f50dde697a31b2057294568426db2d360042d25cf4320916d",
+      "repository_sha256": "2956fba582111b3f50dde697a31b2057294568426db2d360042d25cf4320916d",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openai_runtime.py",
+      "historical_sha256": "d119f944ba32ce2105c18f95bbeb430e74c5d2bc2058b0401e11dff941870f21",
+      "repository_sha256": "e560af7e302d47489f8600556cbb596df4fc37e7e3627fe9becde3930dd7b1ab",
+      "status": "different"
+    },
+    {
+      "path": "src/pyrualean/openai_stream.py",
+      "historical_sha256": "2d69736193919f0343f7a7b656e86a1f882a7e55b1a05ff7b855bb497b9a09ff",
+      "repository_sha256": "2d69736193919f0343f7a7b656e86a1f882a7e55b1a05ff7b855bb497b9a09ff",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_adapter.py",
+      "historical_sha256": "ef0d1534c87f4feba5af390c14aad9791cd7d315d9689ca308a5d56777230134",
+      "repository_sha256": "ef0d1534c87f4feba5af390c14aad9791cd7d315d9689ca308a5d56777230134",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_coding.py",
+      "historical_sha256": "6d5ee453f8e5516ac11c429f1f85ac707a9d94fe6798a723c8fa021f8b5d4bd3",
+      "repository_sha256": "6d5ee453f8e5516ac11c429f1f85ac707a9d94fe6798a723c8fa021f8b5d4bd3",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_completion.py",
+      "historical_sha256": "b3f683abdde688cd30e74e597b88f499ecfc9483f4af62f3b3c3140e7f5b5a11",
+      "repository_sha256": "b3f683abdde688cd30e74e597b88f499ecfc9483f4af62f3b3c3140e7f5b5a11",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_delegation.py",
+      "historical_sha256": "3cf1fe6a5263d344a8e6b0fdf759f6a31ac289608840b269a71eddbc63a36693",
+      "repository_sha256": "3cf1fe6a5263d344a8e6b0fdf759f6a31ac289608840b269a71eddbc63a36693",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_evidence.py",
+      "historical_sha256": "85df5df99fa7527870baaafb8e08cf4d723475e2f875724e4eef89f448dbf042",
+      "repository_sha256": "85df5df99fa7527870baaafb8e08cf4d723475e2f875724e4eef89f448dbf042",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_feedback.py",
+      "historical_sha256": "2cdadf8d0e3434a3d4247d6f2e338ee79f25959bae7aaf8c13e32f5318395561",
+      "repository_sha256": "2cdadf8d0e3434a3d4247d6f2e338ee79f25959bae7aaf8c13e32f5318395561",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_geometry.py",
+      "historical_sha256": "e2119f0d2b8e418979f4172c489485efcbdec4f4978e55f37fce9140e9791a77",
+      "repository_sha256": "e2119f0d2b8e418979f4172c489485efcbdec4f4978e55f37fce9140e9791a77",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_grounding.py",
+      "historical_sha256": "f54ee9058fa29ab00e988d2387d10547f36e682a2b4f0c198b3593ae69278602",
+      "repository_sha256": "f54ee9058fa29ab00e988d2387d10547f36e682a2b4f0c198b3593ae69278602",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_native.py",
+      "historical_sha256": "8a0a12ade67603022ae2f210f48d9f2001039851a1a16bdffad2afe5198f5edb",
+      "repository_sha256": "8a0a12ade67603022ae2f210f48d9f2001039851a1a16bdffad2afe5198f5edb",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_recovery.py",
+      "historical_sha256": "66841619243cbca02024301ed61a102cff5bc39d439e11f4b2434e5857f3366b",
+      "repository_sha256": "66841619243cbca02024301ed61a102cff5bc39d439e11f4b2434e5857f3366b",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_routed.py",
+      "historical_sha256": "4f8c2cc93321376e66a7ba2067e717e09bc6a67a3f362693879c657aa75157c7",
+      "repository_sha256": "4f8c2cc93321376e66a7ba2067e717e09bc6a67a3f362693879c657aa75157c7",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_runtime.py",
+      "historical_sha256": "da8eee11a50b91f13a11193e3683aa7257e1170cfe9c93756c181f0f418f1a04",
+      "repository_sha256": "da8eee11a50b91f13a11193e3683aa7257e1170cfe9c93756c181f0f418f1a04",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_trace.py",
+      "historical_sha256": "ddf2173e295082e452e5d5d29924295a8122467fa1c88dd88ad47935dd6c8362",
+      "repository_sha256": "ddf2173e295082e452e5d5d29924295a8122467fa1c88dd88ad47935dd6c8362",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_visual.py",
+      "historical_sha256": "0c2104d54a51837441e2ba23d63087834dee5b6e1bc1a0636a84a0df574df1d3",
+      "repository_sha256": "0c2104d54a51837441e2ba23d63087834dee5b6e1bc1a0636a84a0df574df1d3",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/openvl_visual_history.py",
+      "historical_sha256": "fea1819f7fedb5a4a2f359e69740939681f942213ce8bfb1eabd4ce17ada387d",
+      "repository_sha256": "fea1819f7fedb5a4a2f359e69740939681f942213ce8bfb1eabd4ce17ada387d",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/phase_geometry.py",
+      "historical_sha256": "3ac866d0f50d69727d75396e15b76525fb4614dc436d8130c33f7089478ece5f",
+      "repository_sha256": "3ac866d0f50d69727d75396e15b76525fb4614dc436d8130c33f7089478ece5f",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/phase_tools.py",
+      "historical_sha256": "28ea4fbc34c52447446aacd2292f39e51e72dcc897d38348f4faa9f3955a9c98",
+      "repository_sha256": "28ea4fbc34c52447446aacd2292f39e51e72dcc897d38348f4faa9f3955a9c98",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/play.py",
+      "historical_sha256": "9f8fd816d2cc8697b9e4318e2f5530c8458182ff52a9892f67bf5ebf086d91f6",
+      "repository_sha256": "9f8fd816d2cc8697b9e4318e2f5530c8458182ff52a9892f67bf5ebf086d91f6",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/pos_harness.py",
+      "historical_sha256": "b0ff9022164108fa345773056fff9b7c0a862e8d1a6f1616ac13a598c83655cb",
+      "repository_sha256": "92d864161505ce449e6e557894dd2a489a00f73ddba674ba350f38c863ebc02c",
+      "status": "different"
+    },
+    {
+      "path": "src/pyrualean/pos_v4.py",
+      "historical_sha256": "63e1b30b8881045c12de11b19191fdf81847944286855d14910fc3f4f9aa5ac9",
+      "repository_sha256": "63e1b30b8881045c12de11b19191fdf81847944286855d14910fc3f4f9aa5ac9",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/prerequisites_v19.py",
+      "historical_sha256": "93a30261eb81f78aea44f34045c452da9d3ecfbb63b7ab16cdee252032b8766e",
+      "repository_sha256": "93a30261eb81f78aea44f34045c452da9d3ecfbb63b7ab16cdee252032b8766e",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/progress_harness.py",
+      "historical_sha256": "116a372e3768e9c40473d9a293a9e5149bcbb4e187f63380c07592b3d58f4dc1",
+      "repository_sha256": "116a372e3768e9c40473d9a293a9e5149bcbb4e187f63380c07592b3d58f4dc1",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/progress_lite.py",
+      "historical_sha256": "b7251a493212acb8cb3e4ffb770370f89456f0d64d0185f569405f24fd2e5ea5",
+      "repository_sha256": "b7251a493212acb8cb3e4ffb770370f89456f0d64d0185f569405f24fd2e5ea5",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/prompt.py",
+      "historical_sha256": "4b8e07db407e9741134bac4e00d3a1f7410806c5d7784569a587285e849d9d6a",
+      "repository_sha256": "4b8e07db407e9741134bac4e00d3a1f7410806c5d7784569a587285e849d9d6a",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/recap_full.py",
+      "historical_sha256": "552db21d5a1301d8db4b409940770142a30aca2e88f1a59af35bad30b2b88b36",
+      "repository_sha256": "552db21d5a1301d8db4b409940770142a30aca2e88f1a59af35bad30b2b88b36",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/reflact_harness.py",
+      "historical_sha256": "bdd3146fc010a2908caabf9f51c6d9e364c52f5f8c58f3f224c9ad93fd0b83d6",
+      "repository_sha256": "bdd3146fc010a2908caabf9f51c6d9e364c52f5f8c58f3f224c9ad93fd0b83d6",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/reuseit_harness.py",
+      "historical_sha256": "76e82987ff0ba9bc27260e467d7cd428faf07afa68aaff01173c4421835f7662",
+      "repository_sha256": "76e82987ff0ba9bc27260e467d7cd428faf07afa68aaff01173c4421835f7662",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/reuseit_task_plan.py",
+      "historical_sha256": "4d97f5dcff244bfbc996782d3f23d7ab47c66a4a2436d5e55d154cb78a00dd28",
+      "repository_sha256": "4d97f5dcff244bfbc996782d3f23d7ab47c66a4a2436d5e55d154cb78a00dd28",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/rlm_harness.py",
+      "historical_sha256": "be16aab3ec12cd0a1c7fc6d1cb52b495c6900833f3ea868027547c877e067493",
+      "repository_sha256": "be16aab3ec12cd0a1c7fc6d1cb52b495c6900833f3ea868027547c877e067493",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/rlm_task_ledger.py",
+      "historical_sha256": "046e817fc04f8bfc812d78dfd4fa78b2facab25fa62104ef228814ae7a4199d1",
+      "repository_sha256": "046e817fc04f8bfc812d78dfd4fa78b2facab25fa62104ef228814ae7a4199d1",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/robocasa.py",
+      "historical_sha256": "3260bdd082477fb37003bd1cbcfda724b3a590a4838db42f489cbe5675988c03",
+      "repository_sha256": "3260bdd082477fb37003bd1cbcfda724b3a590a4838db42f489cbe5675988c03",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/robodojo.py",
+      "historical_sha256": "6de869dab5a4caa8a8c40dcf35bf145e02eb2756b2d45cb36ad55cff452ec0d8",
+      "repository_sha256": "6de869dab5a4caa8a8c40dcf35bf145e02eb2756b2d45cb36ad55cff452ec0d8",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/robodojo_xpl.py",
+      "historical_sha256": "a9dc389cc2a8c5217affcb74d9d85297f37ba22957d0c744c574cb7f57bce173",
+      "repository_sha256": "a9dc389cc2a8c5217affcb74d9d85297f37ba22957d0c744c574cb7f57bce173",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/robodojo_xpl_rgb.py",
+      "historical_sha256": "1dd2c60f8804374a23af3774b3115caac51ef965227bc45c3ee4348591d3cab1",
+      "repository_sha256": "2f95db686c1b0093f9663010a0450bda94c7d08f1e0da2f645f1bcc93f017917",
+      "status": "different"
+    },
+    {
+      "path": "src/pyrualean/robots.py",
+      "historical_sha256": "8e894a9f03326a8f2bbe69e2f6faa25a9ec7a63a298b0c3eda82288d6bdadb4f",
+      "repository_sha256": "8e894a9f03326a8f2bbe69e2f6faa25a9ec7a63a298b0c3eda82288d6bdadb4f",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/robotwin.py",
+      "historical_sha256": "813a7c7eea46bd548f157f869f97d263a6b4bb1210995c4e0c3931f6fa3559b9",
+      "repository_sha256": "813a7c7eea46bd548f157f869f97d263a6b4bb1210995c4e0c3931f6fa3559b9",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/runner.py",
+      "historical_sha256": "d5cbb10dedd60cbd9dee7ac945f5e302bda7584064d76e1bc3a29ecc41ce123b",
+      "repository_sha256": "d5cbb10dedd60cbd9dee7ac945f5e302bda7584064d76e1bc3a29ecc41ce123b",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/sandbox.py",
+      "historical_sha256": "22f679b8e2dbea75b1a0bccef59808e1aadeb25a03eb6ec9b3e72ff67a3aad66",
+      "repository_sha256": "22f679b8e2dbea75b1a0bccef59808e1aadeb25a03eb6ec9b3e72ff67a3aad66",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/stage_verification.py",
+      "historical_sha256": "e040851535bd3c39f0b7a76ab18aecab1bf4404a411823d8be73b79ad7fbc41d",
+      "repository_sha256": "e040851535bd3c39f0b7a76ab18aecab1bf4404a411823d8be73b79ad7fbc41d",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/static_rule_reminders.py",
+      "historical_sha256": "80e5eb20d9d42992b6bedd90be498ca180e8e217520e201dbe20726bd58705d3",
+      "repository_sha256": "80e5eb20d9d42992b6bedd90be498ca180e8e217520e201dbe20726bd58705d3",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/trajectory_context.py",
+      "historical_sha256": "bab46222fc3a5f8200b7764c7348fb7c01e471ac47da48f73511c0e552354ff8",
+      "repository_sha256": "bab46222fc3a5f8200b7764c7348fb7c01e471ac47da48f73511c0e552354ff8",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/v19_cached_v22.py",
+      "historical_sha256": "6f29659f67b022da3fa71f767120a7f5b54f5fd1cce2feabc1a53426145898b5",
+      "repository_sha256": "6f29659f67b022da3fa71f767120a7f5b54f5fd1cce2feabc1a53426145898b5",
+      "status": "identical"
+    },
+    {
+      "path": "src/pyrualean/vista_native.py",
+      "historical_sha256": "8793b46c9f5060b6e0299defbf3af2d9b19a25a6f28af751d517bb9db622e34a",
+      "repository_sha256": "8793b46c9f5060b6e0299defbf3af2d9b19a25a6f28af751d517bb9db622e34a",
+      "status": "identical"
+    },
+    {
+      "path": "tests/test_v19_cached_v22.py",
+      "historical_sha256": "1d10a78876b6b3ddc69229364ffd0b35b8d9e0bacce65a37ceeba672c49c9117",
+      "repository_sha256": null,
+      "status": "missing_in_repository"
+    }
+  ],
+  "interpretation": "Historical fusion config matches the published fusion profile, but source snapshots are not byte-identical. These logs are not reruns of the published commit."
+}

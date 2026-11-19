@@ -1,0 +1,44 @@
+[
+  {
+    "cell": 17,
+    "message_index": 90,
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/images/015_cam_left_wrist.png",
+    "name": "cell017-015_cam_left_wrist.png",
+    "sha256": "1ef994ccc5bf0274bd766be42af5fae7160436bd37d0d8b37bb375ca8e1139ef"
+  },
+  {
+    "cell": 19,
+    "message_index": 103,
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/images/018_cam_head.png",
+    "name": "cell019-018_cam_head.png",
+    "sha256": "94430b354e8f994118aff38a3ff676aa30209c61d767429ccfc3bdb6a15112d3"
+  },
+  {
+    "cell": 27,
+    "message_index": 141,
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/images/024_cam_head.png",
+    "name": "cell027-024_cam_head.png",
+    "sha256": "244494ca28457b342ba167435d160e0a9ce918606f10c0b473e1a2c166e29343"
+  },
+  {
+    "cell": 31,
+    "message_index": 159,
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/images/027_cam_head.png",
+    "name": "cell031-027_cam_head.png",
+    "sha256": "7b01bd5e072545d690c7e5a9d360765ddeca532c2d858397568ca4da1da46ca5"
+  },
+  {
+    "cell": 36,
+    "message_index": 176,
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/images/029_cam_head.png",
+    "name": "cell036-029_cam_head.png",
+    "sha256": "90ba624003b1ccb25713d091debd7693717079d0aca0c137080811611289e32f"
+  },
+  {
+    "cell": 39,
+    "message_index": 186,
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/images/030_cam_head.png",
+    "name": "cell039-030_cam_head.png",
+    "sha256": "eed2576cf484d9be5c90af0a46c7f2ef009ee0f11fcef0c21893667586d7ddd3"
+  }
+]

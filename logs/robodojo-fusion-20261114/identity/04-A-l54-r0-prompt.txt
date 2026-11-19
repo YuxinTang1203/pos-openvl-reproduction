@@ -1,0 +1,990 @@
+# How you control the robot
+
+You control a dual-arm ARX-X5 robot in the RoboDojo benchmark through the primary execution tool,
+`python(code)`.  Each call executes your code in a persistent Python session
+(like a notebook): `robo` (a `RobodojoOfficialColourRobot` bound to the live simulator, a
+SAM3 segmentation service), `np`, `math`, `time`,
+`log(value)` and `display(image)` are predefined, and every variable,
+function or import you create stays
+available in later calls: helpers you define once can be called directly in
+any later call, without re-defining or re-importing them.  The tool returns exactly what your code produced: stdout, stderr, the exception if any, and the value of a trailing expression.  Nothing else is added: print what you want to know (for example `print(robo.state())` or the result of a motion call).
+Images are NOT attached automatically: call `robo.show('cam_head')`, `robo.show('cam_left_wrist')` or `robo.show('cam_right_wrist')` to see a current camera view, or `display(image)` to show any image array you built (a crop, an overlay, a picture you kept in memory), when you need to look before writing the next turn.  Prefer cells that carry out several steps with in-code checks (segment, back_project, gripper opening, Move.reached) and look only when a decision depends on the picture.
+The session is sandboxed: you may import `numpy`, `math`, `time`, `json`,
+`re`, `PIL` and other pure-computation modules, but not `os`, `sys`,
+`subprocess`, `pathlib` or networking, and `open` only works inside your
+workspace; code that reaches for Python internals (`__globals__`,
+`__subclasses__`, ...) is refused.
+
+# How the episode is scored
+
+- The benchmark evaluates the task's required outcome and execution history,
+  including any order specified in the instruction. Follow that order even
+  when a different sequence could produce the same final scene. No result
+  carries a task-success flag; judge progress from observations and actions.
+  The absence of live success feedback does not mean only the final scene counts.
+- The number of `python` calls in an episode is limited (every call counts,
+  including calls that only look, print or display); the episode also ends
+  after 500 simulator steps. At either limit the benchmark evaluates
+  the resulting scene and execution history, so make every call do purposeful
+  work and verify results in code.
+- When observations and completed actions support that the instruction is satisfied, call
+  `finish(status="success", ...)` and stop.  If you cannot make progress, call
+  `finish` with `failure` or `stuck`.
+
+Your working directory is a scratch workspace: you may keep notes or helper
+files there.  Do not read files outside it and do not use the shell to reach
+the simulator; every action goes through `python`.
+
+# API reference (the `robo` object)
+
+class RobodojoOfficialColourRobot
+    The RoboDojo dual-arm station: two 6-DoF ARX-X5 arms with parallel grippers at a table.
+
+    World frame: x runs across the table (the LEFT arm is at negative x and
+    appears on the LEFT of the head image), y points away from the robot
+    towards the far edge of the table, z is up; metres.  Orientations are unit
+    quaternions ordered [w, x, y, z].  The arms are ``"left"`` and ``"right"``
+    (``robo.LEFT`` / ``robo.RIGHT``); a motion call names one arm and holds
+    the other where it is.
+
+    ``move_to`` drives an arm's GRASP POINT, the middle of the finger pads
+    (``state().left.tcp_pos``), to a world position, with an orientation given
+    in degrees: ``pitch`` is how far the gripper points below the horizontal
+    (0 level, 90 straight down), ``yaw`` the heading of the pointing direction
+    on the table (0 away from the robot, +90 towards the robot's left, -90
+    towards its right) and ``roll`` the turn of the fingers about the pointing
+    direction (0: side by side, as at the start).  Pointing straight down, the
+    fingers close along the line at ``yaw`` degrees from +x (counter-clockwise
+    seen from above): ``locate``'s ``grasp_yaw`` is that line across an
+    object's narrow side.  The table
+    surface is at z = 0.765; the arms stand on it at x = -0.30 and +0.30,
+    y = -0.45.
+
+    Two gripper conventions, do not mix them up.  COMMANDS are signed:
+    ``robo.CLOSE`` (1) closes, ``robo.OPEN`` (-1) opens, ``robo.KEEP`` (0)
+    leaves the gripper as it is.  MEASUREMENTS (``state().left.gripper``,
+    ``Gripper.opening``) are openings: 1.0 = open, 0.0 = closed on nothing.
+
+    Every native action (one step of ``move_to``, ``set_gripper`` or
+    ``home``) counts against the episode's
+    native-action budget; when it is spent the state reports ``truncated``
+    and motion calls raise ``EpisodeFinished``.  Motion calls block until the
+    primitive finishes and return a typed result; nothing is queued.
+
+    Perception is from colour images alone; there is no depth image.  A fixed
+    head camera (``cam_head``, the whole table) and one wrist camera per arm
+    (``cam_left_wrist``, ``cam_right_wrist``), 640x480 each, and where each
+    one is, is known from the robot's state.  ``locate`` finds an object by a
+    text prompt and measures it in 3D (centre, top, footprint, heading) from
+    the cameras that see it: it takes two of them to measure a height.
+    ``segment`` / ``back_project`` give a mask centroid and the world point at
+    one pixel.  Object poses are never given.
+
+Constants:
+    robo.ARMS = ('left', 'right')
+    robo.LEFT = 'left'
+    robo.RIGHT = 'right'
+    robo.CLOSE = 1
+    robo.OPEN = -1
+    robo.KEEP = 0
+
+Methods and attributes of `robo`:
+
+robo.task -> str  (read-only attribute)
+    The task instruction the benchmark generated for this layout (authoritative).
+
+    Read it before planning.
+
+robo.state(step: int = -1) -> State
+    Read the recorded state of both arms.
+
+    Args:
+        step: recorded step to read; ``-1`` is the latest, ``0`` the
+            initial scene.  A new step is recorded after every motion call.
+    Returns:
+        State with ``left`` / ``right`` end-effector poses, measured
+        gripper openings and joint angles, and the ``truncated`` flag.
+
+robo.image(camera: str = 'cam_head', *, resolution: str = 'high', step: int = -1) -> Any
+    Load a recorded camera image as a ``numpy`` uint8 array (480, 640, 3), RGB.
+
+    Args:
+        camera: ``"cam_head"`` (fixed view of the whole table: identify
+            objects, destinations and the global layout),
+            ``"cam_left_wrist"`` or ``"cam_right_wrist"`` (on the gripper:
+            what that arm is about to grasp or is holding).
+        resolution: there is one resolution per camera, ``"high"``.  Pixel
+            coordinates are (row, col) with row 0 at the top and col 0 at
+            the left.
+        step: recorded step, ``-1`` = latest.  ``segment`` and
+            ``back_project`` always read the CURRENT observation, which is
+            the latest recorded step.
+
+robo.show(camera: str = 'cam_head') -> None
+    Attach the current image of ``camera`` to the feedback of this turn.
+
+    Images are not returned automatically; call ``show("cam_head")``,
+    ``show("cam_left_wrist")`` or ``show("cam_right_wrist")`` when *you*
+    (the author) need to look at the scene before writing the next turn.
+    Costs tokens: look only when a decision depends on it.
+
+robo.artifact(name: str, *, step: int = -1) -> bytes
+    Return the raw bytes of a recorded artifact (advanced).
+
+    Names are ``cam_head.png``, ``cam_left_wrist.png`` and
+    ``cam_right_wrist.png``.
+
+robo.camera_meta(camera: str = 'cam_head', *, step: int = -1) -> dict[str, Any]
+    Return the calibration of one camera at a recorded step as a dict.
+
+    Keys: ``shape`` (image shape), ``intrinsic_matrix`` (3x3) and
+    ``extrinsic_matrix`` (4x4 camera-to-world; the camera looks down its
+    own -z axis with +y up).  The head camera is fixed; a wrist camera
+    moves with its arm, and its pose is worked out from that arm's state.
+
+robo.segment(
+    text_prompt: str,
+    camera: str = 'cam_head',
+    min_score: float = 0.2,
+) -> Segment
+    Segment an object in the current image of ``camera`` by a text prompt (SAM3).
+
+    Args:
+        text_prompt: what to find, e.g. ``"the green bottle"``.  Name one
+            object by its visible properties.
+        camera: ``"cam_head"`` (default), ``"cam_left_wrist"`` or
+            ``"cam_right_wrist"``.
+        min_score: masks scoring below this are reported as not found.
+    Returns:
+        Segment; when ``found``, pass ``centroid`` (row, col) to
+        ``back_project`` with the same camera to get a world point.  The
+        mask is the best match for the text, not a guarantee of identity:
+        check where it is against the image.
+    Raises:
+        ToolError: the camera image or the SAM3 service is unavailable.
+
+robo.back_project(row: int, col: int, camera: str = 'cam_head') -> SeenPoint
+    Return the world point seen at one pixel of the current image of ``camera``.
+
+    There is no depth image, so a pixel alone is only a ray.  The object
+    under the pixel is segmented from that pixel (SAM3) and measured as
+    ``locate`` measures one, and the answer is where the pixel's ray
+    meets it.  A pixel on the table top itself gives the point of the
+    table it shows, exactly.
+
+    Args:
+        row / col: pixel, row 0 at the top, col 0 at the left (images are
+            480 rows x 640 cols).
+        camera: the camera the pixel was read from (default ``"cam_head"``).
+    Returns:
+        SeenPoint; check ``surface``.  ``"object"``: ``xyz`` is on the
+        object under the pixel, as well as ``locate`` would measure that
+        object from this camera and the others that see it.
+        ``"table"``: ``xyz`` is on the table top; a pixel that shows
+        something too flat or too far to measure also answers so.  A thin
+        part in mid-air (a peg, a handle, a cable) is not measured
+        reliably: reason from the image and from ``locate`` of the whole
+        object instead.
+    Raises:
+        ToolError: pixel out of range, or it looks past the table.
+
+robo.locate(
+    text_prompt: str,
+    camera: str = 'cam_head',
+    min_score: float = 0.2,
+) -> ObjectSight
+    Find an object by a text prompt and measure it in 3D from the colour cameras.
+
+    SAM3 segments the current image of ``camera`` (as ``segment``); the
+    same object is then looked for in the other two cameras, and its
+    height and footprint are those that fit every camera that shows it.
+    One camera cannot measure a height: a low deep thing and a tall
+    shallow one look alike from it.  ``views`` says how many cameras
+    agreed.  Nothing moves.
+
+    Args:
+        text_prompt: one object by its visible properties, e.g. ``"the
+            small red cube on the left"``.
+        camera: ``"cam_head"`` (default; the whole table),
+            ``"cam_left_wrist"`` or ``"cam_right_wrist"`` (close up, from
+            the gripper).
+        min_score: masks scoring below this are reported as not found.
+    Returns:
+        ObjectSight.  For a top grasp: ``move_to([x, y, top_z + 0.09],
+        pitch=90)`` above it, ``locate`` it again from there (the wrist
+        camera then looks down on it and the reading is good to 1-2 mm),
+        turn to ``yaw=grasp_yaw`` and go down to the height to hold it
+        at.  With ``views >= 2`` and no ``note`` a block, a can, a bowl
+        or the body of a bottle is measured to 1-3 mm; a ``note`` that
+        the cameras agree only roughly leaves the height uncertain.  With
+        ``views == 1`` the height is a guess, the tallest upright shape
+        that fits the one image: close for a box or a can, wrong for a
+        bowl, a cup or anything wider above than below, and for a tall
+        thing that tapers; ``center_xyz`` is then off, along the line
+        away from the robot, by about half of what the height is wrong
+        by.  An object once measured with ``views >= 2`` keeps that height
+        in later calls with the same prompt.  No position comes back
+        (``center_xyz`` None, ``note`` says why) for a mask on the robot's
+        own arm or on something that is not on the table.  The mask is
+        the best match for the text, not proof of identity: check it
+        against the image.
+    Raises:
+        ToolError: the camera image or the SAM3 service is unavailable.
+
+robo.move_to(
+    xyz: Sequence[float],
+    arm: str = 'right',
+    gripper: int = 0,
+    pitch: float | None = None,
+    yaw: float | None = None,
+    roll: float | None = None,
+    path: str = 'auto',
+) -> Move
+    Move one arm's grasp point to a world position, with an orientation.
+
+    The grasp point is the middle of the finger pads (``tcp_pos``).  The
+    library solves the arm's inverse kinematics for the full pose and,
+    with ``path="auto"``, moves the grasp point along a straight line to
+    it, about 2.5 cm or 8 degrees per native action; when the line leaves
+    the arm's reach it swings the joints straight to the solution instead.
+    Nothing moves when the pose is out of reach or every way there takes
+    the arm into the table: ``ik_error`` says why.
+
+    Args:
+        xyz: target grasp-point position [x, y, z], metres.
+        arm: ``"left"`` or ``"right"``.  The other arm holds its joints.
+        gripper: ``robo.CLOSE`` (1) or ``robo.OPEN`` (-1) to command the
+            moving arm's gripper on every action of the motion,
+            ``robo.KEEP`` (0) to keep commanding what it was last told (a
+            held object stays squeezed).  Keep it closed (1) while
+            carrying an object.
+        pitch / yaw / roll: the orientation to arrive with, degrees (the
+            class docstring defines them).  An angle left None keeps its
+            current value, so a plain position move does not turn the
+            gripper.  With an EMPTY open gripper the fingers are
+            interchangeable, so the pose turned half a turn about the
+            pointing direction may be taken when it needs less joint
+            travel (``note`` says so; yaw / roll then read 180 off);
+            holding something, the pose is taken exactly as asked.
+        path: ``"auto"`` (default), ``"line"`` (straight line or nothing)
+            or ``"joint"`` (swing the joints: fewer actions, but the grasp
+            point does not follow a line: not near objects).
+    Returns:
+        Move; test ``reached`` (within 0.01 m and 5 degrees).  ``blocked``
+        means the arm was stopped by something on the way.
+    Raises:
+        ValueError: a malformed argument (nothing is sent).
+
+robo.set_gripper(arm: str, gripper: int, opening: float | None = None) -> Gripper
+    Close or open one gripper, without moving the arms.
+
+    The command is repeated until the fingers stop (2 to 10 native
+    actions).  After a close, ``holding`` tells whether something stopped
+    the fingers apart and ``width_m`` how wide it is.  Later motions with
+    ``robo.KEEP`` keep commanding what was commanded last, so a held
+    object stays squeezed and a partial opening stays as it is.
+
+    Args:
+        arm: ``"left"`` or ``"right"``.
+        gripper: ``robo.CLOSE`` (1) or ``robo.OPEN`` (-1).
+        opening: with ``robo.OPEN`` only: open to this reading
+            (0 < opening <= 1) instead of all the way, e.g. to reach
+            between close neighbours.  Something 0.002 + 0.109 x opening
+            metres wide then just fits between the fingers.
+    Returns:
+        Gripper.  ``holding`` is not proof that the INTENDED object is
+        held: confirm it moves with the arm (wrist camera, or ``locate``
+        it again after a lift).
+
+robo.home(arm: str = 'both') -> Home
+    Return an arm to the joint angles it had when the episode started.
+
+    A grasp point lower than 1.0 m first goes straight up by up to 6 cm;
+    then each native action commands the starting angles directly, so the
+    arm swings straight back: no IK and no path planning beyond that lift
+    (clear tall things yourself).  The call returns when every joint is
+    within 0.01 rad or after 25 actions of the swing.  The gripper keeps
+    the opening it has; an arm that is not named holds its joints.  Most
+    tasks count as done only with both arms back where they started.
+
+    Args:
+        arm: ``"left"``, ``"right"`` or ``"both"`` (default).
+    Returns:
+        Home; test ``reached`` and call again when it is False.
+
+Result types (frozen dataclasses; access fields as attributes):
+
+class State(step: int, task: str, left: ArmState, right: ArmState, truncated: bool)
+    Snapshot of both arms at one recorded step.
+
+    step: index of the recorded step (0 = initial scene).  A new step is
+        recorded after every motion call.
+    task: the task instruction given by the benchmark (authoritative).
+    left / right: the two arms (``state.arm("left")`` picks one by name).
+    truncated: the native-action budget of the episode is exhausted; no
+        further motion is possible.
+
+class ArmState(
+    tcp_pos: tuple[float, float, float],
+    pitch: float,
+    yaw: float,
+    roll: float,
+    eef_pos: tuple[float, float, float],
+    eef_quat: tuple[float, float, float, float],
+    gripper: float,
+    joints: tuple[float, ...],
+)
+    One arm at a recorded step.
+
+    tcp_pos: the grasp point [x, y, z] in the world frame, metres: the middle of
+        the finger pads, 0.145 m out along the pointing direction from the
+        end-effector link.  ``move_to`` drives this point.
+    pitch / yaw / roll: the gripper's orientation, degrees (see the class
+        docstring): ``pitch`` 0 points level and 90 straight down, ``yaw`` is
+        the heading of the pointing direction on the table (0 away from the
+        robot, +90 towards the robot's left), ``roll`` the turn of the fingers
+        about the pointing direction (0 as at the start).  Pointing straight
+        down, ``yaw`` alone says how the fingers lie and ``roll`` reads 0.
+    eef_pos: position of the end-effector link (the wrist flange), metres.
+    eef_quat: end-effector orientation as a unit quaternion [w, x, y, z].
+    gripper: measured gripper opening, normalised: 1.0 = open, 0.0 = closed on
+        nothing; closed on an object 0.002 + 0.109 x this reading is the
+        object's width in metres.
+        (Gripper COMMANDS use the opposite sign convention: see ``set_gripper``.)
+    joints: the six arm joint angles, radians (the last turns the fingers about
+        the pointing direction).
+
+class Move(
+    arm: str,
+    target_xyz: tuple[float, float, float],
+    start_xyz: tuple[float, float, float],
+    final_xyz: tuple[float, float, float],
+    dist_to_target_m: float,
+    orientation_error_deg: float,
+    pitch: float,
+    yaw: float,
+    roll: float,
+    reached: bool,
+    path: str | None,
+    ik_error: str | None,
+    note: str | None,
+    blocked: bool,
+    steps_used: int,
+    truncated: bool,
+)
+    Outcome of ``move_to``.
+
+    target_xyz: the requested grasp-point position.
+    start_xyz / final_xyz: where the grasp point was before and after.
+    dist_to_target_m: distance from ``final_xyz`` to ``target_xyz``.
+    orientation_error_deg: how far the final orientation is from the one asked
+        (the angles passed, the others as they were).
+    pitch / yaw / roll: the orientation the gripper ended with, degrees.
+    reached: within 0.01 m and 5 degrees of the target.
+    path: ``"line"`` (the grasp point moved along a straight line),
+        ``"joint"`` (the joints swung straight to the solution) or None
+        (nothing moved).
+    ik_error: why nothing moved (the pose is out of reach, or every way there
+        goes through the table), or None.  An out-of-reach target names the
+        nearby poses that ARE reachable (a less steep pitch here, or this
+        orientation higher or lower).
+    note: set when the exact pose was out of reach but one within 2 cm and
+        8 degrees was not: the arm went there instead (``dist_to_target_m``
+        and ``orientation_error_deg`` say how far off it is).
+    blocked: the arm stopped short of a planned pose it could reach: something
+        is in the way, or a held object is pushing against something.
+    steps_used: native actions consumed.
+    truncated: the native-action budget ran out.
+
+class Gripper(
+    arm: str,
+    commanded: str,
+    opening: float,
+    holding: bool,
+    width_m: float | None,
+    steps_used: int,
+    step: int | None,
+    step_limit: int | None,
+    truncated: bool,
+)
+    Outcome of ``set_gripper``.
+
+    commanded: ``"closed"`` or ``"open"``.
+    opening: the opening once the fingers stopped (1.0 = open, 0.0 = closed on
+        nothing).
+    holding: after a close, the fingers stopped apart (an opening above 0.01,
+        about 3 mm): something is between them.  It does not say what: check
+        that the intended object moves with the arm.
+    width_m: after a close, the width of what is held, across the fingers
+        (0.0 when nothing is), else None.
+    steps_used: native actions consumed.
+    step / step_limit: native actions executed so far and the episode budget
+        (None if the runtime did not report them).
+    truncated: the native-action budget ran out.
+
+class Home(
+    arm: str,
+    reached: bool,
+    max_joint_error_rad: float,
+    steps_used: int,
+    truncated: bool,
+)
+    Outcome of ``home``.
+
+    arm: ``"left"``, ``"right"`` or ``"both"``, as requested.
+    reached: every joint of the returned arm(s) ended within 0.01 rad of the
+        angle it had when the episode started.
+    max_joint_error_rad: the largest difference that remains.
+    steps_used: native actions consumed.
+    truncated: the native-action budget ran out.
+
+class ObjectSight(
+    found: bool,
+    center_xyz: tuple[float, float, float] | None,
+    top_z: float | None,
+    height_m: float | None,
+    length_m: float | None,
+    width_m: float | None,
+    long_axis_deg: float | None,
+    grasp_yaw: float | None,
+    score: float | None,
+    centroid: tuple[int, int] | None,
+    area_px: int,
+    camera: str,
+    note: str | None,
+    views: int,
+)
+    Outcome of ``locate``: an object measured from its masks in the colour cameras.
+
+    found: SAM3 produced a mask scoring at least ``min_score``.
+    center_xyz: [x, y, z] of the middle of the smallest rectangle around the
+        object's footprint, at half its height above the table, metres.  A
+        handle, a spout or a tail is part of the footprint and moves the
+        middle away from the body's.  None when no 3D measurement was
+        possible (see ``note``).
+    top_z: height of the object's top surface.
+    height_m: ``top_z`` above the table surface (0.765 m).
+    length_m / width_m: the long and the short side of the smallest rectangle
+        around the footprint.
+    long_axis_deg: direction of the long side on the table, degrees from +x
+        (-90 .. 90); of a square, one of its sides.
+    grasp_yaw: the ``yaw`` for ``move_to(..., pitch=90, yaw=grasp_yaw)``:
+        pointing straight down, the fingers then close across the short side
+        (a cube's: across two faces).
+    views: how many cameras agreed on the measurement.  1: nothing but the
+        camera asked saw the object, and its height is a guess (see
+        ``locate``); ``note`` says which guess.
+    score: SAM3 confidence.
+    centroid: (row, col) of the mask in the image, as ``Segment.centroid``.
+    area_px: mask pixels.
+    camera: the camera measured from.
+    note: what limits the measurement (one camera only; two that agree only
+        roughly; the mask is the robot's own arm, or not on the table; too
+        flat or too far to measure), else None.
+
+    The object is taken to stand on the table.  What other things or the
+    robot's own arm hide of it is not measured, so a partly hidden object
+    comes out smaller and off-centre.  A held object is usually not found from
+    the head camera.
+
+class Segment(
+    found: bool,
+    centroid: tuple[int, int] | None,
+    area_px: int,
+    score: float | None,
+    box: Any,
+    camera: str,
+)
+    Outcome of ``segment``.
+
+    found: SAM3 produced a mask scoring at least ``min_score``.
+    centroid: (row, col) of the mask centroid (mean of the mask pixels, floored),
+        or None.  Pass exactly this pixel, with the same camera, to
+        ``back_project``.
+    area_px: number of mask pixels (0 when not found).
+    score: SAM3 confidence in [0, 1], None when not found.
+    box: mask bounding box as reported by SAM3, or None.
+
+class SeenPoint(
+    pixel: tuple[int, int],
+    xyz: tuple[float, float, float],
+    depth_m: float,
+    camera: str,
+    surface: str,
+)
+    Outcome of ``back_project``: the point seen at one pixel.
+
+    xyz: world [x, y, z], metres: where the pixel's ray meets the object under
+        the pixel, or the table.
+    depth_m: distance of that point along the camera's optical axis.
+    surface: ``"object"`` when the pixel lies on something that could be
+        measured, ``"table"`` when the point is on the table top (z = 0.765):
+        the pixel shows the table, or something too flat or too far to measure.
+
+Exceptions:
+    ToolError(RuntimeError): a call was rejected or a service failed; catch it if you have a fallback.
+    ValueError: an argument was invalid (e.g. a planar move over 0.30 m) - nothing was executed.
+    EpisodeFinished(BaseException): the episode is over (reason: truncated | timeout | cancelled); return.
+
+# Operating knowledge for RoboDojo: how the tools behave (no task recipes)
+
+## Frames, units, robot
+- Two ARX-X5 arms, `"left"` and `"right"`, stand side by side at the near edge
+  of a table; the head camera looks down the table from the robot's side.
+  World frame: x across the table (the LEFT arm is at negative x and on the
+  LEFT of the head image), y away from the robot towards the far edge, z up;
+  metres and degrees.  The arms' bases are at x = -0.30 and +0.30, y = -0.45.
+- The table top is at z = 0.765.  Read object heights from the scene
+  (`locate`), never assume them.
+- The task instruction (`robo.task`) is generated by the benchmark for this
+  layout and is authoritative: read it before planning and obey it verbatim.
+
+## The grasp point and the gripper's orientation
+- `move_to` drives an arm's GRASP POINT: the middle of the finger pads, 0.145 m
+  out from the end-effector link along the pointing direction.
+  `state().left.tcp_pos` reports it; `eef_pos` is the link behind it.  The
+  pads span about 1.2 cm either side of the grasp point and the fingertips
+  reach 1.3 cm beyond it, so pointing straight down the grasp point cannot go
+  lower than about 1.5 cm above the surface under it.
+- The orientation is three angles (`state().left.pitch`, `.yaw`, `.roll`):
+  `pitch` 0 points level and 90 straight down; `yaw` is the heading of the
+  pointing direction on the table, 0 away from the robot, +90 towards the
+  robot's left (-x); `roll` turns the fingers about the pointing direction.
+  The starting pose is level, pointing away, `0, 0, 0`.
+- Pointing straight down (`pitch=90`), `yaw` alone sets how the fingers lie:
+  they close along the line at `yaw` degrees from +x (counter-clockwise seen
+  from above), and `roll` reads 0.  An EMPTY open gripper's fingers are
+  interchangeable, so `yaw` and `yaw + 180` are the same grasp and such a
+  move may arrive at either (`note` says so).  Holding something, a move
+  always arrives at exactly the angles asked: that is how a held object is
+  turned (pouring, standing something up, twisting).
+- An angle you leave out of `move_to` keeps its current value: a plain
+  position move does not turn the gripper.
+
+## Motion
+- `move_to(xyz, arm, gripper, pitch, yaw, roll, path)` solves the arm's
+  inverse kinematics for the full pose in the library (not in the simulator)
+  and commands joint angles.  With `path="auto"` the grasp point follows a
+  straight line, about 2 cm or 8 degrees per native action; where the line
+  cannot be followed the joints swing straight to the solution (up to 0.15 rad
+  per joint per action) - away from objects only.  `path="line"` is the line
+  or nothing: use it for every approach, descent and lift near objects.
+- In the simulator, pointing-down targets over the table arrived within
+  0.1 mm and 0.3 degrees, and line descents stayed on the line.  `reached`
+  means within 0.01 m and 5 degrees.
+- Nothing moves when the pose is out of reach or every way there puts the arm
+  into the table: `ik_error` says which, `steps_used` is 0, and for a pose
+  out of reach it names nearby poses that ARE reachable ("reachable instead:
+  pitch=45 at this position, or z=0.860 with this orientation").  Take one of
+  those, or the other arm; do not repeat the pose.  A pose missed by at most
+  2 cm and 8 degrees is taken anyway: the arm goes to the closest reachable
+  pose and `note` says how far off it is.
+- Reach depends on height and pitch (measured from the arm's kinematics and
+  joint limits, pointing away from the robot).  Straight down (`pitch=90`)
+  the grasp point must stay LOW: at z = 0.80 an arm reaches out to y = 0.0
+  (0.05 straight in front of it), at z = 0.90 to y = -0.05, at z = 1.0
+  nowhere.  At `pitch=60` it reaches to y = 0.15 at z 0.80 and 0.05 at z 1.0;
+  at 45 to 0.2 / 0.1; level (`pitch=0`) to about 0.3 at any of these heights.
+  Across, pointing down near the table, the right arm reaches from x = -0.15
+  to 0.75 at y = -0.3, from -0.1 to 0.7 at y = -0.15 and from 0.1 to 0.5 at
+  y = 0.0; the left arm is the mirror image.
+- So: a top grasp suits objects lower than about 0.15 m, approached from at
+  most 6-8 cm above; take tall objects (bottles, cups) from the side, level or
+  slightly tilted (`pitch` 0-30, `yaw` towards the object), at about half
+  their height.  To carry something over a rim higher than about 0.9 m (a
+  box, a holder) hold it at `pitch` 30-60 or level: pointing straight down
+  cannot get that high.  Beyond that reach use the other arm, or push or hand
+  the object closer first.
+- Carrying past things: lift first (straight up, `path="line"`), travel
+  above everything in the way, come down over the destination.  A container
+  or fixture an arm bumps moves, and most tasks check where it ended up.
+- `blocked` set means the arm stopped short of its waypoints: something is in
+  the way (an object, the other arm).  Look before trying again.
+- The other arm holds its joints during a motion.  Move one arm at a time and
+  keep the idle arm out of the working arm's way.
+- To twist something held (a key, a cap, a knob), `move_to` the same point
+  with another `roll` (straight down: another `yaw`); the last joint turns
+  and the grasp point stays.  The wrist joint stops at about +-178 degrees.
+- `home(arm)` returns one arm, or `"both"`, to the joint angles it started
+  with and keeps the grippers as they are: a grasp point below 1.0 m first
+  goes straight up by up to 6 cm, then the joints swing straight back.  It
+  took 5 native actions from a short reach and more than 10 from a long one;
+  test `reached` and call again if it is False.  Release what you hold and
+  get clear of tall things before it: the swing plans no path.
+- A press (button, switch, key) is a motion: close the gripper, come down
+  pointing straight down over the point, `move_to` a grasp point 1-2 cm
+  BELOW where the fingertips would touch (they reach 1.3 cm beyond the grasp
+  point) with `path="line"`, then back up.  The fingertips stop where the
+  button bottoms out, so `reached` may read False there: measured on
+  `swap_blocks`, every command from 1 to 2.8 cm deep stopped about 7 mm below
+  the button's top, the bottom of its travel.  Nothing reports whether a press
+  registered; look for the effect the task expects.  Count your presses: a
+  task that asks for three fails with two or four.
+- In a few tasks a third arm, driven by the benchmark, takes part (an
+  opponent's moves, a demonstration to watch).  It moves only while native
+  actions run - your motions, or `set_gripper(arm, robo.OPEN)` on an open
+  gripper, which spends about 2 actions and moves nothing - and an opponent
+  may wait until both your arms are back near their start before it plays.
+  When the instruction says to wait or to watch, home both arms and let time
+  pass that way, looking at the head camera, until it has finished.
+- For budgeting: a 10 cm line costs about 5 native actions, a 40 cm swing
+  with a 90 degree turn about 15; `steps_used` reports it.  Every native action
+  counts against the episode's budget (the task card states it; `Gripper.step`
+  / `Gripper.step_limit` tell you where you stand).  When it is spent the
+  state reports `truncated` and no motion is possible.
+
+## Gripper
+- Two conventions.  Commands are signed: `robo.CLOSE` (1) closes / holds,
+  `robo.OPEN` (-1) opens, `robo.KEEP` (0) keeps commanding what the gripper
+  was last told (a held object stays squeezed, a partial opening stays).
+  Measurements are openings: `state().left.gripper` and `Gripper.opening`
+  read 1.0 when open and 0.0 when closed on nothing.
+- `set_gripper(arm, command)` runs a full stroke (repeats the command until
+  the fingers stop, 2 to 10 native actions) without moving the arms.  After a
+  close, `holding` says the fingers stopped on something (anything thicker
+  than about 3 mm) and `width_m` how wide it is across the fingers
+  (0.002 m + 0.109 m x opening: a 3.5 cm block reads 0.035 held across two
+  faces and 0.049 across its diagonal; within 1 mm on things from 3 to 8 cm).
+  `set_gripper(arm, robo.OPEN, opening=0.5)` opens only that far: something
+  0.002 + 0.109 x opening metres wide then just fits (0.5: 5.7 cm), to reach
+  between close neighbours (slices in a rack, tools in a tray) without
+  catching them.
+- The fingers are position-controlled: the squeeze grows with how far the
+  object keeps them from closing (about 23 N per cm per finger), so a thin
+  part is held weakly.  Grasp it near its centre of mass and turn it in small
+  steps.
+- `holding` is not proof that the INTENDED object is held: confirm that it
+  moved with the arm after a lift (wrist camera, or `locate` it at its old
+  place and see it gone).  A held object is hard to `locate` because the
+  gripper covers it.
+- Carry with `gripper=robo.CLOSE` in every `move_to` that transports an
+  object; `robo.OPEN` in a motion drops it.
+- Thin and flat parts (handles, boards, a set square) are easy to miss or let
+  slip: close across the thin side, and compare `width_m` with the part's
+  thickness before lifting; `holding` False or a width far from it is a miss.
+- A top grasp with these tools: `locate` the object; `set_gripper(arm, OPEN)`;
+  `move_to` above it pointing down (`pitch=90`, 8-10 cm above `top_z`) and
+  `locate` it again from there (see Perception); turn to `yaw=grasp_yaw` and
+  descend with `path="line"` until the pads cover the top part of the object
+  (a 3.5 cm block: grasp point about 1.8 cm below its top, and never lower
+  than 1.6 cm above the table: a target below that is refused);
+  `set_gripper(arm, CLOSE)`; lift with `path="line"`; confirm.  A side grasp
+  of an upright object: level (`pitch=0, roll=0`: the fingers close
+  horizontally), `yaw` pointing from the arm's base at the object, grasp
+  point 3-5 cm above its top; then down with `path="line"`, the open fingers
+  passing on either side of it, to about half its height.  An approach from
+  short of the object, towards the robot, is often out of reach this close to
+  the base.
+- To put something down, lower it with `path="line"` until its bottom is just
+  above the surface (support top + object height, plus a few mm), open, and
+  lift straight up before moving sideways.
+
+## Perception
+- Three colour cameras, 640x480, and no depth image.  `cam_head` is the
+  authority for identity and coarse geometry: which object, which
+  destination, the overall layout.  The wrist cameras show what an arm is
+  about to grasp or is holding, and a measurement needs one of them to be
+  three-dimensional.
+- `locate(text, camera)` segments the object and measures it in 3D from the
+  cameras that see it: `center_xyz` (footprint centre, half its height),
+  `top_z`, `height_m`, the footprint `length_m` x `width_m` (the smallest
+  rectangle around it), its long axis `long_axis_deg` (from +x) and
+  `grasp_yaw`, the `yaw` that closes pointing-down fingers across its narrow
+  side (a cube's: across two faces).  `center_xyz` is the middle of that
+  rectangle: a handle, a spout or a tail belongs to the footprint and pulls
+  the middle away from the body's.  A hollow one (bowl, bin) gives its rim as
+  `top_z`.  Nothing moves.
+- One camera cannot tell how tall a thing is: a low deep object and a tall
+  shallow one look the same from it.  `views` says how many cameras agreed on
+  the measurement.  With `views >= 2` and no `note`, a block, a can, a bowl or
+  the body of a bottle is measured to 1-3 mm, its height included.  A `note`
+  that the cameras agree only roughly means the second camera saw part of it
+  or saw it badly: the position is usable, the height may be centimetres off.
+  With `views == 1` the height is a guess, the tallest upright shape that
+  fits the one image: close for a box or a can, wrong for a bowl, a cup, a mug
+  or anything wider above than below, and for a tall thing that tapers.
+  `center_xyz` is then off, along the line away from the robot, by about half
+  of what the height is wrong by, and `note` says that it is a guess.
+- The view that settles a measurement is from above.  For something low it
+  is the one a top grasp passes through anyway: the gripper pointing straight
+  down with its grasp point 8-10 cm above the object (`move_to([x, y, top_z +
+  0.09], arm, pitch=90)`).  For something tall (a bottle, a holder) or further
+  out, where a gripper pointing straight down does not reach, tilt it:
+  `pitch=45` to `60`, the grasp point over the object and 5-10 cm above its
+  top (for a 19 cm bottle near the robot, `move_to([x, y + 0.04, 1.03], arm,
+  pitch=60)`; at that height an arm reaches to about y = 0.05).  The wrist
+  camera then looks down on the object while the head camera sees it from the
+  side, and `locate` is good to 1-2 mm on a block and 3-4 mm on a bottle, in
+  place and in height.  So: `locate` from where you are for a first position,
+  move above it, `locate` again, and grasp or place by the second reading.  Do
+  the same over the place where something is to be put down (a stack, a slot,
+  a container) just before lowering onto it.
+- At the start each wrist camera sees the table ahead of its own arm, from
+  about y = -0.15 outward and some 40 degrees to either side; what lies close
+  to the robot's edge of the table, or under a gripper, it does not see.
+  Measure everything you will handle once while both arms are home, and check
+  `views`.  A level gripper cannot be brought nearer to the robot than where
+  it starts, so there is no "from short of it" view of a near object: look
+  from above.
+- An arm over the table hides what lies behind and under it from the head
+  camera.  Of an object half hidden, one camera gives a place that can be
+  10 cm off; `note` then says that the arm is in front of part of it, or (when
+  it was measured taller before) that the arm hides part of it and no
+  position is given.  Of an object fully hidden the segmenter returns the
+  best OTHER match for your words: a part of the gripper, a different object,
+  something beyond the table.  The signs are a `score` below about 0.4, a
+  centre far from where the object was, or a `note` that the mask lies on the
+  robot's own arm or that what it shows is not on the table (no position
+  then either).  In every one of these cases move the arm aside or `home` it
+  and `locate` again; never act on a low-score reading that disagrees with an
+  earlier good one.
+- An object measured once with `views >= 2` keeps its height: a later
+  `locate` with the SAME prompt uses it when only one camera sees the object
+  then, or when the cameras agree on it less well than they did (`note` says
+  so).  A new height replaces it once the old one no longer fits what the
+  camera shows (the object fell over).
+- `locate` takes the object to stand on the table.  Something lying on top of
+  another object, inside a container or in a gripper is not measured
+  correctly (it comes out further away and larger): work out where it is from
+  where you put it and from the images.
+- `segment` + `back_project` give one mask and one point.
+  `back_project(row, col, camera)` segments whatever is under that pixel,
+  measures it as `locate` does and returns where the pixel's ray meets it
+  (`surface == "object"`); a pixel on the table top itself returns that point
+  of the table, exactly (`surface == "table"`), and so does one on something
+  too flat or too far to measure.  A thin part in mid-air (a peg, a handle)
+  is not measured reliably.
+- All of them read the CURRENT observation: localise, act, then localise
+  again.  Positions from before a contact are stale.
+- A mask is the best match for the text, not proof of identity.  Describe one
+  object by colour, shape and position; check `score` and where `centroid`
+  falls in the image before acting on it.  If a name finds nothing, try what
+  it looks like (`"yellow cube"` for a textured block).  Words like "left"
+  or "front" do not make it choose another of several alike objects: when two
+  prompts give the same centre they found the same object; tell instances
+  apart in the image (or with `segment`'s box) instead.  What the robot's own
+  arm hides of an object is not measured: it comes out smaller and
+  off-centre (move the arm away first).
+- `robo.image(camera)` returns the recorded picture as an array for your own
+  analysis.
+
+## Judging progress
+- Nothing reports task success while the episode runs: no result carries a
+  task-success flag.  Judge progress from the images and the robot state,
+  and say so when you cannot tell.
+- Grasp: the target leaves its place and moves with the arm.
+- An amount the instruction names ("lift it by 10 cm") is measured on the
+  object, not on the gripper: a held object sags and slips a little in the
+  fingers.  Go 2-3 cm beyond the amount asked.
+- Transport: the hold stays stable through the lift and the lateral move.
+- Placement: the object rests where the instruction wants it after the
+  gripper has opened and the arm has withdrawn; an object on a rim or beside
+  its destination is not placed.
+- The benchmark can check execution history as well as the final scene. Follow
+  the instruction's required order and intermediate outcomes. It checks positions to about a
+  centimetre and angles to a few degrees of the arrangement asked (a row is
+  straight, a stack centred, a part upright); EVERY object the instruction
+  names; containers and fixtures where they were and upright; the exact
+  number of presses; in a task that asks to push or slide something, lifting
+  it can fail the task.  "Nearly" is a failure.  Before finishing, `locate`
+  each object again, compare with what is asked, and correct what is off
+  while budget remains.
+- What else is checked: objects you did not mean to move (things you knock
+  over or out of place count against you: reach between close neighbours
+  with a narrower opening); plurals ("the wooden blocks" means all of them,
+  whatever their colour); articulated parts pushed to the end of their travel
+  (a lever most of the way down, a lid shut within a few degrees; a free lid
+  swings when touched); liquids: nearly all of it in the target at the moment
+  the container comes back upright, and the container upright at the end -
+  liquid visible in a cup is not enough.
+- Most tasks count as done only once BOTH arms are back at the pose they
+  started in (within 0.15 m and 20 degrees) with BOTH grippers open (an
+  opening above 0.8, for a few tasks 0.9), the scene being as the instruction
+  wants it at that moment - whether or not the instruction says to reset the
+  arms.  So release what you hold, `set_gripper(arm, robo.OPEN)` on both arms,
+  lift clear and end with `home("both")`.  Keep about 20 native actions for
+  it; nothing is lost where a task does not ask for it.
+- Finish when the scene shows that the instruction is satisfied and the arms
+  are back and open.
+
+## Safety and recovery
+- Inspect the scene after motion.  Stop the current plan if an object is
+  unstable or an arm is obstructed, and re-localise before recovering.
+- An object that has left the table may be unrecoverable.
+- After a failed phase name what went wrong (wrong object, missed grasp, lost
+  hold, unreachable target, premature release) and change one meaningful
+  variable; do not repeat the same target or the same recovery twice.
+- There is exactly one episode and no reset.  Recover in place: re-observe,
+  re-localise, re-grasp.
+
+# Task card
+- robot: robodojo_xpl_rgb
+- task: insert_tubes
+- variant: arx_x5
+- seed: 54
+- task instruction (authoritative): 'Insert the three tubes into the rack one by one.'
+- left arm initial grasp point [x, y, z]: [-0.300, -0.207, 0.922] m
+- left gripper initial pitch / yaw / roll: 0 / 0 / 0 deg
+- left gripper opening: 1.00 (1 = open, 0 = closed)
+- right arm initial grasp point [x, y, z]: [0.300, -0.207, 0.922] m
+- right gripper initial pitch / yaw / roll: 0 / 0 / 0 deg
+- right gripper opening: 1.00 (1 = open, 0 = closed)
+- native action budget: 500 (a motion call spends one or more)
+- simulator step budget: 500
+- attached images: cam_head (cam_head.png), cam_left_wrist (cam_left_wrist.png), cam_right_wrist (cam_right_wrist.png). They are step 0 of your run, exactly what `robo.image('cam_head')`, `robo.image('cam_left_wrist')`, `robo.image('cam_right_wrist')` return before any motion.
+
+OpenVL visual workspace:
+When a decision depends on object identity, count, visibility, contact/alignment or
+what changed, state the concrete visual question and use the available visual tools
+when the existing view is insufficient. Visual_Grounding_Tool returns all matching
+candidates and a numbered mask image. Inspect the candidates; try a different query
+or view if detections are missing/conflicting. Zoom can take binding_id and
+candidate_number directly, without manual coordinate conversion. Recall_Images
+returns actual saved image pixels together for before/after comparison.
+The task instruction still determines which objects, order and outcome are required.
+Detections are hypotheses; pixels and motion arrival do not certify a grasp, contact
+or task success. After selecting a candidate, preserve that choice for geometry:
+p = visual_candidate(binding_id, candidate_number)
+point = robo.back_project(p["row"], p["col"], camera=p["camera"])
+visual_candidate (also robo.visual_candidate) returns an interior pixel of that
+candidate's mask only when the original camera frame is still current. It rejects
+old/cropped frames; obtain fresh visual evidence after motion. Do not re-run
+locate(text) to project an already selected candidate: it may choose a different
+top-scoring object. Check back_project's surface and uncertainty notes: with RGB,
+the object point is estimated; a table result may also mean an unmeasurable object.
+This is one visible surface point, not an object centre, grasp pose or proven contact.
+On the native RGB-only RoboDojo backend, use
+o = robo.locate_candidate(binding_id, candidate_number)
+when you need the selected object's full ObjectSight geometry: center_xyz, top_z,
+height_m, length_m, width_m, long_axis_deg, grasp_yaw, views and note. This retains
+the exact selected source mask; other cameras use point-seed matching, not another
+text top-one selection or prompt-keyed height memory. Check found, center_xyz,
+views and note before acting. It retains the original RGB geometry's limitations
+(including table-supported-object assumptions and uncertain one-view heights),
+so it does not prove a grasp or task success. Unsupported backends raise explicitly.
+For a pixel believed to lie on an explicitly chosen world z plane, use
+p = robo.visual_project(image_id, row, col, plane_z)
+(also visual_project). This uses public camera calibration with the correct
+camera-to-world, -z optical/+y-up convention. It accepts current original camera
+frames or same-size Grounding annotations of them; crops and stale frames fail.
+The result is a mapping; attribute reads of its fields are also supported:
+if p["status"] == "ok":
+    xyz = p["xyz_m"]  # equivalently p.xyz_m; do not use an unknown projection
+else:
+    print(p["reason"])
+An ok status means the conditional projection was computed, not that plane_z
+was measured. The point is conditional on your plane_z,
+not a measured surface or object pose. Pixel-noise uncertainty is reported;
+plane-height uncertainty is unknown unless you supply plane_sigma_m. No grasp,
+contact or success follows from this projection. Do not substitute a crop's pixels.
+2D evidence is not a world target. Crops use local pixels and must not be passed
+directly to camera back_project. Robot motion remains
+in PyRUA Python. Multi-action cells and persistent variables remain available.
+visual_data(binding_id), also on robo, reads copied native pred_boxes/pred_scores /
+pred_masks (COCO RLE counts, size orig_img_h/orig_img_w), unlike the tool response's
+canonical boxes/scores/masks. Historical data never becomes fresh by reading it.
+visual_find(kind=None, tool=None, cell=None, call_index=None, limit=10) lists
+historical record summaries; visual_context(reference, limit=10) reads one record
+and bounded related references and same_cell_observations (temporal context only,
+not necessarily observations of that action). Both are also on robo. Use the returned
+reference string, frame ID or Grounding binding ID. These copy already available
+public results, cached/returned states and exceptions; they capture nothing new.
+Missing observations stay unknown. Links are provenance or temporal context,
+not proof that an action used a target, that an object stayed held, or of success.
+Nested current/status fields in history describe the recorded instant, not now.
+Initial images: [{"image_id": "frame_0001", "native_image_id": "tool_generated_image_1", "camera": "cam_head", "phase": "initial", "size_hw": [480, 640], "parent_image_id": null, "source_step": 0, "action_revision": 0, "delivery_step": 0, "is_original_camera_frame": true, "actions_since_capture": 0, "current_camera_pixels": true}, {"image_id": "frame_0002", "native_image_id": "tool_generated_image_2", "camera": "cam_left_wrist", "phase": "initial", "size_hw": [480, 640], "parent_image_id": null, "source_step": 0, "action_revision": 0, "delivery_step": 0, "is_original_camera_frame": true, "actions_since_capture": 0, "current_camera_pixels": true}, {"image_id": "frame_0003", "native_image_id": "tool_generated_image_3", "camera": "cam_right_wrist", "phase": "initial", "size_hw": [480, 640], "parent_image_id": null, "source_step": 0, "action_revision": 0, "delivery_step": 0, "is_original_camera_frame": true, "actions_since_capture": 0, "current_camera_pixels": true}]
+Automatic visual routing is enabled for robo.locate/segment TEXT queries. They
+automatically obtain OpenVL candidate evidence. A configurable score-gap/mask-IoU
+heuristic requires a choice only when multiple distinct masks score close to the
+highest candidate. Duplicate mask proposals count as one hypothesis for this
+check; all original proposals and numbers remain available. This is not a
+probability or identity guarantee. Other calls use the original primitive,
+return type and feedback (visual evidence stays archived). Ambiguous calls raise
+PerceptionChoiceRequired BEFORE returning top-one geometry. Unless caught, that
+exception stops the current cell, while earlier actions and variables persist.
+Inspect routed_perception and the attached numbered image to select the intended
+instance. On the supported native RGB-only RoboDojo backend, prefer
+robo.locate_candidate(binding_id, candidate_number): it keeps the selected mask
+and returns the original full ObjectSight geometry (centre, top, size, yaw, views,
+note). Check found, center_xyz, views and note before an action. For a single
+visible surface point, visual_candidate plus back_project remains an alternate
+path. Unsupported backends must use their documented geometry API; locate_candidate
+raises explicitly and never silently substitutes a text top-one selection.
+Do not replay earlier
+actions or re-run the ambiguous text query expecting a different winner. A failed
+Grounding call raises PerceptionRoutingError without silently using top one.
+Point-based segment calls keep their original behavior. SAM regions may include
+false positives; a choice boundary does not prove multiple real objects exist.
+This automatic routing is a robot adaptation, not autonomous visual-tool use.
+Current heuristic: score gap <= 0.1; duplicate mask IoU >= 0.9.
+
+# PoS: explicit current belief and trapping-aware recovery
+Before decisions the harness maintains a task-conditioned belief and independently
+audits it using public evidence. Read the latest POS_CONTEXT, its active gap and
+recovery constraint. Distinguish missing observations from unfinished actions.
+Beliefs, confidence values and auditor approvals are fallible model judgments,
+never official task verdicts. Check uncertain states against current observations.
+Use the normal Python tool and persistent variables; multiple related actions can
+share a cell when their dependencies are checked. Recovery is advisory and does
+not execute retries. Belief maintenance shares your time and request budget.
+
+
+# Task progress with automatic bookkeeping
+Call python(code, step=...) using the original robot API. step is optional: when intent changes, provide {goal,phase,expected}; otherwise the current audited target is inherited. goal is an achievement ID from POS_CONTEXT or task-root. Do not turn observation/measurement into a new task goal.
+Read the automatically injected action outcomes, controller directive and unfinished targets. When needed, add missing (a decision-critical question), change (what differs after failure), or previous_outcome. Evidence indices are optional: current delivered camera images are associated automatically. Metadata warnings do not require resubmitting robot actions.
+Moving is not grasping, holding does not identify the intended object, and releasing is not verified placement. Unsupported completion assertions remain uncertain while subsequent observations/actions continue. Show current outcome images after actions. Whole-task success still requires the existing independent PoS/Sentinel audit within the same1080s auxiliary budget. No automatic robot retry or new primitive is introduced.
+
+# OpenVL -> modified PoS -> execution feedback
+Use the current PoS gap and actual feedback to choose code. Python accepts code and optional step metadata; ReflAct summaries are disabled.
+OpenVL delivers observation evidence with source time and uncertainty. Modified
+PoS updates its belief, task progress and active gap through its original audit.
+COMPOSITE_HANDOFF exposes those actual outputs without adding another policy.
+Missing evidence calls for the relevant observation; an actionable achievement
+gap calls for a task action.
+The handoff's maintenance_feedback preserves the latest original reviewer or
+validator diagnostics. Read last_committed_review too: an accepted belief may
+still have reviewer caveats about conditional geometry, identity or verification.
+Acceptance does not clear those caveats or certify the directive's coordinates.
+A later unavailable review does not erase the last completed review. Its sequence,
+motion_epoch and revision still mark historical advice, not fresh observations;
+resolve relevant caveats against current tool feedback before dependent actions.
+A rejected candidate was NOT committed: keep its specific
+issues as questions to resolve, never adopt its unsupported values as facts.
+After motion, the prior directive moves to historical_directive and is no longer
+the current next action. Read directive_source and compare historical advice with
+latest_feedback and recent_action_feedback before choosing code. An old empty-grasp report is not proof of current failure after new evidence;
+a successful motion or unrelated read also does not prove that grasp succeeded.
+Read openvl_pos_handoff together with the active gap: candidate identity,
+conditional plane geometry, calibration and delivered pixels are distinct evidence.
+Keep the source IDs and assumptions attached to a geometric estimate through
+belief update, independent review and action choice; approval does not measure
+an unknown height or resolve an unobserved contact. When observation is needed,
+choose the existing tool relevant to that gap instead of starting a new broad
+perception pass. When evidence is sufficient for the next action, proceed and
+let its actual returned outcome update the next decision.
+Use existing OpenVL tools to resolve the particular missing evidence identified
+by PoS, and use the actual outcome of execution to select the next decision.
+A no-progress review should identify what evidence or approach changes; do not
+repeat a failed attempt just because the old directive still names that step.
+Full world belief remains in the original POS_CONTEXT; this compact handoff adds
+no competing world model, new tool, host query, automatic retry or action gate.
+Actual execution results and delivered images return to PoS as public evidence.
+Before numeric geometry calculations, check found/status and every field the
+calculation needs. A None field remains unmeasured: do not round it, use it in
+arithmetic or replace it with zero or a fixed guessed pose to enable an action.
+Read the original tool's uncertainty/notes and use the existing observation tools
+when the missing value is decision-critical. A code exception is feedback to
+revise the computation; it does not justify replaying an already executed action.
+Preserve the feedback boundary inside generated code: when a later action depends
+on a result that does not exist yet, do not precommit that later action. Return the
+result for the next decision, or explicitly test the returned result in code.
+Printing a result is not a test. If a contact/placement decision needs a new image,
+return and inspect that image before deciding; capturing it and then executing the
+dependent action in the same unseen cell does not provide visual verification.
+An IK result, blocked contact, or arrival tolerance alone cannot establish seating
+or support. Use public results and delivered observations to decide whether the
+next action is justified; these instructions do not intercept robot execution.
+Keep all original task obligations. Beliefs and executor reports remain fallible;
+read their revision, source time and the latest feedback. Crops and recalled
+images retain original capture time. This bridge does not execute, retry, gate,
+or select robot actions, and does not add a reflection-model request.

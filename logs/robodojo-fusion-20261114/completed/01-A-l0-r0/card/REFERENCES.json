@@ -1,0 +1,14 @@
+{
+  "cam_left_wrist.png": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/card/cam_left_wrist.png",
+    "sha256": "132539307d4b01b71ac75d05c692c56962d32bfcea605ada58eeadd4889021bb"
+  },
+  "cam_right_wrist.png": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/card/cam_right_wrist.png",
+    "sha256": "897ef90524754b26d21eae989a55f5cb66dd55dab408e89a8eebbe4fea0c02a0"
+  },
+  "cam_head.png": {
+    "source": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/card/cam_head.png",
+    "sha256": "c67c992f72c9b1b466e80d567c31f5d0cf2a88382dc8e8e27db99760683e4d6d"
+  }
+}

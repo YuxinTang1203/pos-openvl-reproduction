@@ -1,0 +1,1255 @@
+{
+  "schema": "pyrualean-episode-v2",
+  "system": "pyrualean",
+  "arm": "cells",
+  "backend": "robodojo_xpl_rgb",
+  "robot": "robodojo_xpl_rgb",
+  "suite": "arx_x5",
+  "task": "insert_tubes",
+  "seed": 54,
+  "task_language": "Insert the three tubes into the rack one by one.",
+  "model": "qwen3.8-flash",
+  "reasoning_effort": "high",
+  "max_programs": null,
+  "images": "on-demand",
+  "feedback": "pure",
+  "guides": false,
+  "max_turns": 100,
+  "budget_mode": "calls",
+  "environment_success": false,
+  "status": "completed",
+  "reason": null,
+  "error": null,
+  "finish": null,
+  "calls": 331,
+  "stateful_calls": 63,
+  "env_steps": 499,
+  "tool_turns": 57,
+  "policy_wall_s": 4287.496224006638,
+  "startup_s": 14.869111528620124,
+  "total_wall_s": 4303.136614970863,
+  "timeout_s": 5400.0,
+  "max_episode_steps": 700,
+  "prompt": {
+    "chars": 58919,
+    "sha256": "f0d480bdcef0696a05958e63a768c51f3e4d59ca621c525d695c2e0c7212fcd6",
+    "images": [
+      "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/09-A-l54-r1/episodes/insert_tubes_l54_s0-1794624827/card/cam_head.png",
+      "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/09-A-l54-r1/episodes/insert_tubes_l54_s0-1794624827/card/cam_left_wrist.png",
+      "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/09-A-l54-r1/episodes/insert_tubes_l54_s0-1794624827/card/cam_right_wrist.png"
+    ]
+  },
+  "generation": {
+    "runtime": "openai",
+    "model": "qwen3.8-flash",
+    "models": [
+      "qwen3.8-flash"
+    ],
+    "base_url": "https://REDACTED-SERVICE-HOST/llm_gw/v1",
+    "input_tokens": 16883027,
+    "cached_input_tokens": 15992320,
+    "output_tokens": 250989,
+    "reasoning_output_tokens": 220697,
+    "total_tokens": 17134016,
+    "requests": 64,
+    "auxiliary_requests": 11,
+    "auxiliary_usage": {
+      "prompt": 271391,
+      "completion": 53498,
+      "cached": 4608,
+      "reasoning": 40849
+    },
+    "auxiliary_wall_s": 868.732,
+    "execution_guard": {
+      "episode_deadline": true
+    },
+    "feedback_delivery": {
+      "call_ab74d4ca00cc4e628c456333": {
+        "submitted_requests": [
+          5
+        ],
+        "response_requests": [
+          5
+        ]
+      },
+      "call_851ce68a31e041f9898a326a": {
+        "submitted_requests": [
+          5
+        ],
+        "response_requests": [
+          5
+        ]
+      },
+      "call_62ef91bdcdff49d4bdf3268c": {
+        "submitted_requests": [
+          6
+        ],
+        "response_requests": [
+          6
+        ]
+      },
+      "call_387f7df23d6e473a927dc937": {
+        "submitted_requests": [
+          7
+        ],
+        "response_requests": [
+          7
+        ]
+      },
+      "call_3e3710ff022e48abb0bd7e6e": {
+        "submitted_requests": [
+          7
+        ],
+        "response_requests": [
+          7
+        ]
+      },
+      "call_208e259ec6c9428ebcb4bb49": {
+        "submitted_requests": [
+          8
+        ],
+        "response_requests": [
+          8
+        ]
+      },
+      "call_0a3e8cfaf6c94901a770da20": {
+        "submitted_requests": [
+          11
+        ],
+        "response_requests": [
+          11
+        ]
+      },
+      "call_cb25e985dc504a138d0a5af5": {
+        "submitted_requests": [
+          12
+        ],
+        "response_requests": [
+          12
+        ]
+      },
+      "call_8faf293f00824408b936eec2": {
+        "submitted_requests": [
+          12
+        ],
+        "response_requests": [
+          12
+        ]
+      },
+      "call_a15a0f9dae5944c3a3ec9043": {
+        "submitted_requests": [
+          13
+        ],
+        "response_requests": [
+          13
+        ]
+      },
+      "call_3f52acb0333c4b2291bc3085": {
+        "submitted_requests": [
+          14
+        ],
+        "response_requests": [
+          14
+        ]
+      },
+      "call_4eaf956940a8442ebb10aba5": {
+        "submitted_requests": [
+          15
+        ],
+        "response_requests": [
+          15
+        ]
+      },
+      "call_bc064bdcadbc401789c261fb": {
+        "submitted_requests": [
+          18
+        ],
+        "response_requests": [
+          18
+        ]
+      },
+      "call_7310aa2f6d074ff58091c551": {
+        "submitted_requests": [
+          19
+        ],
+        "response_requests": [
+          19
+        ]
+      },
+      "call_379c2223d4fd406faf4e6b57": {
+        "submitted_requests": [
+          20
+        ],
+        "response_requests": [
+          20
+        ]
+      },
+      "call_9cf2059c5c6f4c66832a5702": {
+        "submitted_requests": [
+          21
+        ],
+        "response_requests": [
+          21
+        ]
+      },
+      "call_d756dc9bacaf4d97a116b5c9": {
+        "submitted_requests": [
+          22
+        ],
+        "response_requests": [
+          22
+        ]
+      },
+      "call_4b3f81c7a348417b96131d75": {
+        "submitted_requests": [
+          23
+        ],
+        "response_requests": [
+          23
+        ]
+      },
+      "call_acffb29fbb794d998616e7c0": {
+        "submitted_requests": [
+          26
+        ],
+        "response_requests": [
+          26
+        ]
+      },
+      "call_4bf0c4666891448e8b07de5e": {
+        "submitted_requests": [
+          27
+        ],
+        "response_requests": [
+          27
+        ]
+      },
+      "call_af01e22765fa4590a14f0a17": {
+        "submitted_requests": [
+          28
+        ],
+        "response_requests": [
+          28
+        ]
+      },
+      "call_caea1ca54c594cc7a1e96010": {
+        "submitted_requests": [
+          29
+        ],
+        "response_requests": [
+          29
+        ]
+      },
+      "call_c869debe987842a58dea704e": {
+        "submitted_requests": [
+          30
+        ],
+        "response_requests": [
+          30
+        ]
+      },
+      "call_2836229fd0494a06bce9c0a7": {
+        "submitted_requests": [
+          31
+        ],
+        "response_requests": [
+          31
+        ]
+      },
+      "call_b3aaf51ae2504bb092c78211": {
+        "submitted_requests": [
+          32
+        ],
+        "response_requests": [
+          32
+        ]
+      },
+      "call_1681d447e9434236ae0b86cd": {
+        "submitted_requests": [
+          33
+        ],
+        "response_requests": [
+          33
+        ]
+      },
+      "call_d33a7cee96bf46858de50f59": {
+        "submitted_requests": [
+          36
+        ],
+        "response_requests": [
+          36
+        ]
+      },
+      "call_fb38077582214ab2a4007671": {
+        "submitted_requests": [
+          37
+        ],
+        "response_requests": [
+          37
+        ]
+      },
+      "call_b24bcbd1a0b44118bade0070": {
+        "submitted_requests": [
+          38
+        ],
+        "response_requests": [
+          38
+        ]
+      },
+      "call_a7c5b84305a8445492bb4baa": {
+        "submitted_requests": [
+          39
+        ],
+        "response_requests": [
+          39
+        ]
+      },
+      "call_d68b57fdd2174bd09e7e3dad": {
+        "submitted_requests": [
+          40
+        ],
+        "response_requests": [
+          40
+        ]
+      },
+      "call_06d218820ee441b683e23e3c": {
+        "submitted_requests": [
+          41
+        ],
+        "response_requests": [
+          41
+        ]
+      },
+      "call_2215f8581adb4b6491cf30f3": {
+        "submitted_requests": [
+          42
+        ],
+        "response_requests": [
+          42
+        ]
+      },
+      "call_d2846b98702d48f5beda7a17": {
+        "submitted_requests": [
+          43
+        ],
+        "response_requests": [
+          43
+        ]
+      },
+      "call_7d6434c4ec3047a7908f6173": {
+        "submitted_requests": [
+          44
+        ],
+        "response_requests": [
+          44
+        ]
+      },
+      "call_f006438972384ba680f71534": {
+        "submitted_requests": [
+          45
+        ],
+        "response_requests": [
+          45
+        ]
+      },
+      "call_3722d580bef84c2fa553901a": {
+        "submitted_requests": [
+          46
+        ],
+        "response_requests": [
+          46
+        ]
+      },
+      "call_16e4fb20bb574a97badbfe86": {
+        "submitted_requests": [
+          47
+        ],
+        "response_requests": [
+          47
+        ]
+      },
+      "call_2abee81026224a22b249be79": {
+        "submitted_requests": [
+          48
+        ],
+        "response_requests": [
+          48
+        ]
+      },
+      "call_4da27285f73944ae9397b8bc": {
+        "submitted_requests": [
+          49
+        ],
+        "response_requests": [
+          49
+        ]
+      },
+      "call_8a921edfd90646b089f13c53": {
+        "submitted_requests": [
+          50
+        ],
+        "response_requests": [
+          50
+        ]
+      },
+      "call_db75228457f34a26bc384764": {
+        "submitted_requests": [
+          51
+        ],
+        "response_requests": [
+          51
+        ]
+      },
+      "call_3488e66af39d4d0993a086db": {
+        "submitted_requests": [
+          52
+        ],
+        "response_requests": [
+          52
+        ]
+      },
+      "call_8839f81be08f4220a6e3cdcb": {
+        "submitted_requests": [
+          53
+        ],
+        "response_requests": [
+          53
+        ]
+      },
+      "call_0c976ae39a9d4dc0a5273c63": {
+        "submitted_requests": [
+          53
+        ],
+        "response_requests": [
+          53
+        ]
+      },
+      "call_ac77a0bf852a4d0bbca7f6f4": {
+        "submitted_requests": [
+          54
+        ],
+        "response_requests": [
+          54
+        ]
+      },
+      "call_0bab126f4577486da1099a4a": {
+        "submitted_requests": [
+          55
+        ],
+        "response_requests": [
+          55
+        ]
+      },
+      "call_303a126fe715498488511ffa": {
+        "submitted_requests": [
+          56
+        ],
+        "response_requests": [
+          56
+        ]
+      },
+      "call_65fb1ecb79134b45b9baa668": {
+        "submitted_requests": [
+          57
+        ],
+        "response_requests": [
+          57
+        ]
+      },
+      "call_c99dcc6827544d21a29c2c69": {
+        "submitted_requests": [
+          58
+        ],
+        "response_requests": [
+          58
+        ]
+      },
+      "call_3ba2c5d726ed42c790e980d0": {
+        "submitted_requests": [
+          59
+        ],
+        "response_requests": [
+          59
+        ]
+      },
+      "call_4b9dfd9887464cc4b9f335d8": {
+        "submitted_requests": [
+          60
+        ],
+        "response_requests": [
+          60
+        ]
+      },
+      "call_b64cc76a4d534489a1e70142": {
+        "submitted_requests": [
+          61
+        ],
+        "response_requests": [
+          61
+        ]
+      },
+      "call_5292643e38a14210a2332007": {
+        "submitted_requests": [
+          62
+        ],
+        "response_requests": [
+          62
+        ]
+      },
+      "call_e5c52456335648ca9213e5d5": {
+        "submitted_requests": [
+          63
+        ],
+        "response_requests": [
+          63
+        ]
+      },
+      "call_af566782a66345b097bbac5d": {
+        "submitted_requests": [
+          64
+        ],
+        "response_requests": [
+          64
+        ]
+      },
+      "call_59d3d8f4a23f4930bbec9c66": {
+        "submitted_requests": [],
+        "response_requests": []
+      }
+    },
+    "request_profile": [
+      6081,
+      14248,
+      20875,
+      41529,
+      72887,
+      111373,
+      167437,
+      232110,
+      255187,
+      279999,
+      356117,
+      446272,
+      545670,
+      655255,
+      774401,
+      801885,
+      830516,
+      963520,
+      1107193,
+      1262478,
+      1428554,
+      1605262,
+      1792501,
+      1829883,
+      1868218,
+      2068551,
+      2279636,
+      2501449,
+      2733804,
+      2976135,
+      3228739,
+      3491623,
+      3765172,
+      3800050,
+      3835967,
+      4122183,
+      4419155,
+      4726955,
+      5047090,
+      5379351,
+      5722983,
+      6078197,
+      6444384,
+      6822779,
+      7213363,
+      7614762,
+      8027916,
+      8452362,
+      8887755,
+      9335064,
+      9793735,
+      10263535,
+      10751716,
+      11251109,
+      11761097,
+      12281934,
+      12814915,
+      13359427,
+      13915277,
+      14482709,
+      15062881,
+      15656788,
+      16263757,
+      16883027
+    ],
+    "request_latency_s": [
+      97.636,
+      36.03,
+      32.587,
+      54.956,
+      50.802,
+      60.005,
+      160.857,
+      146.116,
+      69.352,
+      60.915,
+      114.273,
+      171.527,
+      38.916,
+      99.062,
+      206.15,
+      105.563,
+      76.569,
+      51.454,
+      117.797,
+      81.392,
+      73.283,
+      49.086,
+      61.84,
+      117.689,
+      92.023,
+      53.85,
+      49.572,
+      24.095,
+      19.242,
+      63.09,
+      24.446,
+      36.685,
+      52.397,
+      71.434,
+      108.821,
+      34.232,
+      31.478,
+      44.574,
+      44.035,
+      59.972,
+      27.0,
+      58.518,
+      74.216,
+      47.873,
+      33.205,
+      35.246,
+      56.689,
+      45.007,
+      38.029,
+      35.242,
+      63.499,
+      53.51,
+      43.452,
+      43.999,
+      41.253,
+      36.842,
+      36.359,
+      50.821,
+      41.735,
+      29.274,
+      63.437,
+      63.91,
+      31.835,
+      35.829
+    ],
+    "finish_reasons": [
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls",
+      "tool_calls"
+    ],
+    "turns": 57,
+    "tool_calls": {
+      "Visual_Grounding_Tool": 6,
+      "python": 50,
+      "Zoom_In_Tool": 1
+    },
+    "tool_requests": [
+      {
+        "request": 4,
+        "tool": "Visual_Grounding_Tool",
+        "elapsed_s": 2.036
+      },
+      {
+        "request": 4,
+        "tool": "python",
+        "elapsed_s": 0.775
+      },
+      {
+        "request": 5,
+        "tool": "python",
+        "elapsed_s": 21.336
+      },
+      {
+        "request": 6,
+        "tool": "Visual_Grounding_Tool",
+        "elapsed_s": 0.983
+      },
+      {
+        "request": 6,
+        "tool": "python",
+        "elapsed_s": 0.034
+      },
+      {
+        "request": 7,
+        "tool": "python",
+        "elapsed_s": 0.053
+      },
+      {
+        "request": 8,
+        "tool": "python",
+        "elapsed_s": 0.06
+      },
+      {
+        "request": 11,
+        "tool": "python",
+        "elapsed_s": 0.242
+      },
+      {
+        "request": 11,
+        "tool": "Zoom_In_Tool",
+        "elapsed_s": 0.042
+      },
+      {
+        "request": 12,
+        "tool": "python",
+        "elapsed_s": 8.898
+      },
+      {
+        "request": 13,
+        "tool": "python",
+        "elapsed_s": 5.655
+      },
+      {
+        "request": 14,
+        "tool": "python",
+        "elapsed_s": 0.036
+      },
+      {
+        "request": 15,
+        "tool": "python",
+        "elapsed_s": 21.737
+      },
+      {
+        "request": 18,
+        "tool": "python",
+        "elapsed_s": 7.841
+      },
+      {
+        "request": 19,
+        "tool": "python",
+        "elapsed_s": 7.974
+      },
+      {
+        "request": 20,
+        "tool": "python",
+        "elapsed_s": 3.444
+      },
+      {
+        "request": 21,
+        "tool": "python",
+        "elapsed_s": 1.223
+      },
+      {
+        "request": 22,
+        "tool": "python",
+        "elapsed_s": 5.109
+      },
+      {
+        "request": 23,
+        "tool": "python",
+        "elapsed_s": 5.866
+      },
+      {
+        "request": 26,
+        "tool": "python",
+        "elapsed_s": 3.07
+      },
+      {
+        "request": 27,
+        "tool": "python",
+        "elapsed_s": 2.397
+      },
+      {
+        "request": 28,
+        "tool": "python",
+        "elapsed_s": 1.495
+      },
+      {
+        "request": 29,
+        "tool": "python",
+        "elapsed_s": 0.087
+      },
+      {
+        "request": 30,
+        "tool": "python",
+        "elapsed_s": 1.587
+      },
+      {
+        "request": 31,
+        "tool": "python",
+        "elapsed_s": 1.085
+      },
+      {
+        "request": 32,
+        "tool": "python",
+        "elapsed_s": 4.082
+      },
+      {
+        "request": 33,
+        "tool": "python",
+        "elapsed_s": 0.031
+      },
+      {
+        "request": 36,
+        "tool": "Visual_Grounding_Tool",
+        "elapsed_s": 0.899
+      },
+      {
+        "request": 37,
+        "tool": "python",
+        "elapsed_s": 14.104
+      },
+      {
+        "request": 38,
+        "tool": "python",
+        "elapsed_s": 16.038
+      },
+      {
+        "request": 39,
+        "tool": "python",
+        "elapsed_s": 10.524
+      },
+      {
+        "request": 40,
+        "tool": "python",
+        "elapsed_s": 0.047
+      },
+      {
+        "request": 41,
+        "tool": "python",
+        "elapsed_s": 5.743
+      },
+      {
+        "request": 42,
+        "tool": "python",
+        "elapsed_s": 0.061
+      },
+      {
+        "request": 43,
+        "tool": "python",
+        "elapsed_s": 9.999
+      },
+      {
+        "request": 44,
+        "tool": "python",
+        "elapsed_s": 8.569
+      },
+      {
+        "request": 45,
+        "tool": "python",
+        "elapsed_s": 0.065
+      },
+      {
+        "request": 46,
+        "tool": "python",
+        "elapsed_s": 0.911
+      },
+      {
+        "request": 47,
+        "tool": "python",
+        "elapsed_s": 0.894
+      },
+      {
+        "request": 48,
+        "tool": "python",
+        "elapsed_s": 6.181
+      },
+      {
+        "request": 49,
+        "tool": "python",
+        "elapsed_s": 1.625
+      },
+      {
+        "request": 50,
+        "tool": "python",
+        "elapsed_s": 3.913
+      },
+      {
+        "request": 51,
+        "tool": "python",
+        "elapsed_s": 7.276
+      },
+      {
+        "request": 52,
+        "tool": "Visual_Grounding_Tool",
+        "elapsed_s": 0.849
+      },
+      {
+        "request": 52,
+        "tool": "python",
+        "elapsed_s": 0.101
+      },
+      {
+        "request": 53,
+        "tool": "python",
+        "elapsed_s": 3.064
+      },
+      {
+        "request": 54,
+        "tool": "python",
+        "elapsed_s": 3.663
+      },
+      {
+        "request": 55,
+        "tool": "Visual_Grounding_Tool",
+        "elapsed_s": 0.948
+      },
+      {
+        "request": 56,
+        "tool": "python",
+        "elapsed_s": 18.612
+      },
+      {
+        "request": 57,
+        "tool": "python",
+        "elapsed_s": 0.067
+      },
+      {
+        "request": 58,
+        "tool": "python",
+        "elapsed_s": 0.045
+      },
+      {
+        "request": 59,
+        "tool": "Visual_Grounding_Tool",
+        "elapsed_s": 0.989
+      },
+      {
+        "request": 60,
+        "tool": "python",
+        "elapsed_s": 8.5
+      },
+      {
+        "request": 61,
+        "tool": "python",
+        "elapsed_s": 15.658
+      },
+      {
+        "request": 62,
+        "tool": "python",
+        "elapsed_s": 3.626
+      },
+      {
+        "request": 63,
+        "tool": "python",
+        "elapsed_s": 3.746
+      },
+      {
+        "request": 64,
+        "tool": "python",
+        "elapsed_s": 2.646
+      }
+    ],
+    "errors": [],
+    "warnings": [],
+    "compactions": 0,
+    "dropped_context_rounds": 0,
+    "python_cells": 50,
+    "recap_full": null,
+    "controller": null,
+    "max_turns_hit": false,
+    "max_requests_hit": false,
+    "status": "completed",
+    "returncode": 0,
+    "elapsed_s": 4287.48,
+    "messages": 210,
+    "images_sent": 40,
+    "options": {
+      "stream": false,
+      "batch_actions": false,
+      "phase_tools": false,
+      "model": "qwen3.8-flash",
+      "max_turns": 100,
+      "max_requests": null,
+      "auxiliary_budget_s": 1080.0,
+      "auxiliary_round_budget_s": 480.0,
+      "auxiliary_stage_budget_s": 120.0,
+      "maintenance_requirements": {
+        "min_calls": 2,
+        "role_followup_calls": {
+          "pos_belief": 1,
+          "pos_repair": 1,
+          "pos_sentinel": 0
+        }
+      },
+      "planner_reserve_s": 540.0,
+      "temperature": null,
+      "max_tokens": 8192,
+      "extra_body": {
+        "reasoning_effort": "high"
+      },
+      "tool_choice": "auto",
+      "image_max_side": 0,
+      "nudges": 20,
+      "retries": 10,
+      "request_timeout_s": 900,
+      "preserve_reasoning_content": false,
+      "images": 3
+    },
+    "sandbox_flags": [
+      {
+        "turn": 9,
+        "flags": [
+          "private-attr:__name__"
+        ]
+      }
+    ]
+  },
+  "host": {
+    "python": "$PROJECT_ROOT/.venv/bin/python",
+    "cuda_device": null,
+    "primitive_set": "no-vla",
+    "runtime": "openai",
+    "boot_options": {
+      "bridge": "<Bridge>"
+    },
+    "sandbox": "imports limited to pure-computation modules and workspace files, open() confined to the workspace, exec/eval/compile removed, code naming __globals__/__func__/__subclasses__-style introspection refused before it runs; every cell is audited (sandbox_flags)",
+    "base_url": "https://REDACTED-SERVICE-HOST/llm_gw/v1"
+  },
+  "created_at": "2026-11-14T10:53:48+0800",
+  "notes": [
+    "1 cell(s) raised sandbox audit flags; see tool_turns.json"
+  ],
+  "migration": {
+    "kind": "v17_ablation",
+    "agent_loop": "pyrualean.openai_runtime",
+    "execution_recovery": false,
+    "stage_verification": false,
+    "native": {
+      "mode": "automatically_routed_visual_workspace",
+      "agent_loop": "pyrualean.openai_runtime",
+      "config": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/capabilities_visual.yml",
+      "native_components": [
+        "MemoryStore",
+        "Grounding capability/schema/renderer",
+        "Zoom capability/backend"
+      ],
+      "local_backend": "Existing shared PyRUA SAM3; all valid candidates, not just top one",
+      "options": {
+        "execution_recovery": false,
+        "stage_verification": false
+      },
+      "robot_action_hook": "passive_history_only",
+      "automatic_action_capture": false,
+      "passive_history": "Existing public results/states only; on-demand reads, no sensing, action policy or automatic directory",
+      "camera_metadata_context": {
+        "enabled": true,
+        "trigger": "Python camera_meta request; bypassed when routing is disabled",
+        "original_return_unchanged": true,
+        "extra_image_payload": false
+      },
+      "routing": "locate/segment text queries; distinct score-competitive mask hypotheses require explicit choice",
+      "ambiguity_heuristic": {
+        "version": "score-gap-mask-iou-v1",
+        "score_margin": 0.1,
+        "duplicate_mask_iou": 0.9,
+        "grouping": "highest-score-first representative masks; original candidates retained",
+        "calibrated_probability_guarantee": false
+      },
+      "semantic_change": "Ambiguous text perception raises before original top-one geometry; no automatic replay",
+      "selection_guard": "Ordinary catchable Python exception, not a global action interlock"
+    },
+    "adaptation": {
+      "kind": "minimal_fusion",
+      "implementation": "minimal-fusion-v17",
+      "pos": {
+        "kind": "pos_progress_lite",
+        "implementation": "pyrualean-pos-progress-im-lite-v1",
+        "paper": "https://arxiv.org/abs/2610.01415",
+        "source": "https://github.com/luoyu100/PoS",
+        "adaptation": "cell-level explicit belief, independent sentinel, trapping recovery",
+        "benchmark_reproduction": false,
+        "history_trimming": false,
+        "independent_verifier": true,
+        "verifier_is_ground_truth": false,
+        "automatic_retry": false,
+        "evaluation_updates": false,
+        "extra_model_calls_share_episode_budget": true,
+        "response_protocol": "closed_role_specific_schema_with_host_validation",
+        "maintenance_min_calls": 2,
+        "health_window": 4,
+        "max_cycle_length": 3,
+        "health_threshold": 0.25,
+        "cycle_threshold": 0.75,
+        "recurrence_epsilon": 0.05,
+        "max_records": 24,
+        "max_gaps": 12,
+        "max_evidence": 64,
+        "max_images": 4,
+        "repair_attempts": 1,
+        "execution_checks": "feedback-driven recovery; no blanket failed-motion gripper gate",
+        "schedule": {
+          "event_driven": true,
+          "paced_spending": true,
+          "final_reserved_chains": 1,
+          "late_window_s": 1200,
+          "stale_seconds": 600,
+          "stale_cells": 8,
+          "urgent_cooldown_seconds": 180,
+          "urgent_cooldown_cells": 2,
+          "new_per_cell_cpu_limit": null
+        },
+        "independent_completion_audit": false,
+        "reference_paper": "https://proceedings.mlr.press/v205/huang23c/huang23c.pdf",
+        "reference_method": "Inner Monologue: action outcome + task-progress scene feedback + replanning",
+        "reproduction": false,
+        "oracle_feedback": false,
+        "learned_skills_added": false,
+        "automatic_action_execution": false,
+        "required_step_contract": false,
+        "extra_auxiliary_budget": false,
+        "metadata_corrections": "nonblocking,logged; never rewrite code or fabricate physical success"
+      },
+      "openvl_enabled": true,
+      "reflact": null,
+      "shared_auxiliary_budget": true,
+      "additional_reflection_requests": 0,
+      "automatic_robot_replay": false,
+      "pos_schema_and_validation": "inherited unchanged; no candidate rewrite",
+      "pos_model_calls": "original payload fields/prompt prefixes plus schema contract and delivered-source handoff; no report rewriting",
+      "pos_step_and_completion": "original step validation and completion audit; obsolete directives archived after motion",
+      "robot_primitive_wrappers_added": false,
+      "planner_handoff": "revision-stamped belief/gap, public feedback, compact delivered OpenVL source links and semantic limits; full original evidence retained in POS_CONTEXT",
+      "fusion_adapter": "v14-delivered-source-gap-bridge",
+      "auxiliary_input_change": "openvl_pos_handoff added to belief, repair and Sentinel payloads; original payload fields retained",
+      "pos_schedule": "existing trigger/final reserve; funded retry capacity may be reserved inside original round/total limits",
+      "additional_tools": [],
+      "additional_host_queries": 0,
+      "visual_evidence_policy": "delivered results only; original source time and eligibility retained",
+      "observation_scope": "baseline",
+      "dependency_mode": "off",
+      "additional_model_requests": 0,
+      "additional_sensing_calls": 0,
+      "dependency_links": "optional executor declarations; invalidations only, no promotion",
+      "same_cell_intervention": false,
+      "original_temporal_validation_preserved": true,
+      "full_world_selective_freshness_implemented": false,
+      "v17_ablation": {
+        "profile": "fusion",
+        "static_rules": false,
+        "static_rules_sha256": "c7fad68f7f8afe068e1e5838cefa4b6b557d00d2c7d7681239094033140c75d0",
+        "static_rules_injection": "executor instruction prompt only; identical suffix across pairs",
+        "v15_action_focus": false,
+        "v15_reliability": false,
+        "dependency_mode": "off",
+        "same_v17_projection_fix": true,
+        "added_model_calls": 0,
+        "added_sensing_calls": 0,
+        "added_action_gates": false
+      }
+    }
+  },
+  "openai_returncode": 0,
+  "planner_attempts": 1,
+  "env_steps_total": 499,
+  "openvl_evidence": {
+    "mode": "automatically_routed_visual_workspace",
+    "agent_loop": "pyrualean.openai_runtime",
+    "config": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/capabilities_visual.yml",
+    "native_components": [
+      "MemoryStore",
+      "Grounding capability/schema/renderer",
+      "Zoom capability/backend"
+    ],
+    "local_backend": "Existing shared PyRUA SAM3; all valid candidates, not just top one",
+    "options": {
+      "execution_recovery": false,
+      "stage_verification": false
+    },
+    "robot_action_hook": "passive_history_only",
+    "automatic_action_capture": false,
+    "passive_history": "Existing public results/states only; on-demand reads, no sensing, action policy or automatic directory",
+    "camera_metadata_context": {
+      "enabled": true,
+      "trigger": "Python camera_meta request; bypassed when routing is disabled",
+      "original_return_unchanged": true,
+      "extra_image_payload": false
+    },
+    "routing": "locate/segment text queries; distinct score-competitive mask hypotheses require explicit choice",
+    "ambiguity_heuristic": {
+      "version": "score-gap-mask-iou-v1",
+      "score_margin": 0.1,
+      "duplicate_mask_iou": 0.9,
+      "grouping": "highest-score-first representative masks; original candidates retained",
+      "calibrated_probability_guarantee": false
+    },
+    "semantic_change": "Ambiguous text perception raises before original top-one geometry; no automatic replay",
+    "selection_guard": "Ordinary catchable Python exception, not a global action interlock",
+    "native_calls": 17,
+    "image_captures": 61,
+    "grounding_records": 16,
+    "events": {
+      "autonomous_visual_tool": 7,
+      "native_capability": 17,
+      "automatic_grounding": 10,
+      "automatic_perception_result": 10,
+      "selected_mask_geometry": 9,
+      "visual_plane_projection": 22,
+      "perception_choice_required": 1
+    },
+    "trace_records": 850,
+    "trace_error_count": 0,
+    "trace_errors": [],
+    "routing_enabled": true,
+    "automatic_grounding_calls": 10,
+    "autonomous_tool_calls": 7,
+    "choice_boundaries": 1
+  }
+}

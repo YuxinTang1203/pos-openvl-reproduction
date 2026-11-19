@@ -1,0 +1,27 @@
+{
+  "suite": "arx_x5",
+  "task": "insert_tubes",
+  "seed": 0,
+  "task_language": "Insert the three tubes into the rack one by one.",
+  "object_names": [],
+  "eef_pos": null,
+  "eef_quat": null,
+  "gripper_opening": null,
+  "images": {
+    "cam_head": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/card/cam_head.png",
+    "cam_left_wrist": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/card/cam_left_wrist.png",
+    "cam_right_wrist": "$PROJECT_ROOT/runs/pos-openvl-mainline-abe12-parallel04-20261114/01-A-l0-r0/episodes/insert_tubes_l0_s0-1794607127/card/cam_right_wrist.png"
+  },
+  "max_env_steps": 500,
+  "transfer": false,
+  "robot": "robodojo_xpl_rgb",
+  "facts": {
+    "left arm initial grasp point [x, y, z]": "[-0.300, -0.207, 0.922] m",
+    "left gripper initial pitch / yaw / roll": "0 / 0 / 0 deg",
+    "left gripper opening": "1.00 (1 = open, 0 = closed)",
+    "right arm initial grasp point [x, y, z]": "[0.300, -0.207, 0.922] m",
+    "right gripper initial pitch / yaw / roll": "0 / 0 / 0 deg",
+    "right gripper opening": "1.00 (1 = open, 0 = closed)",
+    "native action budget": "500 (a motion call spends one or more)"
+  }
+}

@@ -1,0 +1,5 @@
+g = robo.set_gripper('right', robo.OPEN)
+print("open:", g.opening, g.holding)
+m = robo.move_to([0.0742,0.0044,0.99], arm='right', gripper=robo.OPEN, pitch=0, yaw=76, roll=0, path='line')
+print("withdraw:", m.reached, m.final_xyz, m.blocked, m.ik_error)
+robo.show('cam_head')

@@ -1,0 +1,5 @@
+robo.show('cam_head')
+s=robo.state()
+print("sim step", s.step, "truncated", s.truncated)
+print("L", [round(v,3) for v in s.left.tcp_pos], "open", round(s.left.gripper,2))
+print("R", [round(v,3) for v in s.right.tcp_pos], "open", round(s.right.gripper,2))

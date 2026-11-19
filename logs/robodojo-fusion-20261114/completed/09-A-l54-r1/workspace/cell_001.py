@@ -1,0 +1,6 @@
+print(robo.task)
+s = robo.state()
+print("left tcp", s.left.tcp_pos, "pitch/yaw/roll", s.left.pitch, s.left.yaw, s.left.roll, "grip", s.left.gripper)
+print("right tcp", s.right.tcp_pos, "pitch/yaw/roll", s.right.pitch, s.right.yaw, s.right.roll, "grip", s.right.gripper)
+rack = robo.locate("the blue and white tube rack")
+print("rack", rack)
